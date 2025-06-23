@@ -76,3 +76,6 @@ func _reset():
 	clicks = 0;
 	stop = false
 	transitioned = false
+
+func _on_video_stream_player_finished() -> void:
+	Global.change_scene(Global.Scenes.GAME)

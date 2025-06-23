@@ -10,14 +10,23 @@ config_version=5
 
 [application]
 
-config/name="ComJamOn2025"
+config/name="SalchiJAM25"
 run/main_scene="uid://t4p55hjx1m5i"
 config/features=PackedStringArray("4.4", "Forward Plus")
+boot_splash/bg_color=Color(0.00829097, 0.0440785, 0.0318227, 1)
 config/icon="res://icon.svg"
 
 [autoload]
 
 Global="*res://scripts/base/Global.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/mode=2
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep_width"
 
 [input]
 
@@ -51,3 +60,7 @@ Global="*res://scripts/base/Global.gd"
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":54,"key_label":0,"unicode":54,"location":0,"echo":false,"script":null)
 ]
 }
+
+[rendering]
+
+environment/defaults/default_clear_color=Color(0.00784314, 0.0431373, 0.0313726, 1)

@@ -16,6 +16,7 @@ var stage = 0
 
 var coolDown = 0.5
 var startCoolDown = false
+var random = RandomNumberGenerator.new()
 
 func _ready() -> void:
 	# change_scene(Scenes.SPLASH)
