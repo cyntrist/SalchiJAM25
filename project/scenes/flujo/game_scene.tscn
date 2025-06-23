@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://bx0cn133vx2x4"]
+
+[ext_resource type="Script" uid="uid://ovognw1joqnr" path="res://scripts/flujo/MainMenu.gd" id="1_es233"]
+
+[node name="Game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_es233")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1284.0
+offset_bottom = 726.0
+color = Color(0.054902, 0.054902, 0.054902, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 389.0
+offset_top = 249.0
+offset_right = 753.0
+offset_bottom = 360.0
+theme_override_font_sizes/font_size = 32
+text = "GAME
+"
+horizontal_alignment = 1
+vertical_alignment = 1

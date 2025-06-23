@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=3 uid="uid://t4p55hjx1m5i"]
+
+[ext_resource type="Script" uid="uid://b2yb2wipspl12" path="res://scripts/flujo/StateMachine.gd" id="1_seyow"]
+[ext_resource type="PackedScene" uid="uid://doma3ldba1l8e" path="res://scenes/flujo/credits_scene.tscn" id="2_6qpgm"]
+[ext_resource type="PackedScene" uid="uid://b6qn383g7pwxp" path="res://scenes/flujo/null_scene.tscn" id="2_v7bwk"]
+[ext_resource type="PackedScene" uid="uid://bx0cn133vx2x4" path="res://scenes/flujo/game_scene.tscn" id="3_ea0l5"]
+[ext_resource type="PackedScene" uid="uid://dy4tygucl1fuu" path="res://scenes/flujo/main_menu.tscn" id="3_mwl0m"]
+[ext_resource type="PackedScene" uid="uid://kuee5s7qpvx2" path="res://scenes/flujo/intro_scene.tscn" id="4_jhmf0"]
+[ext_resource type="PackedScene" uid="uid://dnysdn0d3o7b2" path="res://scenes/flujo/splash_scene.tscn" id="14_aso3l"]
+[ext_resource type="PackedScene" uid="uid://5w0xl8fledrk" path="res://scenes/flujo/fade_scene.tscn" id="17_rgtxn"]
+
+[node name="StateMachine" type="Node" node_paths=PackedStringArray("scenes")]
+script = ExtResource("1_seyow")
+scenes = [NodePath("Scenes/Splash"), NodePath("Scenes/Main Menu"), NodePath("Scenes/Intro"), NodePath("Scenes/Game"), NodePath("Scenes/Credits"), NodePath("Scenes/Null")]
+
+[node name="Scenes" type="Node" parent="."]
+
+[node name="Null" parent="Scenes" instance=ExtResource("2_v7bwk")]
+process_mode = 4
+visible = false
+
+[node name="Credits" parent="Scenes" instance=ExtResource("2_6qpgm")]
+process_mode = 4
+visible = false
+
+[node name="Game" parent="Scenes" instance=ExtResource("3_ea0l5")]
+process_mode = 4
+visible = false
+
+[node name="Intro" parent="Scenes" instance=ExtResource("4_jhmf0")]
+process_mode = 4
+visible = false
+
+[node name="Main Menu" parent="Scenes" instance=ExtResource("3_mwl0m")]
+process_mode = 4
+visible = false
+
+[node name="Splash" parent="Scenes" instance=ExtResource("14_aso3l")]
+
+[node name="Fade" parent="." instance=ExtResource("17_rgtxn")]
+
+[node name="Sound" type="Node" parent="."]
+
+[node name="BGM" type="AudioStreamPlayer2D" parent="Sound"]
+
+[node name="SFX1" type="AudioStreamPlayer2D" parent="Sound"]
+
+[node name="SFX2" type="AudioStreamPlayer2D" parent="Sound"]
+
+[node name="SFX3" type="AudioStreamPlayer2D" parent="Sound"]
