@@ -1,0 +1,91 @@
+[gd_scene load_steps=14 format=3 uid="uid://b3iiuh3bu2ih2"]
+
+[ext_resource type="ArrayMesh" path="res://normalNoodle.res" id="1_ky71t"]
+[ext_resource type="ArrayMesh" uid="uid://ddrdpouuae7qv" path="res://Icosphere.obj" id="2_duvkc"]
+[ext_resource type="Shader" path="res://2d to gradient_3D.gdshader" id="4_0kb28"]
+[ext_resource type="Script" path="res://shaderbox.gd" id="4_tyf0g"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yuuwn"]
+albedo_color = Color(1, 0.54902, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pin38"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_lv8cc"]
+sky_top_color = Color(1, 0, 0, 1)
+sky_horizon_color = Color(0.498039, 0, 0, 1)
+sky_curve = 0.139955
+ground_bottom_color = Color(0.0196078, 0.0313726, 0.0901961, 1)
+ground_horizon_color = Color(0.498039, 0, 0, 1)
+ground_curve = 0.0386376
+sun_angle_max = 15.0
+sun_curve = 0.160766
+use_debanding = false
+
+[sub_resource type="Sky" id="Sky_4veef"]
+sky_material = SubResource("ProceduralSkyMaterial_lv8cc")
+
+[sub_resource type="Environment" id="Environment_h4rov"]
+background_mode = 2
+background_color = Color(1, 1, 1, 1)
+sky = SubResource("Sky_4veef")
+ambient_light_source = 2
+ambient_light_color = Color(0, 1, 0, 1)
+ambient_light_sky_contribution = 0.0
+reflected_light_source = 1
+
+[sub_resource type="Gradient" id="Gradient_a3pes"]
+resource_local_to_scene = true
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.0833333, 0.166667, 0.25, 0.333333, 0.416667, 0.5, 0.583333, 0.666667, 0.75, 0.833333, 0.916667)
+colors = PackedColorArray(0.184314, 0.12549, 0.286275, 1, 0.478431, 0, 0.2, 1, 0.792157, 0.462745, 0.105882, 1, 1, 0.905882, 0.643137, 1, 0, 0, 0.211765, 1, 0, 0.184314, 0.219608, 1, 0, 0.584314, 0.282353, 1, 0, 1, 0.396078, 1, 0.113725, 0.0784314, 0.176471, 1, 0.121569, 0.113725, 0.329412, 1, 0.172549, 0.223529, 0.541176, 1, 0.164706, 0.364706, 0.741176, 1)
+metadata/_snap_enabled = true
+metadata/_snap_count = 12
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_bb07p"]
+gradient = SubResource("Gradient_a3pes")
+width = 512
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ytd1y"]
+resource_local_to_scene = true
+render_priority = -10
+shader = ExtResource("4_0kb28")
+shader_parameter/rows = 3.0
+shader_parameter/cols = 4.0
+shader_parameter/dither_size = 4.0
+shader_parameter/pal = SubResource("GradientTexture1D_bb07p")
+
+[sub_resource type="BoxMesh" id="BoxMesh_pxw2v"]
+size = Vector3(2, 2, 2)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="noodle" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_yuuwn")
+mesh = ExtResource("1_ky71t")
+
+[node name="IcoSphere" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.1577, 0, -4.58815)
+material_override = SubResource("StandardMaterial3D_pin38")
+mesh = ExtResource("2_duvkc")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_h4rov")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
+transform = Transform3D(0.524864, -0.0644315, -0.848744, 0.747848, -0.441291, 0.495969, -0.406499, -0.895048, -0.183433, 0, 50.6645, 0)
+light_color = Color(1, 0, 0, 1)
+shadow_enabled = true
+directional_shadow_max_distance = 400.0
+
+[node name="shaderbox" type="MeshInstance3D" parent="."]
+material_override = SubResource("ShaderMaterial_ytd1y")
+extra_cull_margin = 16384.0
+mesh = SubResource("BoxMesh_pxw2v")
+skeleton = NodePath("../WorldEnvironment")
+script = ExtResource("4_tyf0g")
+cList = Array[Color]([Color(0.184314, 0.12549, 0.286275, 1), Color(0.478431, 0, 0.2, 1), Color(0.862745, 0.372549, 0.0941176, 1), Color(1, 0.905882, 0.643137, 1), Color(0, 0, 0.211765, 1), Color(0, 0.184314, 0.219608, 1), Color(0, 0.584314, 0.282353, 1), Color(0, 1, 0.396078, 1), Color(0.113725, 0.0784314, 0.176471, 1), Color(0.121569, 0.113725, 0.329412, 1), Color(0.172549, 0.223529, 0.541176, 1), Color(0.164706, 0.364706, 0.741176, 1)])
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.999104, -0.00413691, -0.042108, -0.022067, 0.900083, 0.435159, 0.0361005, 0.435698, -0.899368, 37.144, 51.0133, -80.4209)
+current = true

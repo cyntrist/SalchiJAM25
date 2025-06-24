@@ -1,11 +1,17 @@
-[gd_scene load_steps=10 format=3 uid="uid://chaf34d37npvn"]
+[gd_scene load_steps=12 format=3 uid="uid://chaf34d37npvn"]
 
 [ext_resource type="Shader" uid="uid://b2jcj6037lets" path="res://scripts/shaders/2d to gradient_3D.gdshader" id="1_fdr2t"]
 [ext_resource type="Script" uid="uid://c4fei85qf20v3" path="res://scenes/shaderbox.gd" id="1_t240q"]
 [ext_resource type="ArrayMesh" uid="uid://bdk7xv1txdnlp" path="res://assets/models/normalNoodle.res" id="3_mnawn"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mnawn"]
+
+[sub_resource type="Sky" id="Sky_mnawn"]
+sky_material = SubResource("ProceduralSkyMaterial_mnawn")
+
 [sub_resource type="Environment" id="Environment_ptogf"]
-background_mode = 3
+background_mode = 2
+sky = SubResource("Sky_mnawn")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ptogf"]
 albedo_color = Color(0.849328, 0, 0.025441, 1)
@@ -64,5 +70,5 @@ transform = Transform3D(0.988462, 0, 0.151468, 0, 1, 0, -0.151468, 0, 0.988462, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.61081, 1.14445, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -501.763, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -293.41, 0, 0)
 mesh = ExtResource("3_mnawn")
