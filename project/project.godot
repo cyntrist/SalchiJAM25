@@ -65,3 +65,7 @@ window/stretch/aspect="keep_width"
 [rendering]
 
 environment/defaults/default_clear_color=Color(0.00784314, 0.0431373, 0.0313726, 1)
+
+[xr]
+
+shaders/enabled=true
