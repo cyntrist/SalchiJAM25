@@ -1,10 +1,14 @@
 extends Node
 # SEÑALES
+# flujo
 signal on_transition_begin
 signal on_transition_end
 signal on_enable(scene)
 signal on_disable(scene)
 signal on_game_end()
+# juego
+signal nextLevel
+signal contarHistoria(index) # señal para avanzar de sombra
 
 enum Scenes { SPLASH, MAIN_MENU, INTRO, GAME, CREDITS, NULL}
 

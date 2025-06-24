@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*res://scripts/base/Global.gd"
+JsonParser="*res://scripts/jsonParser/json_parser.gd"
 
 [display]
 

@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgdvboufg10pc"]
+
+[ext_resource type="Script" uid="uid://c8uawt6yvc8fc" path="res://scenes/dialogo/dialogue_box.gd" id="1_rpvob"]
+
+[node name="DialogueBox" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_rpvob")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 528.0
+offset_bottom = 229.0
+
+[node name="Label" type="Label" parent="Button"]
+layout_mode = 0
+offset_right = 532.0
+offset_bottom = 230.0
+
+[connection signal="pressed" from="Button" to="." method="_next_dialogue"]
