@@ -1,3 +1,13 @@
-[gd_scene format=3 uid="uid://ds65u7jltp1el"]
+[gd_scene load_steps=2 format=3 uid="uid://ds65u7jltp1el"]
+
+[sub_resource type="Environment" id="Environment_ptogf"]
 
 [node name="CyntristScene" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ptogf")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="WorldEnvironment"]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="WorldEnvironment"]
+transform = Transform3D(0.873483, 0, -0.486854, 0.226069, 0.885653, 0.4056, 0.431184, -0.464347, 0.773603, -1.10002, 1.04375, 1.72372)
