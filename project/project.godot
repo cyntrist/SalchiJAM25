@@ -13,7 +13,7 @@ config_version=5
 config/name="SalchiJAM25"
 run/main_scene="uid://t4p55hjx1m5i"
 config/features=PackedStringArray("4.4", "Forward Plus")
-boot_splash/bg_color=Color(0.00829097, 0.0440785, 0.0318227, 1)
+boot_splash/bg_color=Color(0.054902, 0.054902, 0.054902, 1)
 config/icon="res://icon.svg"
 
 [autoload]

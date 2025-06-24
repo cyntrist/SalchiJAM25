@@ -138,4 +138,26 @@ libraries = {
 volume_db = -10.0
 autoplay = true
 
+[node name="Aviso" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Aviso"]
+layout_mode = 0
+offset_left = 397.0
+offset_top = 620.0
+offset_right = 866.0
+offset_bottom = 672.0
+color = Color(0.215686, 0.529412, 0.403922, 0.384314)
+
+[node name="Label" type="Label" parent="Aviso"]
+layout_mode = 0
+offset_left = 492.0
+offset_top = 634.0
+offset_right = 780.0
+offset_bottom = 657.0
+text = "Pulsa cualquier botón para continuar"
+
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
