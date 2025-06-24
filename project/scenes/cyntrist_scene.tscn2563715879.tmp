@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://chaf34d37npvn"]
+[gd_scene load_steps=14 format=3 uid="uid://chaf34d37npvn"]
 
 [ext_resource type="Shader" uid="uid://b2jcj6037lets" path="res://scripts/shaders/2d to gradient_3D.gdshader" id="1_fdr2t"]
 [ext_resource type="Script" uid="uid://c4fei85qf20v3" path="res://scenes/shaderbox.gd" id="1_t240q"]
@@ -38,8 +38,6 @@ size = Vector3(2, 2, 2)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_unqb3"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ljyf"]
-
 [node name="CyntristScene" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -49,8 +47,6 @@ environment = SubResource("Environment_ptogf")
 transform = Transform3D(0.625878, 0.66051, -0.414734, -0.561631, 0.750665, 0.347955, 0.541154, 0.0151505, 0.840787, -0.311668, 10.9445, 15.7827)
 light_color = Color(1, 0, 0, 1)
 shadow_enabled = true
-shadow_normal_bias = 0.0
-shadow_blur = 0.9
 directional_shadow_max_distance = 400.0
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="."]
@@ -76,8 +72,4 @@ material = SubResource("StandardMaterial3D_unqb3")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0113193, -0.000185555, -0.000784627, 8.16086e-05, 0.00931027, -0.000683621, 0.00138796, 0.000965838, 0.00643908, -1.94565, -0.511065, 1.34274)
 mesh = ExtResource("3_mnawn")
-
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.427342, 1.01361, 0)
-material = SubResource("StandardMaterial3D_4ljyf")
 script = ExtResource("3_unqb3")
