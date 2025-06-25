@@ -1,9 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://chaf34d37npvn"]
+[gd_scene load_steps=12 format=3 uid="uid://cagciatay3u85"]
 
-[ext_resource type="Shader" uid="uid://b2jcj6037lets" path="res://scripts/shaders/2d to gradient_3D.gdshader" id="1_fdr2t"]
-[ext_resource type="Script" uid="uid://c4fei85qf20v3" path="res://scenes/shaderbox.gd" id="1_t240q"]
-[ext_resource type="ArrayMesh" uid="uid://bdk7xv1txdnlp" path="res://assets/models/normalNoodle.res" id="3_mnawn"]
-[ext_resource type="Script" uid="uid://csu0hw21baqef" path="res://scenes/rotable.gd" id="3_unqb3"]
+[ext_resource type="Shader" uid="uid://b2jcj6037lets" path="res://scripts/shaders/2d to gradient_3D.gdshader" id="1_q04gk"]
+[ext_resource type="Script" uid="uid://c4fei85qf20v3" path="res://scenes/shaderbox.gd" id="2_irjko"]
+[ext_resource type="PackedScene" uid="uid://bslpvbowedeel" path="res://assets/models/mano.tscn" id="3_lofah"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mnawn"]
 
@@ -17,28 +16,24 @@ sky = SubResource("Sky_mnawn")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mnawn"]
 albedo_color = Color(0.190762, 0.190762, 0.190762, 1)
 
-[sub_resource type="Gradient" id="Gradient_unqb3"]
+[sub_resource type="Gradient" id="Gradient_lofah"]
 interpolation_mode = 1
 offsets = PackedFloat32Array(0, 0.0833333, 0.166667, 0.25, 0.333333, 0.416667, 0.5, 0.583333, 0.666667, 0.75, 0.833333, 0.916667)
 colors = PackedColorArray(0.00784314, 0.00784314, 0.00784314, 1, 0.262745, 0.262745, 0.262745, 1, 0.862745, 0.372549, 0.0941176, 1, 0.113725, 0.0784314, 0.176471, 1, 0, 0, 0.211765, 1, 0.00392157, 0.054902, 0.321569, 1, 0.00392157, 0.12549, 0.72549, 1, 0.164706, 0.364706, 0.741176, 1, 1, 0.905882, 0.643137, 1, 0.188235, 0.321569, 0.980392, 1, 0.121569, 0.113725, 0.329412, 1, 0.172549, 0.223529, 0.541176, 1)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_4ljyf"]
-gradient = SubResource("Gradient_unqb3")
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_q04gk"]
+gradient = SubResource("Gradient_lofah")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4ljyf"]
 render_priority = -10
-shader = ExtResource("1_fdr2t")
+shader = ExtResource("1_q04gk")
 shader_parameter/rows = 3.0
 shader_parameter/cols = 4.0
 shader_parameter/dither_size = 4.0
-shader_parameter/pal = SubResource("GradientTexture1D_4ljyf")
+shader_parameter/pal = SubResource("GradientTexture1D_q04gk")
 
 [sub_resource type="BoxMesh" id="BoxMesh_qmgvp"]
 size = Vector3(2, 2, 2)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_unqb3"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ljyf"]
 
 [node name="CyntristScene" type="Node3D"]
 
@@ -63,21 +58,11 @@ transform = Transform3D(1, 0, 0, 0, 0.99984, -0.0179061, 0, 0.0179061, 0.99984, 
 material_override = SubResource("ShaderMaterial_4ljyf")
 extra_cull_margin = 16384.0
 mesh = SubResource("BoxMesh_qmgvp")
-script = ExtResource("1_t240q")
+script = ExtResource("2_irjko")
 cList = Array[Color]([Color(0.00784314, 0.00784314, 0.00784314, 1), Color(0.262745, 0.262745, 0.262745, 1), Color(0.862745, 0.372549, 0.0941176, 1), Color(0.113725, 0.0784314, 0.176471, 1), Color(0, 0, 0.211765, 1), Color(0.00392157, 0.054902, 0.321569, 1), Color(0.00392157, 0.12549, 0.72549, 1), Color(0.164706, 0.364706, 0.741176, 1), Color(1, 0.905882, 0.643137, 1), Color(0.188235, 0.321569, 0.980392, 1), Color(0.121569, 0.113725, 0.329412, 1), Color(0.172549, 0.223529, 0.541176, 1)])
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.988462, 0, 0.151468, 0, 1, 0, -0.151468, 0, 0.988462, 1.06847, 1.53369, 3.16994)
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.873866, -0.486168, 0, 0.486168, 0.873866, 2.12552, 1.14445, 0.445628)
-material = SubResource("StandardMaterial3D_unqb3")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.0113193, -0.000185555, -0.000784627, 8.16086e-05, 0.00931027, -0.000683621, 0.00138796, 0.000965838, 0.00643908, -1.94565, -0.511065, 1.34274)
-mesh = ExtResource("3_mnawn")
-
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.427342, 1.01361, 0)
-material = SubResource("StandardMaterial3D_4ljyf")
-script = ExtResource("3_unqb3")
+[node name="MANO" parent="." instance=ExtResource("3_lofah")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 1.49783, 0)
