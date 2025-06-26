@@ -60,7 +60,7 @@ script = ExtResource("3_q04gk")
 environment = SubResource("Environment_ptogf")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
-transform = Transform3D(0.526977, 0.648755, -0.549011, -0.561631, 0.750665, 0.347955, 0.637861, 0.124977, 0.759944, -12.9924, 10.9445, 15.7827)
+transform = Transform3D(0.800732, 0.599024, 0, -0.355472, 0.475169, -0.804894, -0.482151, 0.644504, 0.593419, -12.9924, 10.9445, 15.7827)
 light_color = Color(1, 0, 0, 1)
 shadow_enabled = true
 shadow_bias = 0.035
@@ -71,8 +71,8 @@ directional_shadow_max_distance = 27.1
 directional_shadow_pancake_size = 11.2
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="."]
-transform = Transform3D(0.999938, 0, -0.0111001, 0, 1, 0, 0.0111001, 0, 0.999938, 0.741821, 0.364097, -1.25608)
-size = Vector3(11.5133, 7.52144, 0.241333)
+transform = Transform3D(0.999938, 0, -0.0111001, 0, 1, 0, 0.0111001, 0, 0.999938, 0.741821, 0.364097, -1.43296)
+size = Vector3(18.8857, 16.957, 0.241333)
 material = SubResource("StandardMaterial3D_mnawn")
 
 [node name="shaderbox" type="MeshInstance3D" parent="."]
@@ -84,10 +84,10 @@ script = ExtResource("2_irjko")
 cList = Array[Color]([Color(0.00784314, 0.00784314, 0.00784314, 1), Color(0.262745, 0.262745, 0.262745, 1), Color(0.862745, 0.372549, 0.0941176, 1), Color(0.113725, 0.0784314, 0.176471, 1), Color(0, 0, 0.211765, 1), Color(0.00392157, 0.054902, 0.321569, 1), Color(0.00392157, 0.12549, 0.72549, 1), Color(0.164706, 0.364706, 0.741176, 1), Color(1, 0.905882, 0.643137, 1), Color(0.188235, 0.321569, 0.980392, 1), Color(0.121569, 0.113725, 0.329412, 1), Color(0.172549, 0.223529, 0.541176, 1)])
 
 [node name="MANO" parent="." instance=ExtResource("3_lofah")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.771, 1.498, 0)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.771, 0.233436, 0)
 
 [node name="MANO2" parent="." instance=ExtResource("3_lofah")]
-transform = Transform3D(-0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.770528, 1.49783, 0)
+transform = Transform3D(-0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.770528, 0.233266, 0)
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.873866, -0.486168, 0, 0.486168, 0.873866, 2.12552, 1.14445, 0.445628)
