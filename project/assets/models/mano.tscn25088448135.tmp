@@ -1,0 +1,558 @@
+[gd_scene load_steps=14 format=3 uid="uid://bslpvbowedeel"]
+
+[ext_resource type="PackedScene" uid="uid://crnhs87x11khv" path="res://assets/models/MANO.fbx" id="1_efll3"]
+[ext_resource type="Script" uid="uid://k48i5dkerj25" path="res://scripts/mano.gd" id="2_6h2rq"]
+[ext_resource type="Script" uid="uid://csu0hw21baqef" path="res://scripts/rotable.gd" id="2_5886d"]
+[ext_resource type="Script" uid="uid://e3f1ox6y6cvg" path="res://addons/Gizmo3DScript/gizmo3D.gd" id="4_6h2rq"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5886d"]
+radius = 0.0206322
+height = 0.10172
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mb73p"]
+radius = 0.0192854
+height = 0.0566214
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6h2rq"]
+radius = 0.010984
+height = 0.021968
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_q0fwf"]
+radius = 0.00648464
+height = 0.0195142
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fuxoh"]
+radius = 0.00848968
+height = 0.0169794
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mqmft"]
+radius = 0.00677691
+height = 0.0255704
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ynj6x"]
+radius = 0.00607882
+height = 0.0183387
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1u2xy"]
+radius = 0.00501836
+height = 0.0162814
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_n6cdg"]
+radius = 0.00405459
+height = 0.0168991
+
+[node name="MANO" instance=ExtResource("1_efll3")]
+script = ExtResource("2_6h2rq")
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/1/position = Vector3(0, 0.124201, -4.65661e-10)
+bones/1/rotation = Quaternion(0.074675, -0.000899469, -0.0178706, 0.997047)
+bones/1/scale = Vector3(1, 1, 1)
+bones/2/position = Vector3(0.00887169, 0.00501714, 0.0013783)
+bones/2/rotation = Quaternion(-0.153978, 0.200767, -0.434456, 0.864425)
+bones/2/scale = Vector3(1, 1, 1)
+bones/3/position = Vector3(-3.72529e-09, 0.0137614, 0)
+bones/3/rotation = Quaternion(0.021309, -0.127524, -0.107608, 0.985751)
+bones/3/scale = Vector3(1, 1, 1)
+bones/4/position = Vector3(-5.58794e-09, 0.00723151, 6.98492e-10)
+bones/4/rotation = Quaternion(0.0654172, 0.194986, 0.0495695, 0.977366)
+bones/4/scale = Vector3(1, 1, 1)
+bones/6/position = Vector3(-0.00578879, 0.00630824, 0.00226969)
+bones/6/rotation = Quaternion(-0.0571, -0.0217229, 0.150153, 0.986773)
+bones/6/scale = Vector3(1, 1, 1)
+bones/7/position = Vector3(1.3737e-08, 0.0243032, -7.85803e-10)
+bones/7/rotation = Quaternion(3.39643e-05, 0.0310605, -0.0586358, 0.997796)
+bones/7/scale = Vector3(1, 0.999999, 0.999999)
+bones/8/position = Vector3(-4.65661e-10, 0.013292, 5.09317e-11)
+bones/8/rotation = Quaternion(-0.00189382, 0.000153886, -0.0471302, 0.998887)
+bones/8/scale = Vector3(1, 1, 1)
+bones/9/position = Vector3(2.79397e-09, 0.00880343, 7.27596e-12)
+bones/9/rotation = Quaternion(2.9163e-06, 4.30477e-08, -0.0254433, 0.999676)
+bones/9/scale = Vector3(1, 1, 1)
+bones/11/position = Vector3(-0.00153603, 0.00953883, 0.00211755)
+bones/11/rotation = Quaternion(-0.0623889, 0.007287, 0.0885749, 0.994087)
+bones/11/scale = Vector3(1, 1, 1)
+bones/12/position = Vector3(-1.28057e-08, 0.0226304, 5.52973e-10)
+bones/12/rotation = Quaternion(0.00167044, -0.00182532, -0.03811, 0.99927)
+bones/12/scale = Vector3(1, 1, 1)
+bones/13/position = Vector3(-6.0536e-09, 0.0156432, 1.45519e-11)
+bones/13/rotation = Quaternion(-0.00160371, 2.43602e-05, -0.0329524, 0.999456)
+bones/13/scale = Vector3(1, 1, 1)
+bones/14/position = Vector3(-5.12227e-09, 0.010532, -2.91038e-11)
+bones/14/rotation = Quaternion(-5.29923e-11, 3.63517e-12, -1.23009e-08, 1)
+bones/14/scale = Vector3(1, 1, 1)
+bones/16/position = Vector3(0.00190172, 0.00986415, 0.00214922)
+bones/16/rotation = Quaternion(-0.0614876, 0.0254245, -0.0355419, 0.997151)
+bones/16/scale = Vector3(1, 1, 1)
+bones/17/position = Vector3(-1.39698e-09, 0.0227378, -4.65661e-10)
+bones/17/rotation = Quaternion(0.000274548, -0.0273974, 0.0476429, 0.998489)
+bones/17/scale = Vector3(1, 1, 0.999999)
+bones/18/position = Vector3(9.31323e-10, 0.0157314, -1.45519e-11)
+bones/18/rotation = Quaternion(-0.00159694, -4.81818e-05, 0.000801301, 0.999998)
+bones/18/scale = Vector3(1, 1, 1)
+bones/19/position = Vector3(0, 0.0133248, 0)
+bones/19/rotation = Quaternion(-3.85289e-07, -5.90264e-08, 0.00336093, 0.999994)
+bones/19/scale = Vector3(1, 1, 1)
+bones/21/position = Vector3(0.0063295, 0.00841768, 0.00200454)
+bones/21/rotation = Quaternion(-0.052503, 0.071268, -0.122365, 0.98853)
+bones/21/scale = Vector3(1, 1, 1)
+bones/22/position = Vector3(4.19095e-09, 0.023038, -8.14907e-10)
+bones/22/rotation = Quaternion(-0.00636177, -0.078586, 0.0988077, 0.991978)
+bones/22/scale = Vector3(0.999999, 1, 0.999999)
+bones/23/position = Vector3(1.86265e-09, 0.0164793, 4.36557e-10)
+bones/23/rotation = Quaternion(-0.00153095, -0.0001052, 0.0274679, 0.999622)
+bones/23/scale = Vector3(1, 1, 1)
+bones/24/position = Vector3(5.58794e-09, 0.0111567, 0)
+bones/24/rotation = Quaternion(-1.09446e-06, 5.06969e-08, 0.00958013, 0.999954)
+bones/24/scale = Vector3(1, 1, 1)
+
+[node name="Brazo" type="BoneAttachment3D" parent="Armature/Skeleton3D" index="1"]
+transform = Transform3D(1, 4.26326e-14, 2.38419e-07, 2.38347e-07, 0.0244662, -0.999701, -5.83324e-09, 0.999701, 0.0244662, 0, 0, -0.123066)
+rotation_edit_mode = 1
+bone_name = "Brazo"
+bone_idx = 0
+use_external_skeleton = true
+external_skeleton = NodePath("..")
+script = ExtResource("2_5886d")
+
+[node name="BrazoCol" type="StaticBody3D" parent="Armature/Skeleton3D/Brazo" index="0"]
+transform = Transform3D(1, 2.23513e-09, 1.42109e-14, 4.02379e-09, 1, -1.30385e-08, 9.21403e-10, 2.23517e-08, 1, -6.98124e-10, 0.0637818, 0.00156097)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Armature/Skeleton3D/Brazo/BrazoCol" index="0"]
+transform = Transform3D(1, -4.44089e-16, 8.52651e-14, 0, 1, -1.86265e-09, -4.26326e-14, 1.86265e-09, 1, -6.56918e-11, 0.00814011, 0.000199218)
+shape = SubResource("CapsuleShape3D_5886d")
+
+[node name="Palma" type="BoneAttachment3D" parent="Armature/Skeleton3D/Brazo" index="1"]
+transform = Transform3D(0.99936, 0.0355013, -0.0044626, -0.03577, 0.988208, -0.148877, -0.000875346, 0.148941, 0.988845, 0, 0.124201, -2.32831e-10)
+rotation_edit_mode = 1
+bone_name = "Palma_1"
+bone_idx = 1
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../..")
+script = ExtResource("2_5886d")
+
+[node name="PalmaCol" type="StaticBody3D" parent="Armature/Skeleton3D/Brazo/Palma" index="0"]
+transform = Transform3D(1, 1.75112e-09, 4.91696e-10, 2.13179e-09, 1, -7.45058e-09, 7.26089e-10, 3.72529e-08, 1, -3.27418e-10, -5.82077e-11, -6.98492e-10)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Armature/Skeleton3D/Brazo/Palma/PalmaCol" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.79518e-06, 0.00362453, 0.000859869)
+shape = SubResource("CapsuleShape3D_mb73p")
+
+[node name="Pulgar1" type="BoneAttachment3D" parent="Armature/Skeleton3D/Brazo/Palma" index="1"]
+transform = Transform3D(0.541881, 0.689282, 0.48089, -0.812937, 0.575078, 0.0917555, -0.213304, -0.440654, 0.871967, 0.00887169, 0.00501714, 0.0013783)
+rotation_edit_mode = 1
+bone_name = "Pulgar_1"
+bone_idx = 2
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../../..")
+script = ExtResource("2_5886d")
+
+[node name="Pulgar1Col" type="StaticBody3D" parent="Armature/Skeleton3D/Brazo/Palma/Pulgar1" index="0"]
+transform = Transform3D(1, 2.23517e-08, 0, 5.96046e-08, 1, 0, 0, 2.98023e-08, 1, -3.49246e-10, -9.31323e-10, -9.31323e-10)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Armature/Skeleton3D/Brazo/Palma/Pulgar1/Pulgar1Col" index="0"]
+transform = Transform3D(1, -2.23517e-08, -2.98023e-08, 7.45058e-09, 1, 5.96046e-08, 1.19209e-07, 5.96046e-08, 1, -0.000886077, 0.00919377, 0.000201059)
+shape = SubResource("CapsuleShape3D_6h2rq")
+
+[node name="Pulgar2" type="BoneAttachment3D" parent="Armature/Skeleton3D/Brazo/Palma/Pulgar1" index="1"]
+transform = Transform3D(0.944316, 0.206714, -0.255999, -0.217584, 0.975933, -0.0145654, 0.246827, 0.0694557, 0.966567, 1.16415e-10, 0.0137614, -2.32831e-10)
+rotation_edit_mode = 1
+bone_name = "Pulgar_2"
+bone_idx = 3
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../../../..")
+script = ExtResource("2_5886d")
+
+[node name="Pulgar2Col" type="StaticBody3D" parent="Armature/Skeleton3D/Brazo/Palma/Pulgar1/Pulgar2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Armature/Skeleton3D/Brazo/Palma/Pulgar1/Pulgar2/Pulgar2Col" index="0"]
+transform = Transform3D(0.985957, -0.136086, 0.0967761, 0.125128, 0.985856, 0.111495, -0.11058, -0.0978197, 0.98904, -0.000216016, 0.00515222, -5.85886e-05)
+shape = SubResource("CapsuleShape3D_q0fwf")
+
+[node name="Pulgar3" type="BoneAttachment3D" parent="Armature/Skeleton3D/Brazo/Palma/Pulgar1/Pulgar2" index="1"]
+transform = Transform3D(0.919047, -0.0713845, 0.38763, 0.122406, 0.986527, -0.108543, -0.374659, 0.147204, 0.915402, 9.31323e-10, 0.00723151, -4.65661e-10)
+rotation_edit_mode = 1
+bone_name = "Pulgar_3"
+bone_idx = 4
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../../../../..")
+script = ExtResource("2_5886d")
+
+[node name="Pulgar3Col" type="StaticBody3D" parent="Armature/Skeleton3D/Brazo/Palma/Pulgar1/Pulgar2/Pulgar3" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Armature/Skeleton3D/Brazo/Palma/Pulgar1/Pulgar2/Pulgar3/Pulgar3Col" index="0"]
+transform = Transform3D(0.999998, 0, -2.98023e-08, -2.23517e-08, 1, -1.49012e-08, -5.96046e-08, -8.9407e-08, 0.999999, 0.000120754, 0.00581663, -0.00116218)
+shape = SubResource("CapsuleShape3D_fuxoh")
+
+[node name="Gizmo3D" type="Node3D" parent="Armature/Skeleton3D/Brazo/Palma/Pulgar1/Pulgar2/Pulgar3" index="1"]
+script = ExtResource("4_6h2rq")
+mode = 2
+metadata/_custom_type_script = "uid://e3f1ox6y6cvg"
+
+[node name="Gizmo3D" type="Node3D" parent="Armature/Skeleton3D/Brazo/Palma/Pulgar1/Pulgar2" index="2"]
+script = ExtResource("4_6h2rq")
+mode = 2
+metadata/_custom_type_script = "uid://e3f1ox6y6cvg"
+
+[node name="Gizmo3D" type="Node3D" parent="Armature/Skeleton3D/Brazo/Palma/Pulgar1" index="2"]
+script = ExtResource("4_6h2rq")
+mode = 2
+metadata/_custom_type_script = "uid://e3f1ox6y6cvg"
+
+[node name="Menique0" type="BoneAttachment3D" parent="Armature/Skeleton3D/Brazo/Palma" index="2"]
+transform = Transform3D(0.953965, -0.293852, -0.0600184, 0.298814, 0.948388, 0.106166, 0.0257237, -0.119213, 0.992536, -0.00578879, 0.00630824, 0.00226969)
+rotation_edit_mode = 1
+bone_name = "Meñique_0"
+bone_idx = 6
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../../..")
+script = ExtResource("2_5886d")
+
+[node name="Menique0Col" type="StaticBody3D" parent="Armature/Skeleton3D/Brazo/Palma/Menique0" index="0"]
+transform = Transform3D(0.998841, 0.00682926, -0.0476359, -0.0149912, 0.98478, -0.173157, 0.0457283, 0.17367, 0.983741, 0.000147799, 0.0244412, -0.000335505)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Armature/Skeleton3D/Brazo/Palma/Menique0/Menique0Col" index="0"]
+transform = Transform3D(0.99514, 0.0791614, 0.0585624, -0.0878297, 0.982471, 0.164426, -0.0445196, -0.16877, 0.984649, -0.000817412, -0.00756093, 5.14238e-05)
+shape = SubResource("CapsuleShape3D_mqmft")
+
+[node name="Menique1" type="BoneAttachment3D" parent="Armature/Skeleton3D/Brazo/Palma/Menique0" index="1"]
+transform = Transform3D(0.991194, 0.117015, 0.06198, -0.117011, 0.993123, -0.00371025, -0.061988, -0.00357475, 0.99807, 0, 0.0243032, -2.03727e-10)
+rotation_edit_mode = 1
+bone_name = "Meñique_1"
+bone_idx = 7
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../../../..")
+script = ExtResource("2_5886d")
+
+[node name="Menique1Col" type="StaticBody3D" parent="Armature/Skeleton3D/Brazo/Palma/Menique0/Menique1" index="0"]
+transform = Transform3D(0.998841, 0.00682917, -0.0476358, -0.0149912, 0.98478, -0.173157, 0.0457283, 0.17367, 0.98374, 0.00130322, 0.0160785, -0.000304329)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Armature/Skeleton3D/Brazo/Palma/Menique0/Menique1/Menique1Col" index="0"]
+transform = Transform3D(0.995403, 0.0757546, 0.0586069, -0.0844757, 0.982758, 0.164468, -0.0451372, -0.168663, 0.98464, -0.000817413, -0.00756093, 5.14248e-05)
+shape = SubResource("CapsuleShape3D_ynj6x")
+
+[node name="Menique2" type="BoneAttachment3D" parent="Armature/Skeleton3D/Brazo/Palma/Menique0/Menique1" index="1"]
+transform = Transform3D(0.995557, 0.0941548, 0.000485926, -0.0941561, 0.99555, 0.00376894, -0.0001289, -0.00379793, 0.999993, -3.25963e-09, 0.013292, 0)
+rotation_edit_mode = 1
+bone_name = "Meñique_2"
+bone_idx = 8
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../../../../..")
+script = ExtResource("2_5886d")
+
+[node name="Menique2Col" type="StaticBody3D" parent="Armature/Skeleton3D/Brazo/Palma/Menique0/Menique1/Menique2" index="0"]
+transform = Transform3D(0.997363, -0.0619927, -0.0377181, 0.0597224, 0.996494, -0.0585976, 0.0412185, 0.0561906, 0.997568, 0.000450281, 0.0129202, -0.000304428)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Armature/Skeleton3D/Brazo/Palma/Menique0/Menique1/Menique2/Menique2Col" index="0"]
+transform = Transform3D(0.995403, 0.0757546, 0.0586069, -0.0844757, 0.982758, 0.164468, -0.0451372, -0.168663, 0.98464, -0.000788547, -0.00685176, 1.02846e-05)
+shape = SubResource("CapsuleShape3D_1u2xy")
+
+[node name="Menique3" type="BoneAttachment3D" parent="Armature/Skeleton3D/Brazo/Palma/Menique0/Menique1/Menique2" index="1"]
+transform = Transform3D(0.998705, 0.0508702, -6.08052e-08, -0.0508702, 0.998705, -5.83481e-06, -2.34504e-07, 5.82869e-06, 1, 9.31323e-10, 0.00880343, 1.09139e-11)
+rotation_edit_mode = 1
+bone_name = "Meñique_3"
+bone_idx = 9
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../../../../../..")
+script = ExtResource("2_5886d")
+
+[node name="Menique3Col" type="StaticBody3D" parent="Armature/Skeleton3D/Brazo/Palma/Menique0/Menique1/Menique2/Menique3" index="0"]
+transform = Transform3D(0.997363, -0.0619927, -0.0377181, 0.0597224, 0.996494, -0.0585976, 0.0412185, 0.0561906, 0.997568, 0.000450281, 0.0129202, -0.000304427)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Armature/Skeleton3D/Brazo/Palma/Menique0/Menique1/Menique2/Menique3/Menique3Col" index="0"]
+transform = Transform3D(0.995403, 0.0757546, 0.0586069, -0.0844757, 0.982758, 0.164468, -0.0451372, -0.168663, 0.98464, -0.000788547, -0.00685176, 1.02846e-05)
+shape = SubResource("CapsuleShape3D_n6cdg")
+
+[node name="Gizmo3D" type="Node3D" parent="Armature/Skeleton3D/Brazo/Palma/Menique0/Menique1/Menique2/Menique3" index="1"]
+script = ExtResource("4_6h2rq")
+mode = 2
+metadata/_custom_type_script = "uid://e3f1ox6y6cvg"
+
+[node name="Gizmo3D" type="Node3D" parent="Armature/Skeleton3D/Brazo/Palma/Menique0/Menique1/Menique2" index="2"]
+script = ExtResource("4_6h2rq")
+mode = 2
+metadata/_custom_type_script = "uid://e3f1ox6y6cvg"
+
+[node name="Gizmo3D" type="Node3D" parent="Armature/Skeleton3D/Brazo/Palma/Menique0/Menique1" index="2"]
+script = ExtResource("4_6h2rq")
+mode = 2
+metadata/_custom_type_script = "uid://e3f1ox6y6cvg"
+
+[node name="Gizmo3D" type="Node3D" parent="Armature/Skeleton3D/Brazo/Palma/Menique0" index="2"]
+script = ExtResource("4_6h2rq")
+mode = 2
+metadata/_custom_type_script = "uid://e3f1ox6y6cvg"
+
+[node name="Anular0" type="BoneAttachment3D" parent="Armature/Skeleton3D/Brazo/Palma" index="3"]
+transform = Transform3D(0.984203, -0.177012, 0.00343554, 0.175193, 0.976524, 0.125331, -0.02554, -0.122749, 0.992109, -0.00153603, 0.00953883, 0.00211755)
+rotation_edit_mode = 1
+bone_name = "Anular_0"
+bone_idx = 11
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../../..")
+script = ExtResource("2_5886d")
+
+[node name="Anular0Col" type="StaticBody3D" parent="Armature/Skeleton3D/Brazo/Palma/Anular0" index="0"]
+transform = Transform3D(0.999672, -0.00291046, -0.0254355, -0.00166699, 0.984009, -0.17811, 0.0255471, 0.178094, 0.983681, 0.000146492, 0.0243406, 0.000315809)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Armature/Skeleton3D/Brazo/Palma/Anular0/Anular0Col" index="0"]
+transform = Transform3D(0.99514, 0.0791614, 0.0585624, -0.0878297, 0.982471, 0.164426, -0.0445196, -0.16877, 0.984649, -0.000817412, -0.00756093, 5.14238e-05)
+shape = SubResource("CapsuleShape3D_mqmft")
+
+[node name="Anular1" type="BoneAttachment3D" parent="Armature/Skeleton3D/Brazo/Palma/Anular0" index="1"]
+transform = Transform3D(0.997088, 0.0761583, -0.00377529, -0.0761704, 0.99709, -0.0031993, 0.00352065, 0.00347756, 0.999988, -6.98492e-10, 0.0226304, 6.1118e-10)
+rotation_edit_mode = 1
+bone_name = "Anular_1"
+bone_idx = 12
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../../../..")
+script = ExtResource("2_5886d")
+
+[node name="Anular1Col" type="StaticBody3D" parent="Armature/Skeleton3D/Brazo/Palma/Anular0/Anular1" index="0"]
+transform = Transform3D(0.998841, 0.00682916, -0.0476358, -0.0149912, 0.98478, -0.173157, 0.0457283, 0.17367, 0.98374, 0.00130322, 0.0160785, -0.000304329)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Armature/Skeleton3D/Brazo/Palma/Anular0/Anular1/Anular1Col" index="0"]
+transform = Transform3D(0.995403, 0.0757546, 0.0586069, -0.0844757, 0.982758, 0.164468, -0.0451372, -0.168663, 0.98464, -0.000817413, -0.00756093, 5.14248e-05)
+shape = SubResource("CapsuleShape3D_ynj6x")
+
+[node name="Anular2" type="BoneAttachment3D" parent="Armature/Skeleton3D/Brazo/Palma/Anular0/Anular1" index="1"]
+transform = Transform3D(0.997828, 0.0658688, 0.000154387, -0.0658689, 0.997823, 0.00320407, 5.69978e-05, -0.00320728, 0.999995, 1.16415e-09, 0.0156432, 0)
+rotation_edit_mode = 1
+bone_name = "Anular_2"
+bone_idx = 13
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../../../../..")
+script = ExtResource("2_5886d")
+
+[node name="Anular2Col" type="StaticBody3D" parent="Armature/Skeleton3D/Brazo/Palma/Anular0/Anular1/Anular2" index="0"]
+transform = Transform3D(0.997363, -0.0619927, -0.0377181, 0.0597224, 0.996494, -0.0585976, 0.0412185, 0.0561906, 0.997568, 0.000450281, 0.0129202, -0.000304427)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Armature/Skeleton3D/Brazo/Palma/Anular0/Anular1/Anular2/Anular2Col" index="0"]
+transform = Transform3D(0.995403, 0.0757546, 0.0586069, -0.0844757, 0.982758, 0.164468, -0.0451372, -0.168663, 0.98464, -0.000788547, -0.00685176, 1.02846e-05)
+shape = SubResource("CapsuleShape3D_1u2xy")
+
+[node name="Anular3" type="BoneAttachment3D" parent="Armature/Skeleton3D/Brazo/Palma/Anular0/Anular1/Anular2" index="1"]
+transform = Transform3D(1, -6.69133e-09, -1.45519e-11, 2.20226e-09, 1, -2.79307e-10, 1.45519e-11, 7.90859e-10, 1, -9.31323e-10, 0.010532, 2.91038e-11)
+rotation_edit_mode = 1
+bone_name = "Anular_3"
+bone_idx = 14
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../../../../../..")
+script = ExtResource("2_5886d")
+
+[node name="Anular3Col" type="StaticBody3D" parent="Armature/Skeleton3D/Brazo/Palma/Anular0/Anular1/Anular2/Anular3" index="0"]
+transform = Transform3D(0.997363, -0.0619927, -0.0377181, 0.0597224, 0.996494, -0.0585976, 0.0412185, 0.0561906, 0.997568, 0.000450281, 0.0129202, -0.000304427)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Armature/Skeleton3D/Brazo/Palma/Anular0/Anular1/Anular2/Anular3/Anular3Col" index="0"]
+transform = Transform3D(0.995403, 0.0757546, 0.0586069, -0.0844757, 0.982758, 0.164468, -0.0451372, -0.168663, 0.98464, -0.000788547, -0.00685176, 1.02846e-05)
+shape = SubResource("CapsuleShape3D_n6cdg")
+
+[node name="Gizmo3D" type="Node3D" parent="Armature/Skeleton3D/Brazo/Palma/Anular0/Anular1/Anular2/Anular3" index="1"]
+script = ExtResource("4_6h2rq")
+mode = 2
+metadata/_custom_type_script = "uid://e3f1ox6y6cvg"
+
+[node name="Gizmo3D" type="Node3D" parent="Armature/Skeleton3D/Brazo/Palma/Anular0/Anular1/Anular2" index="2"]
+script = ExtResource("4_6h2rq")
+mode = 2
+metadata/_custom_type_script = "uid://e3f1ox6y6cvg"
+
+[node name="Gizmo3D" type="Node3D" parent="Armature/Skeleton3D/Brazo/Palma/Anular0/Anular1" index="2"]
+script = ExtResource("4_6h2rq")
+mode = 2
+metadata/_custom_type_script = "uid://e3f1ox6y6cvg"
+
+[node name="Gizmo3D" type="Node3D" parent="Armature/Skeleton3D/Brazo/Palma/Anular0" index="2"]
+script = ExtResource("4_6h2rq")
+mode = 2
+metadata/_custom_type_script = "uid://e3f1ox6y6cvg"
+
+[node name="Corazon0" type="BoneAttachment3D" parent="Armature/Skeleton3D/Brazo/Palma" index="4"]
+transform = Transform3D(0.996181, 0.0677547, 0.0550748, -0.0740079, 0.989912, 0.120818, -0.0463333, -0.124432, 0.991146, 0.00190172, 0.00986415, 0.00214922)
+rotation_edit_mode = 1
+bone_name = "Corazon_0"
+bone_idx = 16
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../../..")
+script = ExtResource("2_5886d")
+
+[node name="CorazonCol" type="StaticBody3D" parent="Armature/Skeleton3D/Brazo/Palma/Corazon0" index="0"]
+transform = Transform3D(0.998841, 0.00682925, -0.0476359, -0.0149912, 0.98478, -0.173157, 0.0457283, 0.17367, 0.983741, 0.0001478, 0.0244412, -0.000335505)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Armature/Skeleton3D/Brazo/Palma/Corazon0/CorazonCol" index="0"]
+transform = Transform3D(0.99514, 0.0791614, 0.0585624, -0.0878297, 0.982471, 0.164426, -0.0445196, -0.16877, 0.984649, -0.000817412, -0.00756093, 5.14238e-05)
+shape = SubResource("CapsuleShape3D_mqmft")
+
+[node name="Corazon1" type="BoneAttachment3D" parent="Armature/Skeleton3D/Brazo/Palma/Corazon0" index="1"]
+transform = Transform3D(0.993959, -0.0951568, -0.0546858, 0.0951267, 0.99546, -0.00315885, 0.0547381, -0.00206231, 0.998498, -1.04774e-09, 0.0227378, 8.73115e-11)
+rotation_edit_mode = 1
+bone_name = "Corazon_1"
+bone_idx = 17
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../../../..")
+script = ExtResource("2_5886d")
+
+[node name="Corazon1Col" type="StaticBody3D" parent="Armature/Skeleton3D/Brazo/Palma/Corazon0/Corazon1" index="0"]
+transform = Transform3D(0.998841, 0.00682916, -0.0476358, -0.0149912, 0.984779, -0.173157, 0.0457283, 0.17367, 0.98374, 0.00130322, 0.0160785, -0.000304329)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Armature/Skeleton3D/Brazo/Palma/Corazon0/Corazon1/Corazon1Col" index="0"]
+transform = Transform3D(0.995403, 0.0757546, 0.0586069, -0.0844757, 0.982758, 0.164468, -0.0451372, -0.168663, 0.98464, -0.000817413, -0.00756093, 5.14248e-05)
+shape = SubResource("CapsuleShape3D_ynj6x")
+
+[node name="Corazon2" type="BoneAttachment3D" parent="Armature/Skeleton3D/Brazo/Palma/Corazon0/Corazon1" index="1"]
+transform = Transform3D(0.999999, -0.00160245, -9.8908e-05, 0.00160276, 0.999994, 0.0031938, 9.37994e-05, -0.00319396, 0.999995, 4.65661e-10, 0.0157314, -1.45519e-11)
+rotation_edit_mode = 1
+bone_name = "Corazon_2"
+bone_idx = 18
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../../../../..")
+script = ExtResource("2_5886d")
+
+[node name="Corazon2Col" type="StaticBody3D" parent="Armature/Skeleton3D/Brazo/Palma/Corazon0/Corazon1/Corazon2" index="0"]
+transform = Transform3D(0.997363, -0.0619927, -0.0377181, 0.0597224, 0.996494, -0.0585976, 0.0412185, 0.0561906, 0.997568, 0.000450281, 0.0129202, -0.000304427)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Armature/Skeleton3D/Brazo/Palma/Corazon0/Corazon1/Corazon2/Corazon2Col" index="0"]
+transform = Transform3D(0.995403, 0.0757546, 0.0586069, -0.0844757, 0.982758, 0.164468, -0.0451372, -0.168663, 0.98464, -0.000788547, -0.00685176, 1.02846e-05)
+shape = SubResource("CapsuleShape3D_1u2xy")
+
+[node name="Corazon3" type="BoneAttachment3D" parent="Armature/Skeleton3D/Brazo/Palma/Corazon0/Corazon1/Corazon2" index="1"]
+transform = Transform3D(0.999977, -0.00672181, -1.20643e-07, 0.00672181, 0.999977, 7.7001e-07, 1.15462e-07, -7.71406e-07, 1, -4.65661e-10, 0.0133248, -2.91038e-11)
+rotation_edit_mode = 1
+bone_name = "Corazon_3"
+bone_idx = 19
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../../../../../..")
+script = ExtResource("2_5886d")
+
+[node name="Corazon3Col" type="StaticBody3D" parent="Armature/Skeleton3D/Brazo/Palma/Corazon0/Corazon1/Corazon2/Corazon3" index="0"]
+transform = Transform3D(0.997363, -0.0619927, -0.0377181, 0.0597224, 0.996494, -0.0585976, 0.0412185, 0.0561906, 0.997568, 0.000450281, 0.0129202, -0.000304427)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Armature/Skeleton3D/Brazo/Palma/Corazon0/Corazon1/Corazon2/Corazon3/Corazon3Col" index="0"]
+transform = Transform3D(0.995403, 0.0757546, 0.0586069, -0.0844757, 0.982758, 0.164468, -0.0451372, -0.168663, 0.98464, -0.000788547, -0.00685176, 1.02846e-05)
+shape = SubResource("CapsuleShape3D_n6cdg")
+
+[node name="Gizmo3D" type="Node3D" parent="Armature/Skeleton3D/Brazo/Palma/Corazon0/Corazon1/Corazon2/Corazon3" index="1"]
+script = ExtResource("4_6h2rq")
+mode = 2
+metadata/_custom_type_script = "uid://e3f1ox6y6cvg"
+
+[node name="Gizmo3D" type="Node3D" parent="Armature/Skeleton3D/Brazo/Palma/Corazon0/Corazon1/Corazon2" index="2"]
+script = ExtResource("4_6h2rq")
+mode = 2
+metadata/_custom_type_script = "uid://e3f1ox6y6cvg"
+
+[node name="Gizmo3D" type="Node3D" parent="Armature/Skeleton3D/Brazo/Palma/Corazon0" index="2"]
+script = ExtResource("4_6h2rq")
+mode = 2
+metadata/_custom_type_script = "uid://e3f1ox6y6cvg"
+
+[node name="Indice0" type="BoneAttachment3D" parent="Armature/Skeleton3D/Brazo/Palma" index="5"]
+transform = Transform3D(0.959895, 0.23444, 0.15375, -0.249407, 0.96454, 0.0863602, -0.128052, -0.121243, 0.984329, 0.0063295, 0.00841768, 0.00200454)
+rotation_edit_mode = 1
+bone_name = "Indice_0"
+bone_idx = 21
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../../..")
+script = ExtResource("2_5886d")
+
+[node name="Indice0Col" type="StaticBody3D" parent="Armature/Skeleton3D/Brazo/Palma/Indice0" index="0"]
+transform = Transform3D(0.998841, 0.00682925, -0.0476359, -0.0149912, 0.98478, -0.173157, 0.0457283, 0.17367, 0.983741, 0.000147799, 0.0244412, -0.000335505)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Armature/Skeleton3D/Brazo/Palma/Indice0/Indice0Col" index="0"]
+transform = Transform3D(0.99514, 0.0791614, 0.0585624, -0.0878297, 0.982471, 0.164426, -0.0445196, -0.16877, 0.984649, -0.000817412, -0.00756093, 5.14238e-05)
+shape = SubResource("CapsuleShape3D_mqmft")
+
+[node name="Indice1" type="BoneAttachment3D" parent="Armature/Skeleton3D/Brazo/Palma/Indice0" index="1"]
+transform = Transform3D(0.968122, -0.19503, -0.157168, 0.19703, 0.980393, -0.00290838, 0.154654, -0.0281512, 0.987567, 0, 0.023038, -3.49246e-10)
+rotation_edit_mode = 1
+bone_name = "Indice_1"
+bone_idx = 22
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../../../..")
+script = ExtResource("2_5886d")
+
+[node name="Indice1Col" type="StaticBody3D" parent="Armature/Skeleton3D/Brazo/Palma/Indice0/Indice1" index="0"]
+transform = Transform3D(0.998841, 0.00682917, -0.0476358, -0.0149912, 0.98478, -0.173157, 0.0457283, 0.173671, 0.98374, 0.00130322, 0.0160785, -0.000304329)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Armature/Skeleton3D/Brazo/Palma/Indice0/Indice1/Indice1Col" index="0"]
+transform = Transform3D(0.995403, 0.0757546, 0.0586069, -0.0844757, 0.982758, 0.164468, -0.0451372, -0.168663, 0.98464, -0.000817413, -0.00756093, 5.14248e-05)
+shape = SubResource("CapsuleShape3D_ynj6x")
+
+[node name="Indice2" type="BoneAttachment3D" parent="Armature/Skeleton3D/Brazo/Palma/Indice0/Indice1" index="1"]
+transform = Transform3D(0.998491, -0.0549147, -0.0002944, 0.0549153, 0.998486, 0.00305496, 0.000126214, -0.00306652, 0.999995, -3.72529e-09, 0.0164793, 1.96451e-10)
+rotation_edit_mode = 1
+bone_name = "Indice_2"
+bone_idx = 23
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../../../../..")
+script = ExtResource("2_5886d")
+
+[node name="Indice2Col" type="StaticBody3D" parent="Armature/Skeleton3D/Brazo/Palma/Indice0/Indice1/Indice2" index="0"]
+transform = Transform3D(0.997363, -0.0619927, -0.0377181, 0.0597224, 0.996494, -0.0585976, 0.0412185, 0.0561906, 0.997568, 0.000450281, 0.0129202, -0.000304427)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Armature/Skeleton3D/Brazo/Palma/Indice0/Indice1/Indice2/Indice2Col" index="0"]
+transform = Transform3D(0.995403, 0.0757546, 0.0586069, -0.0844757, 0.982758, 0.164468, -0.0451372, -0.168663, 0.98464, -0.000788547, -0.00685176, 1.02846e-05)
+shape = SubResource("CapsuleShape3D_1u2xy")
+
+[node name="Indice3" type="BoneAttachment3D" parent="Armature/Skeleton3D/Brazo/Palma/Indice0/Indice1/Indice2" index="1"]
+transform = Transform3D(0.999817, -0.0191594, 8.05012e-08, 0.0191594, 0.999817, 2.18992e-06, -1.22345e-07, -2.18782e-06, 1, 1.86265e-09, 0.0111567, 1.09139e-11)
+rotation_edit_mode = 1
+bone_name = "indice_3"
+bone_idx = 24
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../../../../../..")
+script = ExtResource("2_5886d")
+
+[node name="Indice3Col" type="StaticBody3D" parent="Armature/Skeleton3D/Brazo/Palma/Indice0/Indice1/Indice2/Indice3" index="0"]
+transform = Transform3D(0.997363, -0.0619927, -0.0377181, 0.0597224, 0.996494, -0.0585976, 0.0412185, 0.0561906, 0.997568, 0.000450281, 0.0129202, -0.000304427)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Armature/Skeleton3D/Brazo/Palma/Indice0/Indice1/Indice2/Indice3/Indice3Col" index="0"]
+transform = Transform3D(0.995403, 0.0757546, 0.0586069, -0.0844757, 0.982758, 0.164468, -0.0451372, -0.168663, 0.98464, -0.000788547, -0.00685176, 1.02846e-05)
+shape = SubResource("CapsuleShape3D_n6cdg")
+
+[node name="Gizmo3D" type="Node3D" parent="Armature/Skeleton3D/Brazo/Palma/Indice0/Indice1/Indice2" index="2"]
+script = ExtResource("4_6h2rq")
+mode = 2
+metadata/_custom_type_script = "uid://e3f1ox6y6cvg"
+
+[node name="Gizmo3D" type="Node3D" parent="Armature/Skeleton3D/Brazo/Palma/Indice0/Indice1" index="2"]
+script = ExtResource("4_6h2rq")
+mode = 2
+metadata/_custom_type_script = "uid://e3f1ox6y6cvg"
+
+[node name="Gizmo3D" type="Node3D" parent="Armature/Skeleton3D/Brazo/Palma/Indice0" index="2"]
+script = ExtResource("4_6h2rq")
+mode = 2
+metadata/_custom_type_script = "uid://e3f1ox6y6cvg"
+
+[node name="Gizmo3D" type="Node3D" parent="Armature/Skeleton3D/Brazo/Palma" index="6"]
+script = ExtResource("4_6h2rq")
+mode = 2
+metadata/_custom_type_script = "uid://e3f1ox6y6cvg"
+
+[node name="Gizmo3D" type="Node3D" parent="Armature/Skeleton3D/Brazo" index="2"]
+script = ExtResource("4_6h2rq")
+mode = 3
+metadata/_custom_type_script = "uid://e3f1ox6y6cvg"

@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bem4wihxka0tu"]
+
+[ext_resource type="PackedScene" uid="uid://dv5r46dyp4hcl" path="res://assets/models/gizmos.fbx" id="1_gtiwi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_upqhi"]
+albedo_color = Color(0, 1, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rhoey"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jwuak"]
+albedo_color = Color(0, 0, 1, 1)
+
+[node name="gizmos" instance=ExtResource("1_gtiwi")]
+
+[node name="GizmoY" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_upqhi")
+
+[node name="GizmoX" parent="." index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_rhoey")
+
+[node name="GizmoZ" parent="." index="2"]
+surface_material_override/0 = SubResource("StandardMaterial3D_jwuak")
