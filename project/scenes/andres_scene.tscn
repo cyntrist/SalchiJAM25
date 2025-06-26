@@ -48,7 +48,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24298, 2.35625)
 
 [node name="CameraSombras" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.748422, 1.63852, -0.290083)
-fov = 120.0
 script = ExtResource("3_q04gk")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
