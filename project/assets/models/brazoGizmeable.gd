@@ -9,7 +9,8 @@ func  _input(event: InputEvent) -> void:
 	if event is InputEventKey and event.is_pressed():
 		if event.keycode == KEY_Q or event.keycode == KEY_E:
 			giro = not giro
-		
+		if event.keycode == KEY_R:
+				reset_pos()
 		if giro:
 			match event.keycode:
 				KEY_RIGHT:

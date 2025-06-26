@@ -68,9 +68,8 @@ size = Vector3(2, 2, 2)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_irjko"]
 
-[node name="AndresScene" type="Node3D" node_paths=PackedStringArray("manos")]
+[node name="AndresScene" type="Node3D"]
 script = ExtResource("1_24kfx")
-manos = [NodePath("MANO"), NodePath("MANO2")]
 
 [node name="Camera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24298, 2.35625)

@@ -45,6 +45,8 @@ func  _input(event: InputEvent) -> void:
 					Vector3(0,0,1):
 						axis = Vector3(0,1,0)
 						set_axis_vis(0)
+			KEY_R:
+				reset_pos()
 
 func set_axis_vis(n):
 	for c in gizmos.get_children():
