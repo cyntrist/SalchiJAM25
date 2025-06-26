@@ -1,12 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://cagciatay3u85"]
+[gd_scene load_steps=15 format=3 uid="uid://cagciatay3u85"]
 
 [ext_resource type="Shader" uid="uid://b2jcj6037lets" path="res://scripts/shaders/2d to gradient_3D.gdshader" id="1_q04gk"]
 [ext_resource type="Script" uid="uid://c4fei85qf20v3" path="res://scripts/shaders/shaderbox.gd" id="2_irjko"]
-[ext_resource type="Script" uid="uid://b0reyf6s75rus" path="res://scripts/camera_sombras.gd" id="2_yfca1"]
-[ext_resource type="Script" uid="uid://bf36gv8raoibe" path="res://scenes/flickering_light.gd" id="3_24kfx"]
+[ext_resource type="Script" path="res://scripts/camera_sombras.gd" id="2_yfca1"]
 [ext_resource type="Script" uid="uid://by2kdi7hju2bj" path="res://scripts/camera_3d.gd" id="3_q04gk"]
 [ext_resource type="Script" uid="uid://cne05dlno2a5e" path="res://scripts/image_comparator.gd" id="5_irjko"]
-[ext_resource type="PackedScene" uid="uid://chaf34d37npvn" path="res://scenes/cyntrist_scene.tscn" id="5_yfca1"]
+[ext_resource type="PackedScene" uid="uid://chaf34d37npvn" path="res://scenes/MANO5.tscn" id="5_yfca1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mnawn"]
 
@@ -17,13 +16,13 @@ sky_material = SubResource("ProceduralSkyMaterial_mnawn")
 background_mode = 2
 sky = SubResource("Sky_yfca1")
 
-[sub_resource type="Gradient" id="Gradient_24kfx"]
+[sub_resource type="Gradient" id="Gradient_yfca1"]
 interpolation_mode = 1
 offsets = PackedFloat32Array(0, 0.0833333, 0.166667, 0.25, 0.333333, 0.416667, 0.5, 0.583333, 0.666667, 0.75, 0.833333, 0.916667)
 colors = PackedColorArray(0.00784314, 0.00784314, 0.00784314, 1, 0.262745, 0.262745, 0.262745, 1, 0.862745, 0.372549, 0.0941176, 1, 0.113725, 0.0784314, 0.176471, 1, 0, 0, 0.211765, 1, 0.00392157, 0.054902, 0.321569, 1, 0.00392157, 0.12549, 0.72549, 1, 0.164706, 0.364706, 0.741176, 1, 1, 0.905882, 0.643137, 1, 0.188235, 0.321569, 0.980392, 1, 0.121569, 0.113725, 0.329412, 1, 0.172549, 0.223529, 0.541176, 1)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_h4tmv"]
-gradient = SubResource("Gradient_24kfx")
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_24kfx"]
+gradient = SubResource("Gradient_yfca1")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4ljyf"]
 render_priority = -10
@@ -31,7 +30,7 @@ shader = ExtResource("1_q04gk")
 shader_parameter/rows = 3.0
 shader_parameter/cols = 4.0
 shader_parameter/dither_size = 4.0
-shader_parameter/pal = SubResource("GradientTexture1D_h4tmv")
+shader_parameter/pal = SubResource("GradientTexture1D_24kfx")
 
 [sub_resource type="BoxMesh" id="BoxMesh_qmgvp"]
 size = Vector3(2, 2, 2)
@@ -77,7 +76,6 @@ light_energy = 7.0
 shadow_enabled = true
 spot_range = 23.7406
 spot_angle = 34.3445
-script = ExtResource("3_24kfx")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.741821, 0.364097, -2.84078)
