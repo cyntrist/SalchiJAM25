@@ -54,12 +54,15 @@ environment = SubResource("Environment_ptogf")
 transform = Transform3D(0.625878, 0.66051, -0.414734, -0.561631, 0.750665, 0.347955, 0.541154, 0.0151505, 0.840787, -0.311668, 10.9445, 15.7827)
 light_color = Color(1, 0, 0, 1)
 shadow_enabled = true
+shadow_bias = 0.035
 shadow_normal_bias = 0.0
-shadow_blur = 0.9
-directional_shadow_max_distance = 400.0
+shadow_blur = 0.278
+directional_shadow_split_1 = 0.04
+directional_shadow_max_distance = 27.1
+directional_shadow_pancake_size = 11.2
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="."]
-transform = Transform3D(0.999938, 0, -0.0111001, 0, 1, 0, 0.0111001, 0, 0.999938, 0.741821, 0.364097, -2.03305)
+transform = Transform3D(0.999938, 0, -0.0111001, 0, 1, 0, 0.0111001, 0, 0.999938, 0.741821, 0.364097, -1.25608)
 size = Vector3(11.5133, 7.52144, 0.241333)
 material = SubResource("StandardMaterial3D_mnawn")
 
@@ -83,3 +86,6 @@ material = SubResource("StandardMaterial3D_irjko")
 
 [node name="ImageComparator" type="Node" parent="."]
 script = ExtResource("5_irjko")
+
+[node name="Camera3D2" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.907332, 1.33644, 0.968529)
