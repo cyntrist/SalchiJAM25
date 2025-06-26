@@ -31,6 +31,6 @@ func apagar():
 func apagar_y_encender():
 	print_debug("cjones")
 	apagar()
-	andres.reset_pos();
 	await get_tree().create_timer(1).timeout
+	andres.reset_pos();
 	encender()
