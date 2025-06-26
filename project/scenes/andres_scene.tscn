@@ -41,11 +41,15 @@ size = Vector3(2, 2, 2)
 
 [node name="AndresScene" type="Node3D"]
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24298, 2.35625)
-script = ExtResource("3_q04gk")
 
-[node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
+[node name="RayCast3D" type="RayCast3D" parent="Camera"]
+
+[node name="CameraSombras" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.748422, 1.63852, -0.290083)
+fov = 120.0
+script = ExtResource("3_q04gk")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_ptogf")
@@ -82,6 +86,7 @@ transform = Transform3D(-0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.770528, 1.49783, 0)
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.873866, -0.486168, 0, 0.486168, 0.873866, 2.12552, 1.14445, 0.445628)
+visible = false
 material = SubResource("StandardMaterial3D_irjko")
 
 [node name="ImageComparator" type="Node" parent="."]

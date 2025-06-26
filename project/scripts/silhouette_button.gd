@@ -11,7 +11,7 @@ func _pressed() -> void:
 
 func _next_stage():
 	if (Global.stage == Global.maxStages):
-		Global.change_scene(Global.Scenes.CREDITS, 0.5);
+		Global.change_scene(Global.Scenes.CREDITS, 0.25);
 		pass;
 	else:
 		Global.next_stage();
