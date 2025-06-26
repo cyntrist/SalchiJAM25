@@ -4,9 +4,9 @@
 [ext_resource type="Shader" uid="uid://b2jcj6037lets" path="res://scripts/shaders/2d to gradient_3D.gdshader" id="1_q04gk"]
 [ext_resource type="Script" uid="uid://c4fei85qf20v3" path="res://scripts/shaders/shaderbox.gd" id="2_irjko"]
 [ext_resource type="Script" uid="uid://b0reyf6s75rus" path="res://scripts/camera_sombras.gd" id="2_yfca1"]
-[ext_resource type="PackedScene" uid="uid://bslpvbowedeel" path="res://assets/models/mano.tscn" id="3_lofah"]
 [ext_resource type="Script" uid="uid://by2kdi7hju2bj" path="res://scripts/camera_3d.gd" id="3_q04gk"]
 [ext_resource type="Script" uid="uid://cne05dlno2a5e" path="res://scripts/image_comparator.gd" id="5_irjko"]
+[ext_resource type="PackedScene" uid="uid://ywcejmpfamf7" path="res://scenes/MANO5.tscn" id="5_yfca1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mnawn"]
 
@@ -70,7 +70,7 @@ size = Vector3(2, 2, 2)
 
 [node name="AndresScene" type="Node3D" node_paths=PackedStringArray("manos")]
 script = ExtResource("1_24kfx")
-manos = [NodePath("MANO"), NodePath("MANO2")]
+manos = [NodePath("MANO_I"), NodePath("MANO_R")]
 
 [node name="Camera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24298, 2.35625)
@@ -122,10 +122,10 @@ mesh = SubResource("BoxMesh_qmgvp")
 script = ExtResource("2_irjko")
 cList = Array[Color]([Color(0.00784314, 0.00784314, 0.00784314, 1), Color(0.262745, 0.262745, 0.262745, 1), Color(0.862745, 0.372549, 0.0941176, 1), Color(0.113725, 0.0784314, 0.176471, 1), Color(0, 0, 0.211765, 1), Color(0.00392157, 0.054902, 0.321569, 1), Color(0.00392157, 0.12549, 0.72549, 1), Color(0.164706, 0.364706, 0.741176, 1), Color(1, 0.905882, 0.643137, 1), Color(0.188235, 0.321569, 0.980392, 1), Color(0.121569, 0.113725, 0.329412, 1), Color(0.172549, 0.223529, 0.541176, 1)])
 
-[node name="MANO" parent="." instance=ExtResource("3_lofah")]
-transform = Transform3D(0.2, 0, 0, 0, 0.198057, -0.0278104, 0, 0.0278104, 0.198057, -0.771, -0.320012, 0.0372625)
+[node name="MANO_I" parent="." instance=ExtResource("5_yfca1")]
+transform = Transform3D(0.2, 0, 0, 0, 0.19998, -0.00279244, 0, 0.00279244, 0.19998, -0.771, -0.320012, 0.0372625)
 
-[node name="MANO2" parent="." instance=ExtResource("3_lofah")]
+[node name="MANO_R" parent="." instance=ExtResource("5_yfca1")]
 transform = Transform3D(-0.2, 0, 0, 0, 0.198057, -0.0278104, 0, 0.0278104, 0.198057, 0.770528, -0.32018, 0.0372385)
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="."]
