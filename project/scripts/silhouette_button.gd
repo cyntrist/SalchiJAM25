@@ -11,7 +11,7 @@ func _pressed() -> void:
 	#Global.change_scene(Global.Scenes.GAME);
 
 	if (Global.stage == Global.maxStages):
-		Global.change_scene(Global.Scenes.CREDITS);
+		Global.change_scene(Global.Scenes.CREDITS, 0.5);
 		pass;
 	
 	# AQUÍ GESTION DE SI PASA AL SIGUIENTE SI ES SUFICIENTEMENTE ACERTADO
