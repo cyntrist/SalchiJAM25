@@ -45,7 +45,7 @@ func next_stage():
 
 func change_scene(next : Global.Scenes, speed = 1.0, force = true):
 	Global.next_scene = next
-	print(">> Changing from ", Global.current_scene, " to ", Global.next_scene)
+	#print(">> Changing from ", Global.current_scene, " to ", Global.next_scene)
 	if ((current_scene != next || force)and not startCoolDown):
 		startCoolDown = true
 		Global.on_transition_begin.emit(speed)

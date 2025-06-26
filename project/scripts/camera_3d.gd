@@ -23,7 +23,8 @@ func _screenshot():
 	var vpImg = viewport.get_texture().get_image() #imagen del viewport
 	
 	#imagen a comparar, prueba del jugador
-	vpImg.save_png("user://screenshots/userTry"+str(Global.stage)+".png")
+	# vpImg.save_png("user://screenshots/userTry"+str(Global.stage)+".png")
+	vpImg.save_png("res://screenshots/userTry"+str(Global.stage)+".png")
 
 func  _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
