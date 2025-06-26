@@ -15,10 +15,10 @@ func  _input(event: InputEvent) -> void:
 	
 	if event is InputEventKey and event.is_pressed():
 		match event.keycode:
-			KEY_RIGHT:
-				rotate_object_local(axis, velocity)
-			KEY_LEFT:
+			KEY_W:
 				rotate_object_local(axis, -velocity)
+			KEY_S:
+				rotate_object_local(axis, velocity)
 			KEY_Q:
 				match axis:
 					Vector3(1,0,0):

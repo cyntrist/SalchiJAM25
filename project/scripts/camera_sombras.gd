@@ -3,14 +3,8 @@ extends Camera3D
 @onready var raycast = camaraVP.get_child(0) # su raycast
 @onready var viewport = camaraVP.get_child(1);
 
-@onready var imm = ImmediateMesh.new()
-@onready var mesh_inst = MeshInstance3D.new()
 #capturas
-
 func _ready():
-	mesh_inst.mesh = imm
-	add_child(mesh_inst)
-	
 	Global.capturaToCompare.connect(_screenshot)
 	var dir = DirAccess.open("user://")
 	dir.make_dir("screenshots")
@@ -23,6 +17,7 @@ func _ready():
 	
 func _screenshot():
 	print("CAPTURA")
+	print_debug("holaa")
 	
 	await RenderingServer.frame_post_draw #accede al frame despues de dibujarlo
 	var vpImg = viewport.get_texture().get_image() #imagen del viewport

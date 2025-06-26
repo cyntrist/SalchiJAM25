@@ -1,27 +1,28 @@
-[gd_scene load_steps=14 format=3 uid="uid://cagciatay3u85"]
+[gd_scene load_steps=15 format=3 uid="uid://cagciatay3u85"]
 
 [ext_resource type="Shader" uid="uid://b2jcj6037lets" path="res://scripts/shaders/2d to gradient_3D.gdshader" id="1_q04gk"]
 [ext_resource type="Script" uid="uid://c4fei85qf20v3" path="res://scripts/shaders/shaderbox.gd" id="2_irjko"]
+[ext_resource type="Script" uid="uid://b0reyf6s75rus" path="res://scripts/camera_sombras.gd" id="2_yfca1"]
 [ext_resource type="PackedScene" uid="uid://bslpvbowedeel" path="res://assets/models/mano.tscn" id="3_lofah"]
 [ext_resource type="Script" uid="uid://by2kdi7hju2bj" path="res://scripts/camera_3d.gd" id="3_q04gk"]
 [ext_resource type="Script" uid="uid://cne05dlno2a5e" path="res://scripts/image_comparator.gd" id="5_irjko"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mnawn"]
 
-[sub_resource type="Sky" id="Sky_mnawn"]
+[sub_resource type="Sky" id="Sky_yfca1"]
 sky_material = SubResource("ProceduralSkyMaterial_mnawn")
 
 [sub_resource type="Environment" id="Environment_ptogf"]
 background_mode = 2
-sky = SubResource("Sky_mnawn")
+sky = SubResource("Sky_yfca1")
 
-[sub_resource type="Gradient" id="Gradient_irjko"]
+[sub_resource type="Gradient" id="Gradient_yfca1"]
 interpolation_mode = 1
 offsets = PackedFloat32Array(0, 0.0833333, 0.166667, 0.25, 0.333333, 0.416667, 0.5, 0.583333, 0.666667, 0.75, 0.833333, 0.916667)
 colors = PackedColorArray(0.00784314, 0.00784314, 0.00784314, 1, 0.262745, 0.262745, 0.262745, 1, 0.862745, 0.372549, 0.0941176, 1, 0.113725, 0.0784314, 0.176471, 1, 0, 0, 0.211765, 1, 0.00392157, 0.054902, 0.321569, 1, 0.00392157, 0.12549, 0.72549, 1, 0.164706, 0.364706, 0.741176, 1, 1, 0.905882, 0.643137, 1, 0.188235, 0.321569, 0.980392, 1, 0.121569, 0.113725, 0.329412, 1, 0.172549, 0.223529, 0.541176, 1)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_yfca1"]
-gradient = SubResource("Gradient_irjko")
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_24kfx"]
+gradient = SubResource("Gradient_yfca1")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4ljyf"]
 render_priority = -10
@@ -29,7 +30,7 @@ shader = ExtResource("1_q04gk")
 shader_parameter/rows = 3.0
 shader_parameter/cols = 4.0
 shader_parameter/dither_size = 4.0
-shader_parameter/pal = SubResource("GradientTexture1D_yfca1")
+shader_parameter/pal = SubResource("GradientTexture1D_24kfx")
 
 [sub_resource type="BoxMesh" id="BoxMesh_qmgvp"]
 size = Vector3(2, 2, 2)
@@ -49,15 +50,16 @@ manos = [NodePath("../MANO"), NodePath("../MANO2")]
 render_target_update_mode = 4
 
 [node name="CameraSombras" type="Camera3D" parent="Camera/SubViewport"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000583649, 2.96325, -1.55145)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000583649, 2.96325, -1.6556)
 fov = 120.0
-script = ExtResource("3_q04gk")
+script = ExtResource("2_yfca1")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_ptogf")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
 transform = Transform3D(0.800731, 0.599024, -4.06257e-08, -0.385045, 0.5147, -0.766045, -0.458879, 0.613396, 0.642787, 0, 0, 3)
+visible = false
 light_color = Color(1, 0, 0, 1)
 light_energy = 1.5
 shadow_enabled = true
@@ -67,6 +69,13 @@ shadow_blur = 0.278
 directional_shadow_split_1 = 0.04
 directional_shadow_max_distance = 27.1
 directional_shadow_pancake_size = 11.2
+
+[node name="SpotLight3D" type="SpotLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 0.587333, -0.809345, 0, 0.809345, 0.587333, -0.0452889, -4.71157, 5.57549)
+light_energy = 7.0
+shadow_enabled = true
+spot_range = 23.7406
+spot_angle = 34.3445
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.741821, 0.364097, -2.84078)
@@ -81,10 +90,10 @@ script = ExtResource("2_irjko")
 cList = Array[Color]([Color(0.00784314, 0.00784314, 0.00784314, 1), Color(0.262745, 0.262745, 0.262745, 1), Color(0.862745, 0.372549, 0.0941176, 1), Color(0.113725, 0.0784314, 0.176471, 1), Color(0, 0, 0.211765, 1), Color(0.00392157, 0.054902, 0.321569, 1), Color(0.00392157, 0.12549, 0.72549, 1), Color(0.164706, 0.364706, 0.741176, 1), Color(1, 0.905882, 0.643137, 1), Color(0.188235, 0.321569, 0.980392, 1), Color(0.121569, 0.113725, 0.329412, 1), Color(0.172549, 0.223529, 0.541176, 1)])
 
 [node name="MANO" parent="." instance=ExtResource("3_lofah")]
-transform = Transform3D(0.2, 0, 0, 0, 0.198057, -0.0278104, 0, 0.0278104, 0.198057, -0.771, -0.258741, -0.458908)
+transform = Transform3D(0.2, 0, 0, 0, 0.198057, -0.0278104, 0, 0.0278104, 0.198057, -0.771, -0.320012, 0.0372625)
 
 [node name="MANO2" parent="." instance=ExtResource("3_lofah")]
-transform = Transform3D(-0.2, 0, 0, 0, 0.198057, -0.0278104, 0, 0.0278104, 0.198057, 0.770528, -0.258909, -0.458932)
+transform = Transform3D(-0.2, 0, 0, 0, 0.198057, -0.0278104, 0, 0.0278104, 0.198057, 0.770528, -0.32018, 0.0372385)
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.873866, -0.486168, 0, 0.486168, 0.873866, 2.12552, 1.14445, 0.445628)

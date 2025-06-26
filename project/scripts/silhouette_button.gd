@@ -5,7 +5,7 @@ func _ready() -> void:
 	pass
 
 func _pressed() -> void:
-	#print("BOTON PULSADO");
+	print("BOTON PULSADO");
 	Global.capturaToCompare.emit(); # captura para comparar
 	pass
 

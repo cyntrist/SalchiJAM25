@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bx0cn133vx2x4"]
 
-[ext_resource type="Script" uid="uid://ovognw1joqnr" path="res://scripts/flujo/MainMenu.gd" id="1_es233"]
+[ext_resource type="Script" uid="uid://dh6njmuxh0ww2" path="res://scripts/flujo/Game.gd" id="1_ab273"]
 [ext_resource type="PackedScene" uid="uid://cagciatay3u85" path="res://scenes/andres_scene.tscn" id="2_pa1jb"]
 [ext_resource type="Texture2D" uid="uid://cwwhik7hll2c1" path="res://icon.svg" id="3_ab273"]
 [ext_resource type="Script" uid="uid://cchiii0apdegl" path="res://scripts/silhouette_button.gd" id="4_6wywq"]
@@ -12,7 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_es233")
+script = ExtResource("1_ab273")
 
 [node name="AndresScene" parent="." instance=ExtResource("2_pa1jb")]
 

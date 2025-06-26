@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://dik3jn4i5aous"]
+
+[ext_resource type="PackedScene" uid="uid://bslpvbowedeel" path="res://assets/models/mano.tscn" id="1_1eu8g"]
+
+[node name="Prueba" type="Node3D"]
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.741821, 0.364097, -2.84078)
+size = Vector3(18.8857, 16.957, 0.241333)
+
+[node name="MANO" parent="." instance=ExtResource("1_1eu8g")]
+transform = Transform3D(0.2, 0, 0, 0, 0.198057, -0.0278104, 0, 0.0278104, 0.198057, -0.655847, -0.221008, -0.367277)
+
+[node name="MANO2" parent="." instance=ExtResource("1_1eu8g")]
+transform = Transform3D(-0.2, 0, 0, 0, 0.198057, -0.0278104, 0, 0.0278104, 0.198057, 0.885681, -0.221176, -0.367301)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
+transform = Transform3D(0.800731, 0.599024, -4.06257e-08, -0.385045, 0.5147, -0.766045, -0.458879, 0.613396, 0.642787, 0, 0, 3)
+visible = false
+light_color = Color(1, 0, 0, 1)
+light_energy = 1.5
+shadow_enabled = true
+shadow_bias = 0.035
+shadow_normal_bias = 0.0
+shadow_blur = 0.278
+directional_shadow_split_1 = 0.04
+directional_shadow_max_distance = 27.1
+directional_shadow_pancake_size = 11.2
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.02329)
+spot_range = 10.4439
+spot_angle = 11.4413
