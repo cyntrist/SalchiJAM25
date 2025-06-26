@@ -12,7 +12,12 @@ func _ready():
 	var dir = DirAccess.open("user://")
 	dir.make_dir("screenshots")
 	
-	#dir = DirAccess.open("user://screenshots")
+	var ssCount = 0
+	dir = DirAccess.open("user://screenshots")
+	for n in dir.get_files():
+		ssCount += 1
+	
+	print("capturas: " + str(ssCount))
 	
 func _screenshot():
 	print("CAPTURA")
