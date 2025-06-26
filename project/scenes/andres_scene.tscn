@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://cagciatay3u85"]
+[gd_scene load_steps=16 format=3 uid="uid://cagciatay3u85"]
 
 [ext_resource type="Shader" uid="uid://b2jcj6037lets" path="res://scripts/shaders/2d to gradient_3D.gdshader" id="1_q04gk"]
 [ext_resource type="Script" uid="uid://c4fei85qf20v3" path="res://scripts/shaders/shaderbox.gd" id="2_irjko"]
 [ext_resource type="Script" uid="uid://b0reyf6s75rus" path="res://scripts/camera_sombras.gd" id="2_yfca1"]
+[ext_resource type="Script" uid="uid://bf36gv8raoibe" path="res://scenes/flickering_light.gd" id="3_24kfx"]
 [ext_resource type="PackedScene" uid="uid://bslpvbowedeel" path="res://assets/models/mano.tscn" id="3_lofah"]
 [ext_resource type="Script" uid="uid://by2kdi7hju2bj" path="res://scripts/camera_3d.gd" id="3_q04gk"]
 [ext_resource type="Script" uid="uid://cne05dlno2a5e" path="res://scripts/image_comparator.gd" id="5_irjko"]
@@ -76,6 +77,7 @@ light_energy = 7.0
 shadow_enabled = true
 spot_range = 23.7406
 spot_angle = 34.3445
+script = ExtResource("3_24kfx")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.741821, 0.364097, -2.84078)
