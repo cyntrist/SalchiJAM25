@@ -51,7 +51,7 @@ script = ExtResource("3_q04gk")
 environment = SubResource("Environment_ptogf")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
-transform = Transform3D(0.625878, 0.66051, -0.414734, -0.561631, 0.750665, 0.347955, 0.541154, 0.0151505, 0.840787, -0.311668, 10.9445, 15.7827)
+transform = Transform3D(0.526977, 0.648755, -0.549011, -0.561631, 0.750665, 0.347955, 0.637861, 0.124977, 0.759944, -12.9924, 10.9445, 15.7827)
 light_color = Color(1, 0, 0, 1)
 shadow_enabled = true
 shadow_bias = 0.035
