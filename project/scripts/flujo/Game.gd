@@ -17,20 +17,20 @@ func on_disable():
 	luz.light_energy = 0.0;
 	pass
 
-func encender():
+func encender(speed = 0.5):
 	var tween = create_tween()
-	tween.tween_property(luz, "light_energy", initial_value, 0.5)
+	tween.tween_property(luz, "light_energy", initial_value, speed)
 	debugnivel.text = "Nivel: " + str((Global.stage))
 	pass
 	
-func apagar():
+func apagar(speed = 0.5):
 	var tween = create_tween()
-	tween.tween_property(luz, "light_energy", 0.0, 0.5)
+	tween.tween_property(luz, "light_energy", 0.0, speed)
+	tween.finished.connect(func(): andres.reset_pos())
 	pass
 	
-func apagar_y_encender():
-	print_debug("cjones")
-	apagar()
+func apagar_y_encender(speed = 0.5):
+	apagar(speed)
 	await get_tree().create_timer(1).timeout
 	andres.reset_pos();
-	encender()
+	encender(speed)

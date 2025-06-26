@@ -5,12 +5,14 @@ func _ready() -> void:
 	pass
 
 func _pressed() -> void:
-	print("BOTON PULSADO");
+	#print("BOTON PULSADO");
 	Global.capturaToCompare.emit(); # captura para comparar
 	pass
 
 func _next_stage():
 	if (Global.stage == Global.maxStages):
+		await get_tree().create_timer(1).timeout
+		get_parent().apagar()
 		Global.change_scene(Global.Scenes.CREDITS, 0.25);
 		pass;
 	else:
