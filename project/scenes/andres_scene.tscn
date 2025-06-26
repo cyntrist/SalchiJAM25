@@ -52,7 +52,7 @@ script = ExtResource("1_yfca1")
 render_target_update_mode = 4
 
 [node name="CameraSombras" type="Camera3D" parent="Camera/SubViewport"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.748422, 1.63852, -0.290083)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000583649, 1.63852, -0.290083)
 fov = 120.0
 script = ExtResource("3_q04gk")
 
@@ -60,7 +60,7 @@ script = ExtResource("3_q04gk")
 environment = SubResource("Environment_ptogf")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
-transform = Transform3D(0.800732, 0.599024, 0, -0.355472, 0.475169, -0.804894, -0.482151, 0.644504, 0.593419, -12.9924, 10.9445, 15.7827)
+transform = Transform3D(0.800731, 0.599024, 0, -0.385045, 0.5147, -0.766044, -0.458879, 0.613396, 0.642788, 0, 0, 3)
 light_color = Color(1, 0, 0, 1)
 shadow_enabled = true
 shadow_bias = 0.035
@@ -71,7 +71,7 @@ directional_shadow_max_distance = 27.1
 directional_shadow_pancake_size = 11.2
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="."]
-transform = Transform3D(0.999938, 0, -0.0111001, 0, 1, 0, 0.0111001, 0, 0.999938, 0.741821, 0.364097, -1.43296)
+transform = Transform3D(1, 0, 0, 0, 0.984808, -0.173648, 0, 0.173648, 0.984808, 0.741821, 0.364097, -2.84078)
 size = Vector3(18.8857, 16.957, 0.241333)
 material = SubResource("StandardMaterial3D_mnawn")
 
@@ -84,10 +84,10 @@ script = ExtResource("2_irjko")
 cList = Array[Color]([Color(0.00784314, 0.00784314, 0.00784314, 1), Color(0.262745, 0.262745, 0.262745, 1), Color(0.862745, 0.372549, 0.0941176, 1), Color(0.113725, 0.0784314, 0.176471, 1), Color(0, 0, 0.211765, 1), Color(0.00392157, 0.054902, 0.321569, 1), Color(0.00392157, 0.12549, 0.72549, 1), Color(0.164706, 0.364706, 0.741176, 1), Color(1, 0.905882, 0.643137, 1), Color(0.188235, 0.321569, 0.980392, 1), Color(0.121569, 0.113725, 0.329412, 1), Color(0.172549, 0.223529, 0.541176, 1)])
 
 [node name="MANO" parent="." instance=ExtResource("3_lofah")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.771, 0.233436, 0)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.771, -0.25874, -0.45892)
 
 [node name="MANO2" parent="." instance=ExtResource("3_lofah")]
-transform = Transform3D(-0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.770528, 0.233266, 0)
+transform = Transform3D(-0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.770528, -0.25891, -0.45892)
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.873866, -0.486168, 0, 0.486168, 0.873866, 2.12552, 1.14445, 0.445628)
