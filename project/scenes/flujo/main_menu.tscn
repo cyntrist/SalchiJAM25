@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dy4tygucl1fuu"]
+[gd_scene load_steps=3 format=3 uid="uid://dy4tygucl1fuu"]
 
 [ext_resource type="Script" uid="uid://ovognw1joqnr" path="res://scripts/flujo/MainMenu.gd" id="1_rpswa"]
+[ext_resource type="Texture2D" uid="uid://bwlxghpwdh36a" path="res://icon.svg" id="2_1urw7"]
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3
@@ -24,12 +25,46 @@ color = Color(0.054902, 0.054902, 0.054902, 1)
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 389.0
-offset_top = 249.0
-offset_right = 753.0
-offset_bottom = 360.0
+offset_left = 455.0
+offset_top = 45.0
+offset_right = 819.0
+offset_bottom = 156.0
 theme_override_font_sizes/font_size = 32
 text = "MAIN MENU
 "
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Jugar" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 563.0
+offset_top = 181.0
+offset_right = 691.0
+offset_bottom = 309.0
+texture_normal = ExtResource("2_1urw7")
+
+[node name="Label" type="Label" parent="Jugar"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 48.0
+offset_right = 116.0
+offset_bottom = 71.0
+text = "jugaaaaaaar"
+
+[node name="Salir" type="TextureButton" parent="."]
+offset_left = 1135.0
+offset_top = 569.0
+offset_right = 1263.0
+offset_bottom = 697.0
+texture_normal = ExtResource("2_1urw7")
+
+[node name="Label" type="Label" parent="Salir"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 48.0
+offset_right = 116.0
+offset_bottom = 71.0
+text = "saliiiiiiiiiir"
+
+[connection signal="pressed" from="Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]

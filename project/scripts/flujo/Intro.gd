@@ -52,7 +52,7 @@ func _input(event):
 	# ESTO ES PARA MOSTRAR AVISO EN MACHI MENTIBUS
 	if (event.is_action_pressed("1") || event.is_action_pressed("2") || event.is_action_pressed("3") || event.is_action_pressed("4") ||  event.is_action_pressed("5") ||  event.is_action_pressed("6")):
 		pass
-	elif (event is InputEventKey && event.pressed) || event.is_action_pressed("any"):
+	elif (event is InputEventKey && event.pressed):
 		if (!mostrar_aviso):
 			mostrar_aviso = true
 			var tween = create_tween()
