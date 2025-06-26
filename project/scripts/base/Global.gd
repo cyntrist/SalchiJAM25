@@ -21,7 +21,8 @@ var sfx
 var current_scene = Scenes.SPLASH 
 var next_scene = Scenes.SPLASH
 var stage = 1
-var maxStages = 3;
+var maxStages = 4;
+var trasladarBrazo = false
 
 var coolDown = 0.5
 var startCoolDown = false
