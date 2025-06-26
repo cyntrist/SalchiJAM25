@@ -5,9 +5,13 @@ class_name Gizmeable
 var selected = false
 var velocity: float = 0.1
 var axis: Vector3 = Vector3(1,0,0)
+var startRot: Vector3
+var startPos: Vector3
 
 func _ready() -> void:
 	gizmos.visible = false
+	startRot = rotation
+	startPos = position
 
 func  _input(event: InputEvent) -> void:
 	if not selected:
@@ -63,3 +67,7 @@ func reset_select():
 	print("Reset")
 	gizmos.visible = false
 	selected = false
+
+func reset_pos():
+	rotation = startRot
+	position = startPos

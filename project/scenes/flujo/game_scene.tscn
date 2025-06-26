@@ -22,11 +22,22 @@ offset_right = 40.0
 offset_bottom = 23.0
 text = "Nivel"
 
-[node name="Button" type="Button" parent="."]
+[node name="ButtonReset" type="Button" parent="."]
+offset_left = 20.11
+offset_top = 20.0
+offset_right = 156.11
+offset_bottom = 156.0
+icon = ExtResource("3_ab273")
+clip_text = true
+
+[node name="ButtonConfirm" type="Button" parent="."]
 layout_mode = 0
 offset_left = 1123.0
 offset_top = 23.0
 offset_right = 1259.0
 offset_bottom = 159.0
 icon = ExtResource("3_ab273")
+clip_text = true
 script = ExtResource("4_6wywq")
+
+[connection signal="button_down" from="ButtonReset" to="AndresScene" method="reset_pos"]

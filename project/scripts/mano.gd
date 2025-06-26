@@ -6,6 +6,10 @@ extends Node3D
 var selected = false
 var boneActual: int = 0
 
+func reset_pos():
+	for b in listBones:
+		b.reset_pos()
+
 func select():
 	selected = true
 	mesh.scale = Vector3(1.05,1.05,1.05)

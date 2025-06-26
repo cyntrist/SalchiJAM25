@@ -1,8 +1,9 @@
-[gd_scene load_steps=16 format=3 uid="uid://cagciatay3u85"]
+[gd_scene load_steps=17 format=3 uid="uid://cagciatay3u85"]
 
+[ext_resource type="Script" uid="uid://ildu48g22hgr" path="res://scripts/andres_scene.gd" id="1_24kfx"]
 [ext_resource type="Shader" uid="uid://b2jcj6037lets" path="res://scripts/shaders/2d to gradient_3D.gdshader" id="1_q04gk"]
 [ext_resource type="Script" uid="uid://c4fei85qf20v3" path="res://scripts/shaders/shaderbox.gd" id="2_irjko"]
-[ext_resource type="Script" uid="uid://b0reyf6s75rus" path="res://scripts/camera_sombras.gd" id="2_yfca1"]
+[ext_resource type="Script" path="res://scripts/camera_sombras.gd" id="2_yfca1"]
 [ext_resource type="PackedScene" uid="uid://bslpvbowedeel" path="res://assets/models/mano.tscn" id="3_lofah"]
 [ext_resource type="Script" uid="uid://by2kdi7hju2bj" path="res://scripts/camera_3d.gd" id="3_q04gk"]
 [ext_resource type="Script" uid="uid://cne05dlno2a5e" path="res://scripts/image_comparator.gd" id="5_irjko"]
@@ -67,12 +68,13 @@ size = Vector3(2, 2, 2)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_irjko"]
 
-[node name="AndresScene" type="Node3D"]
+[node name="AndresScene" type="Node3D" node_paths=PackedStringArray("manos")]
+script = ExtResource("1_24kfx")
+manos = [NodePath("MANO"), NodePath("MANO2")]
 
-[node name="Camera" type="Camera3D" parent="." node_paths=PackedStringArray("manos")]
+[node name="Camera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24298, 2.35625)
 script = ExtResource("3_q04gk")
-manos = [NodePath("../MANO"), NodePath("../MANO2")]
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera"]
 
