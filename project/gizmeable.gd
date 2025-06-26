@@ -3,7 +3,7 @@ class_name Gizmeable
 
 @onready var gizmos: Node3D = $gizmos
 var selected = false
-var velocity: float = 0.1
+var velocity: float = 0.05
 var axis: Vector3 = Vector3(1,0,0)
 var startRot: Vector3
 var startPos: Vector3
