@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dqbgerab2hwp4"]
 
 [ext_resource type="PackedScene" uid="uid://dv5r46dyp4hcl" path="res://assets/models/gizmos.fbx" id="1_gtiwi"]
-[ext_resource type="Script" uid="uid://bk6nccjvivshw" path="res://scenes/gizmo.gd" id="2_upqhi"]
+[ext_resource type="Script" path="res://scenes/gizmo.gd" id="2_upqhi"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_upqhi"]
 albedo_color = Color(0, 1, 0, 1)

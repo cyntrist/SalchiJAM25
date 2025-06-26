@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://k48i5dkerj25" path="res://scripts/mano.gd" id="1_aw2lm"]
 [ext_resource type="Script" uid="uid://fi6dalvamsdp" path="res://gizmeable.gd" id="1_bumlc"]
-[ext_resource type="PackedScene" uid="uid://bem4wihxka0tu" path="res://scenes/gizmos.tscn" id="2_aw2lm"]
+[ext_resource type="PackedScene" uid="uid://dqbgerab2hwp4" path="res://scenes/gizmos.tscn" id="2_aw2lm"]
 [ext_resource type="Script" uid="uid://by2kdi7hju2bj" path="res://scripts/camera_3d.gd" id="3_aw2lm"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_t7c0d"]

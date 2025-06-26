@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" path="res://assets/models/MANO5.fbx" id="1_wdaso"]
 [ext_resource type="Script" uid="uid://k48i5dkerj25" path="res://scripts/mano.gd" id="2_do7mt"]
 [ext_resource type="Script" uid="uid://dtj6witonkt1u" path="res://assets/models/brazoGizmeable.gd" id="3_psdjq"]
-[ext_resource type="PackedScene" uid="uid://bem4wihxka0tu" path="res://scenes/gizmos.tscn" id="4_ub5ih"]
+[ext_resource type="PackedScene" uid="uid://dqbgerab2hwp4" path="res://scenes/gizmos.tscn" id="4_ub5ih"]
 [ext_resource type="Script" uid="uid://fi6dalvamsdp" path="res://gizmeable.gd" id="5_pwog1"]
 
 [node name="MANO5" node_paths=PackedStringArray("listBones") instance=ExtResource("1_wdaso")]
