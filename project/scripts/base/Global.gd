@@ -9,6 +9,9 @@ signal on_game_end()
 # juego
 signal nextLevel
 signal contarHistoria(index) # señal para avanzar de sombra
+signal checkLevel()
+
+enum Sombras { sombra1, sombra2, sombra3 }
 
 enum Scenes { SPLASH, MAIN_MENU, INTRO, GAME, CREDITS, NULL}
 

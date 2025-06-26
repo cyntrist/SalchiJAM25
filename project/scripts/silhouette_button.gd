@@ -6,6 +6,10 @@ func _ready() -> void:
 func _pressed() -> void:
 	print("BOTON PULSADO");
 
+	Global.next_stage();
+	Global.checkLevel.emit();
+	#Global.change_scene(Global.Scenes.GAME);
+
 	if (Global.stage == Global.maxStages):
 		Global.change_scene(Global.Scenes.CREDITS);
 		pass;

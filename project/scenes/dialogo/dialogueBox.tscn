@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://c8uawt6yvc8fc" path="res://scripts/dialogue_box.gd" id="1_rpvob"]
 [ext_resource type="FontFile" uid="uid://byqc7t6dyjxfk" path="res://assets/fonts/PPModelPlastic-Medium.otf" id="2_cbqrf"]
 
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cbqrf"]
 content_margin_left = 50.0
 content_margin_top = 5.0
