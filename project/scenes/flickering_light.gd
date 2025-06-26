@@ -1,0 +1,1 @@
+extends SpotLight3D
