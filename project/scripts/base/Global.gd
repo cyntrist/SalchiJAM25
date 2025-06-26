@@ -1,7 +1,7 @@
 extends Node
 # SEÑALES
 # flujo
-signal on_transition_begin
+signal on_transition_begin(speed)
 signal on_transition_end
 signal on_enable(scene)
 signal on_disable(scene)
@@ -43,9 +43,9 @@ func next_stage():
 	Global.stage += 1
 	Global.stage = clamp(Global.stage, 1, maxStages)
 
-func change_scene(next : Global.Scenes, force = true):
+func change_scene(next : Global.Scenes, speed = 1.0, force = true):
 	Global.next_scene = next
 	print(">> Changing from ", Global.current_scene, " to ", Global.next_scene)
 	if ((current_scene != next || force)and not startCoolDown):
 		startCoolDown = true
-		Global.on_transition_begin.emit()
+		Global.on_transition_begin.emit(speed)
