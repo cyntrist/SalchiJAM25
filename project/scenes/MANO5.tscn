@@ -7,6 +7,9 @@
 [ext_resource type="Script" uid="uid://fi6dalvamsdp" path="res://gizmeable.gd" id="5_pwog1"]
 [ext_resource type="Script" uid="uid://d3jdvmltbt0h5" path="res://scripts/dependenceBone.gd" id="6_do7mt"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_wdaso"]
+size = Vector3(2.88696, 34.9926, 2.91602)
+
 [node name="MANO5" node_paths=PackedStringArray("listBones") instance=ExtResource("1_wdaso")]
 script = ExtResource("2_do7mt")
 listBones = [NodePath("Armature"), NodePath("Armature/Skeleton3D/BPalma"), NodePath("Armature/Skeleton3D/BPalma/BMenique0"), NodePath("Armature/Skeleton3D/BPalma/BAnular0"), NodePath("Armature/Skeleton3D/BPalma/BCorazon0"), NodePath("Armature/Skeleton3D/BPalma/BIndice0"), NodePath("Armature/Skeleton3D/BPalma/BPulgar0")]
@@ -287,3 +290,9 @@ transform = Transform3D(0.02, 2.32831e-10, -4.65661e-10, -2.32831e-10, 0.02, -9.
 
 [node name="gizmos" parent="Armature/Skeleton3D/BPalma" index="5" instance=ExtResource("4_ub5ih")]
 transform = Transform3D(-0.021, 0, 0, 0, -0.021, 5.96856e-16, 0, -5.96856e-16, -0.021, 0, 0, 0)
+
+[node name="Body" type="StaticBody3D" parent="." index="1"]
+
+[node name="Collider" type="CollisionShape3D" parent="Body" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10.3411, 0)
+shape = SubResource("BoxShape3D_wdaso")
