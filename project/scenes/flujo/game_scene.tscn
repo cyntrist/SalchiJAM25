@@ -23,6 +23,7 @@ offset_bottom = 23.0
 text = "Nivel"
 
 [node name="ButtonReset" type="Button" parent="."]
+layout_mode = 0
 offset_left = 20.11
 offset_top = 20.0
 offset_right = 156.11
