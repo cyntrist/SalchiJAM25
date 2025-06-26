@@ -86,6 +86,3 @@ material = SubResource("StandardMaterial3D_irjko")
 
 [node name="ImageComparator" type="Node" parent="."]
 script = ExtResource("5_irjko")
-
-[node name="Camera3D2" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.907332, 1.33644, 0.968529)
