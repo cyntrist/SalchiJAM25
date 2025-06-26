@@ -1,4 +1,6 @@
 extends Node3D
+class_name Gizmeable
+
 @onready var gizmos: Node3D = $gizmos
 var selected = false
 var velocity: float = 0.1
@@ -13,11 +15,11 @@ func  _input(event: InputEvent) -> void:
 	
 	if event is InputEventKey and event.is_pressed():
 		match event.keycode:
-			KEY_UP:
+			KEY_RIGHT:
 				rotate_object_local(axis, velocity)
-			KEY_DOWN:
-				rotate_object_local(axis, -velocity)
 			KEY_LEFT:
+				rotate_object_local(axis, -velocity)
+			KEY_Q:
 				match axis:
 					Vector3(1,0,0):
 						axis = Vector3(0,1,0)
@@ -28,7 +30,7 @@ func  _input(event: InputEvent) -> void:
 					Vector3(0,0,1):
 						axis = Vector3(1,0,0)
 						set_axis_vis(1)
-			KEY_RIGHT:
+			KEY_E:
 				match axis:
 					Vector3(1,0,0):
 						axis = Vector3(0,0,1)

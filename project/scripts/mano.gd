@@ -9,6 +9,7 @@ var boneActual: int = 0
 func select():
 	selected = true
 	mesh.scale = Vector3(1.05,1.05,1.05)
+	
 	listBones[boneActual].select_bone()
 
 func un_select():
