@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bem4wihxka0tu"]
+[gd_scene load_steps=6 format=3 uid="uid://dqbgerab2hwp4"]
 
 [ext_resource type="PackedScene" uid="uid://dv5r46dyp4hcl" path="res://assets/models/gizmos.fbx" id="1_gtiwi"]
+[ext_resource type="Script" uid="uid://bk6nccjvivshw" path="res://scenes/gizmo.gd" id="2_upqhi"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_upqhi"]
 albedo_color = Color(0, 1, 0, 1)
@@ -15,9 +16,12 @@ albedo_color = Color(0, 0, 1, 1)
 
 [node name="GizmoY" parent="." index="0"]
 surface_material_override/0 = SubResource("StandardMaterial3D_upqhi")
+script = ExtResource("2_upqhi")
 
 [node name="GizmoX" parent="." index="1"]
 surface_material_override/0 = SubResource("StandardMaterial3D_rhoey")
+script = ExtResource("2_upqhi")
 
 [node name="GizmoZ" parent="." index="2"]
 surface_material_override/0 = SubResource("StandardMaterial3D_jwuak")
+script = ExtResource("2_upqhi")
