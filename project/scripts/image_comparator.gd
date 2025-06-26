@@ -1,7 +1,7 @@
 extends Node
-const ICON = preload("res://icon.png")
+
 func _ready() -> void:
-	var image = Image.load_from_file("res://icon.png")
+	var image = Image.load_from_file("res://icon.svg")
 	var similitude = comparate(image, image)
 	print(similitude * 100, "%")
 
