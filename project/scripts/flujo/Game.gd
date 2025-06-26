@@ -4,7 +4,7 @@ extends Scene
 @onready var debugnivel = $DebugNivel
 
 func on_enable():
-	debugnivel.text = "Nivel: " + str((Global.stage + 1))
+	debugnivel.text = "Nivel: " + str((Global.stage))
 	pass
 
 func on_disable():
