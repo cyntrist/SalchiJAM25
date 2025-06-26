@@ -1,1 +1,1 @@
-extends BoneAttachment3D
+extends Node3D

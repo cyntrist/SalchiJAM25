@@ -1,0 +1,19 @@
+extends Camera3D
+@onready var imm = ImmediateMesh.new()
+@onready var mesh_inst = MeshInstance3D.new()
+
+func _ready():
+	mesh_inst.mesh = imm
+	add_child(mesh_inst)
+
+func  _input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		var mouse_pos = get_viewport().get_mouse_position()
+		var origin = self.project_ray_origin(mouse_pos)
+		var direction = self.project_ray_normal(mouse_pos)
+		var to = origin + direction * 1000  # largo del rayo
+		$RayCast3D.target_position = to
+		$RayCast3D.force_raycast_update()
+		if $RayCast3D.is_colliding():
+			print("Hit", $RayCast3D.get_collider().name)
+			$RayCast3D.get_collider().get_parent().select_bone(true)
