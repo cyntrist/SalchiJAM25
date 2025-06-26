@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bslpvbowedeel"]
 
 [ext_resource type="PackedScene" uid="uid://crnhs87x11khv" path="res://assets/models/MANO.fbx" id="1_efll3"]
-[ext_resource type="Script" uid="uid://csu0hw21baqef" path="res://scenes/rotable.gd" id="2_5886d"]
+[ext_resource type="Script" uid="uid://csu0hw21baqef" path="res://scripts/rotable.gd" id="2_5886d"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5886d"]
 radius = 0.0206322
