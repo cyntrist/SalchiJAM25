@@ -14,6 +14,6 @@ func _next_stage():
 		Global.change_scene(Global.Scenes.CREDITS, 0.25);
 		pass;
 	else:
+		get_parent().apagar_y_encender()
 		Global.next_stage();
-		Global.change_scene(Global.Scenes.GAME);
-	pass;
+		#Global.change_scene(Global.Scenes.GAME);

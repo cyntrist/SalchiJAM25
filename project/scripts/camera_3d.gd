@@ -1,7 +1,6 @@
 extends Camera3D
 @onready var imm = ImmediateMesh.new()
 @onready var mesh_inst = MeshInstance3D.new()
-@onready var raycast = $RayCast3D # su raycast
 
 @export var manos : Array[Node3D]
 

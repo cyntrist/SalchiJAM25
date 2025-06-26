@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cagciatay3u85"]
+[gd_scene load_steps=14 format=3 uid="uid://cagciatay3u85"]
 
 [ext_resource type="Shader" uid="uid://b2jcj6037lets" path="res://scripts/shaders/2d to gradient_3D.gdshader" id="1_q04gk"]
 [ext_resource type="Script" uid="uid://c4fei85qf20v3" path="res://scripts/shaders/shaderbox.gd" id="2_irjko"]
@@ -14,9 +14,6 @@ sky_material = SubResource("ProceduralSkyMaterial_mnawn")
 [sub_resource type="Environment" id="Environment_ptogf"]
 background_mode = 2
 sky = SubResource("Sky_mnawn")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mnawn"]
-albedo_color = Color(0.190762, 0.190762, 0.190762, 1)
 
 [sub_resource type="Gradient" id="Gradient_irjko"]
 interpolation_mode = 1
@@ -73,7 +70,6 @@ directional_shadow_pancake_size = 11.2
 [node name="CSGBox3D2" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.984808, -0.173648, 0, 0.173648, 0.984808, 0.741821, 0.364097, -2.84078)
 size = Vector3(18.8857, 16.957, 0.241333)
-material = SubResource("StandardMaterial3D_mnawn")
 
 [node name="shaderbox" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.99984, -0.0179061, 0, 0.0179061, 0.99984, 0.189896, 3.09497, 0)
