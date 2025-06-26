@@ -1,5 +1,6 @@
 extends Scene
 
+@export var initial_value : float = 1.5
 @onready var andres = $AndresScene
 @onready var debugnivel = $DebugNivel
 @onready var luz = $AndresScene/WorldEnvironment/DirectionalLight3D
@@ -17,7 +18,7 @@ func on_disable():
 
 func encender():
 	var tween = create_tween()
-	tween.tween_property(luz, "light_energy", 1.0, 0.5)
+	tween.tween_property(luz, "light_energy", initial_value, 0.5)
 	pass
 	
 func apagar():

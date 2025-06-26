@@ -27,7 +27,7 @@ func parse_json(json_string: String) -> Dictionary:
 	if result == OK:
 		var data = json.data
 		if not typeof(data) == null:
-			print("Done parseo") # Prints array
+			#print("Done parseo") # Prints array
 			return data
 		else:
 			print("Error al parsear JSON")

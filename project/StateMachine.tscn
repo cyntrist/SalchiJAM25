@@ -28,6 +28,7 @@ visible = false
 process_mode = 4
 visible = false
 script = ExtResource("5_ofqfh")
+initial_value = 1.5
 
 [node name="Intro" parent="Scenes" instance=ExtResource("4_jhmf0")]
 process_mode = 4

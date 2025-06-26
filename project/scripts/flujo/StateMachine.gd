@@ -22,10 +22,10 @@ func _process(delta: float) -> void:
 
 func _input(event):
 	var scene = Global.Scenes.NULL;
-	if event.is_action_pressed("1"):
-		scene = Global.Scenes.SPLASH
-	if event.is_action_pressed("2"):
-		scene = Global.Scenes.MAIN_MENU
+	#if event.is_action_pressed("1"):
+		#scene = Global.Scenes.SPLASH
+	#if event.is_action_pressed("2"):
+		#scene = Global.Scenes.MAIN_MENU
 	if event.is_action_pressed("3"):
 		scene = Global.Scenes.INTRO
 	if event.is_action_pressed("4"):
