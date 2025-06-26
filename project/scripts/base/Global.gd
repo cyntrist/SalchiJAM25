@@ -17,6 +17,7 @@ var sfx
 var current_scene = Scenes.SPLASH 
 var next_scene = Scenes.SPLASH
 var stage = 0
+var maxStages = 5;
 
 var coolDown = 0.5
 var startCoolDown = false
@@ -37,7 +38,7 @@ func  _process(delta: float) -> void:
 
 func next_stage():
 	Global.stage += 1
-	Global.stage = clamp(Global.stage, 0, 6)
+	Global.stage = clamp(Global.stage, 0, maxStages)
 
 func change_scene(next : Global.Scenes, force = true):
 	Global.next_scene = next
