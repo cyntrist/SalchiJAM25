@@ -10,6 +10,7 @@ signal on_game_end()
 signal nextLevel
 signal contarHistoria(index) # señal para avanzar de sombra
 signal checkLevel()
+signal capturaToCompare
 
 enum Sombras { sombra1, sombra2, sombra3 }
 

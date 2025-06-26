@@ -7,7 +7,6 @@ var antPosCursor # anterior
 var sigPosCursor # siguiente
 
 func _process(delta):
-	
 	if(Input.is_action_just_pressed("Rotate")):
 		#print("HOLA")
 		rotating = true
@@ -20,7 +19,7 @@ func _process(delta):
 		sigPosCursor = get_viewport().get_mouse_position()
 		rotate3D(Vector3(1,0,0), (sigPosCursor.y - antPosCursor.y) * .1 * delta)
 		rotate3D(Vector3(0,1,0), (sigPosCursor.x - antPosCursor.x) * .1 * delta)
-		rotate3D(Vector3(0,0,1), (sigPosCursor.y - antPosCursor.y) * .1 * delta)
+		rotate3D(Vector3(0,0,-1), (sigPosCursor.y - antPosCursor.y) * .1 * delta)
 		antPosCursor = sigPosCursor
 
 func rotate3D(axis:Vector3, angle):

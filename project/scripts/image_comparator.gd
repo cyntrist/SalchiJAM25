@@ -1,17 +1,25 @@
 extends Node
 
 func _ready() -> void:
-	var image = Image.load_from_file("res://icon.svg")
-	var similitude = comparate(image, image)
-	print(similitude * 100, "%")
+	Global.checkLevel.connect(comparate)
 
-func comparate(img1: Image, img2: Image) -> float:
+func comparate() -> float:
+	print("COMPARAR")
+	var img1 = Image.load_from_file("user://screenshots/userTry"+str(Global.stage)+".png")
+	var img2 = Image.load_from_file("user://screenshots/userTry"+str(Global.stage)+".png")
+
 	var imgSize = img1.get_size()
-	var newImage := img1
 	var equalPixels = 0
-	newImage.resize(imgSize.x, imgSize.y)
 	for i in range(imgSize.x):
 		for j in range(imgSize.y):
 			if img1.get_pixel(i,j) == img2.get_pixel(i,j):
 				equalPixels += 1
-	return equalPixels / (imgSize.x * imgSize.y)
+	
+	var similitud = equalPixels / (imgSize.x * imgSize.y)
+	print(similitud * 100, "%")
+	
+	# comprueba si es correcta la respuesta
+	if similitud * 100 >= 70:
+		Global.nextLevel.emit()
+		
+	return similitud

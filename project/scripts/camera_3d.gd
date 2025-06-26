@@ -8,16 +8,12 @@ func _ready():
 	mesh_inst.mesh = imm
 	add_child(mesh_inst)
 	
-	Global.checkLevel.connect(_screenshot)
+	Global.capturaToCompare.connect(_screenshot)
 	var dir = DirAccess.open("user://")
 	dir.make_dir("screenshots")
 	
-	var ssCount = 0
-	dir = DirAccess.open("user://screenshots")
-	for n in dir.get_files():
-		ssCount += 1
-	
-	print("capturas: " + str(ssCount))
+	#var img2 = "user://screenshots/userTry"+str(Global.stage)+".png".get_file()
+	#dir = DirAccess.open("user://screenshots")
 	
 func _screenshot():
 	print("CAPTURA")
@@ -27,9 +23,10 @@ func _screenshot():
 	var viewport = get_viewport()
 	var vpImg = viewport.get_texture().get_image() #imagen del viewport
 	
-	#imagen a comparar, prueba del jugador
-	# vpImg.save_png("user://screenshots/userTry"+str(Global.stage)+".png")
-	vpImg.save_png("res://screenshots/userTry"+str(Global.stage)+".png")
+	# imagen a comparar, prueba del jugador
+	# guarda en \AppData\Roaming\sombras\screenshots
+	vpImg.save_png("user://screenshots/userTry"+str(Global.stage)+".png")
+	Global.checkLevel.emit(); # comprobar la resolucion 
 
 func  _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:

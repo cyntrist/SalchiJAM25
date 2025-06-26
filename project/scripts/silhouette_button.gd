@@ -6,9 +6,8 @@ func _ready() -> void:
 
 func _pressed() -> void:
 	#print("BOTON PULSADO");
-	Global.checkLevel.emit(); # comprobar si se acerca
+	Global.capturaToCompare.emit(); # captura para comparar
 	pass
-
 
 func _next_stage():
 	if (Global.stage == Global.maxStages):
