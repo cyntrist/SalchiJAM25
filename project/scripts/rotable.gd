@@ -18,10 +18,19 @@ func _process(delta):
 
 	if(rotating and isSelected):
 		sigPosCursor = get_viewport().get_mouse_position()
-		rotate_x((sigPosCursor.y - antPosCursor.y) * .1 * delta)
-		rotate_y((sigPosCursor.x - antPosCursor.x) * .1 * delta)
-		rotate_z(-(sigPosCursor.y - antPosCursor.y) * .1 * delta)
+		rotate3D(Vector3(1,0,0), (sigPosCursor.y - antPosCursor.y) * .1 * delta)
+		rotate3D(Vector3(0,1,0), (sigPosCursor.x - antPosCursor.x) * .1 * delta)
+		rotate3D(Vector3(0,0,1), (sigPosCursor.y - antPosCursor.y) * .1 * delta)
 		antPosCursor = sigPosCursor
+
+func rotate3D(axis:Vector3, angle):
+	match axis:
+		Vector3(1,0,0):
+			rotate_x(angle)
+		Vector3(0,1,0):
+			rotate_y(angle)
+		Vector3(0,0,1):
+			rotate_z(angle)
 
 func select_bone(selected):
 	isSelected = selected
