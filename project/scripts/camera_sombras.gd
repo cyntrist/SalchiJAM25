@@ -16,8 +16,7 @@ func _ready():
 	#dir = DirAccess.open("user://screenshots")
 	
 func _screenshot():
-	print("CAPTURA")
-	print_debug("holaa")
+	#print("CAPTURA")
 	
 	await RenderingServer.frame_post_draw #accede al frame despues de dibujarlo
 	var vpImg = viewport.get_texture().get_image() #imagen del viewport

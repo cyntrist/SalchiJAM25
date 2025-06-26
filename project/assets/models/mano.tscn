@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://crnhs87x11khv" path="res://assets/models/MANO.fbx" id="1_efll3"]
 [ext_resource type="Script" uid="uid://k48i5dkerj25" path="res://scripts/mano.gd" id="2_6h2rq"]
 [ext_resource type="Script" uid="uid://fi6dalvamsdp" path="res://gizmeable.gd" id="3_6h2rq"]
-[ext_resource type="PackedScene" uid="uid://bem4wihxka0tu" path="res://scenes/gizmos.tscn" id="3_mb73p"]
+[ext_resource type="PackedScene" path="res://scenes/gizmos.tscn" id="3_mb73p"]
 [ext_resource type="Script" uid="uid://dtj6witonkt1u" path="res://assets/models/brazoGizmeable.gd" id="3_q0fwf"]
 
 [node name="MANO" node_paths=PackedStringArray("listBones") instance=ExtResource("1_efll3")]
@@ -40,7 +40,6 @@ bones/8/rotation = Quaternion(-0.00189382, 0.000153882, -0.0471302, 0.998887)
 bones/8/scale = Vector3(0.999999, 1, 1)
 bones/9/position = Vector3(2.79397e-09, 0.00880343, 1.81899e-11)
 bones/9/rotation = Quaternion(2.91627e-06, 4.3056e-08, -0.0254433, 0.999676)
-bones/9/scale = Vector3(1, 1, 1)
 bones/11/position = Vector3(-0.00153603, 0.00953883, 0.00211755)
 bones/11/rotation = Quaternion(-0.0623888, 0.007287, 0.0885748, 0.994087)
 bones/11/scale = Vector3(1, 1, 1)
@@ -49,10 +48,8 @@ bones/12/rotation = Quaternion(0.00167044, -0.00182532, -0.03811, 0.99927)
 bones/12/scale = Vector3(1, 1, 1)
 bones/13/position = Vector3(-7.68341e-09, 0.0156432, 4.36557e-11)
 bones/13/rotation = Quaternion(-0.00160371, 2.43605e-05, -0.0329524, 0.999456)
-bones/13/scale = Vector3(1, 1, 1)
 bones/14/position = Vector3(-5.12227e-09, 0.010532, -2.91038e-11)
 bones/14/rotation = Quaternion(2.305e-11, 2.54628e-11, -1.2301e-08, 1)
-bones/14/scale = Vector3(1, 1, 1)
 bones/16/position = Vector3(0.00190172, 0.00986415, 0.00214922)
 bones/16/rotation = Quaternion(-0.0614875, 0.0254245, -0.0355419, 0.997151)
 bones/16/scale = Vector3(1, 1, 1)
@@ -76,7 +73,6 @@ bones/23/rotation = Quaternion(-0.00153095, -0.000105195, 0.0274679, 0.999622)
 bones/23/scale = Vector3(1, 1, 1)
 bones/24/position = Vector3(4.65661e-09, 0.0111567, 7.27596e-12)
 bones/24/rotation = Quaternion(-1.09475e-06, 5.06795e-08, 0.00958014, 0.999954)
-bones/24/scale = Vector3(1, 1, 1)
 
 [node name="Circle" parent="Armature/Skeleton3D" index="0"]
 transform = Transform3D(1.035, 0, 0, 0, 1.035, 0, 0, 0, 1.035, 0, 0, 0)

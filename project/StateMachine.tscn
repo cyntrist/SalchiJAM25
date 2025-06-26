@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://t4p55hjx1m5i"]
+[gd_scene load_steps=9 format=3 uid="uid://t4p55hjx1m5i"]
 
 [ext_resource type="Script" uid="uid://b2yb2wipspl12" path="res://scripts/flujo/StateMachine.gd" id="1_seyow"]
 [ext_resource type="PackedScene" uid="uid://doma3ldba1l8e" path="res://scenes/flujo/credits_scene.tscn" id="2_6qpgm"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://bx0cn133vx2x4" path="res://scenes/flujo/game_scene.tscn" id="3_ea0l5"]
 [ext_resource type="PackedScene" uid="uid://dy4tygucl1fuu" path="res://scenes/flujo/main_menu.tscn" id="3_mwl0m"]
 [ext_resource type="PackedScene" uid="uid://kuee5s7qpvx2" path="res://scenes/flujo/intro_scene.tscn" id="4_jhmf0"]
-[ext_resource type="Script" uid="uid://dh6njmuxh0ww2" path="res://scripts/flujo/Game.gd" id="5_ofqfh"]
 [ext_resource type="PackedScene" uid="uid://dnysdn0d3o7b2" path="res://scenes/flujo/splash_scene.tscn" id="14_aso3l"]
 [ext_resource type="PackedScene" uid="uid://5w0xl8fledrk" path="res://scenes/flujo/fade_scene.tscn" id="17_rgtxn"]
 
@@ -27,8 +26,6 @@ visible = false
 [node name="Game" parent="Scenes" instance=ExtResource("3_ea0l5")]
 process_mode = 4
 visible = false
-script = ExtResource("5_ofqfh")
-initial_value = 7.0
 
 [node name="Intro" parent="Scenes" instance=ExtResource("4_jhmf0")]
 process_mode = 4
