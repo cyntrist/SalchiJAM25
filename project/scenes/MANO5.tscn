@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://chaf34d37npvn"]
+[gd_scene load_steps=6 format=3 uid="uid://caw0otuh2508q"]
 
 [ext_resource type="PackedScene" uid="uid://bqkn860s6qknx" path="res://assets/models/MANO5.fbx" id="1_wdaso"]
 [ext_resource type="Script" uid="uid://k48i5dkerj25" path="res://scripts/mano.gd" id="2_do7mt"]
