@@ -38,7 +38,7 @@ version_control/autoload_on_startup=true
 
 [editor_plugins]
 
-enabled=PackedStringArray()
+enabled=PackedStringArray("res://addons/Gizmo3DScript/plugin.cfg", "res://addons/transform_ctrl_gizmo-main/plugin.cfg")
 
 [input]
 
