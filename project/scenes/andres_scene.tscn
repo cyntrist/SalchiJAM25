@@ -47,13 +47,13 @@ func _process(delta):
 	global_position = original_position + current_offset
 "
 
-[sub_resource type="Gradient" id="Gradient_24kfx"]
+[sub_resource type="Gradient" id="Gradient_yfca1"]
 interpolation_mode = 1
 offsets = PackedFloat32Array(0, 0.0833333, 0.166667, 0.25, 0.333333, 0.416667, 0.5, 0.583333, 0.666667, 0.75, 0.833333, 0.916667)
 colors = PackedColorArray(0.00784314, 0.00784314, 0.00784314, 1, 0.262745, 0.262745, 0.262745, 1, 0.862745, 0.372549, 0.0941176, 1, 0.113725, 0.0784314, 0.176471, 1, 0, 0, 0.211765, 1, 0.00392157, 0.054902, 0.321569, 1, 0.00392157, 0.12549, 0.72549, 1, 0.164706, 0.364706, 0.741176, 1, 1, 0.905882, 0.643137, 1, 0.188235, 0.321569, 0.980392, 1, 0.121569, 0.113725, 0.329412, 1, 0.172549, 0.223529, 0.541176, 1)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_h4tmv"]
-gradient = SubResource("Gradient_24kfx")
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_24kfx"]
+gradient = SubResource("Gradient_yfca1")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4ljyf"]
 render_priority = -10
@@ -61,7 +61,7 @@ shader = ExtResource("1_q04gk")
 shader_parameter/rows = 3.0
 shader_parameter/cols = 4.0
 shader_parameter/dither_size = 4.0
-shader_parameter/pal = SubResource("GradientTexture1D_h4tmv")
+shader_parameter/pal = SubResource("GradientTexture1D_24kfx")
 
 [sub_resource type="BoxMesh" id="BoxMesh_qmgvp"]
 size = Vector3(2, 2, 2)
@@ -82,8 +82,8 @@ script = ExtResource("3_q04gk")
 render_target_update_mode = 4
 
 [node name="CameraSombras" type="Camera3D" parent="Camera/SubViewport"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000583649, 2.96325, -1.6556)
-fov = 120.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0360334, 2.33102, -0.400857)
+fov = 100.0
 script = ExtResource("2_yfca1")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
