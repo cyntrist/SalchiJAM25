@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://hcvwr6t74lw0"]
+
+[ext_resource type="Script" uid="uid://k48i5dkerj25" path="res://scripts/mano.gd" id="1_aw2lm"]
+[ext_resource type="Script" uid="uid://fi6dalvamsdp" path="res://gizmeable.gd" id="1_bumlc"]
+[ext_resource type="PackedScene" uid="uid://bem4wihxka0tu" path="res://scenes/gizmos.tscn" id="2_aw2lm"]
+[ext_resource type="Script" uid="uid://b0reyf6s75rus" path="res://scripts/camera_3d.gd" id="3_aw2lm"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_t7c0d"]
+
+[node name="Node3D" type="Node3D" node_paths=PackedStringArray("listBones")]
+script = ExtResource("1_aw2lm")
+listBones = [NodePath("gizmeable")]
+
+[node name="gizmeable" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_t7c0d")
+script = ExtResource("1_bumlc")
+
+[node name="gizmos" parent="gizmeable" instance=ExtResource("2_aw2lm")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.998384, 0.0568322, 0, -0.0568322, 0.998384, -0.055336, 0.785531, 2.79137)
+script = ExtResource("3_aw2lm")
