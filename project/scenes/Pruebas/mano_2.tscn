@@ -1,0 +1,204 @@
+[gd_scene load_steps=2 format=3 uid="uid://0ixlfm172lxx"]
+
+[ext_resource type="PackedScene" uid="uid://nroejnm4cevt" path="res://assets/models/MANO2.fbx" id="1_4jc2h"]
+
+[node name="MANO2" instance=ExtResource("1_4jc2h")]
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/1/position = Vector3(-7.1787e-10, 0.123029, 0.00301094)
+bones/1/rotation = Quaternion(-0.698403, -8.53187e-08, -8.32561e-08, 0.715705)
+bones/1/scale = Vector3(1, 1, 1)
+bones/2/position = Vector3(5.55111e-17, 7.88861e-31, 7.88861e-31)
+bones/2/rotation = Quaternion(1.42109e-14, -7.10543e-15, 7.10543e-15, 1)
+bones/2/scale = Vector3(1, 1, 1)
+bones/3/position = Vector3(-7.21642e-16, 8.14907e-09, 1.86265e-07)
+bones/3/rotation = Quaternion(3.27825e-07, -1.75415e-14, 1.42109e-14, 1)
+bones/3/scale = Vector3(1, 1, 1)
+bones/7/position = Vector3(5.55111e-17, 7.88861e-31, 7.88861e-31)
+bones/7/rotation = Quaternion(1.42109e-14, -7.10543e-15, 7.10543e-15, 1)
+bones/7/scale = Vector3(1, 1, 1)
+bones/8/position = Vector3(-7.21642e-16, 8.14907e-09, 1.86265e-07)
+bones/8/rotation = Quaternion(3.27825e-07, -1.75415e-14, 1.42109e-14, 1)
+bones/8/scale = Vector3(1, 1, 1)
+bones/9/position = Vector3(-1.44329e-15, 1.6298e-08, 3.72529e-07)
+bones/9/rotation = Quaternion(6.55651e-07, -3.5083e-14, 2.84217e-14, 1)
+bones/9/scale = Vector3(1, 1, 1)
+bones/10/position = Vector3(-2.16495e-15, 2.44468e-08, 5.58793e-07)
+bones/10/rotation = Quaternion(9.83477e-07, -5.26246e-14, 4.26326e-14, 1)
+bones/10/scale = Vector3(1, 1, 1)
+bones/13/position = Vector3(5.55111e-17, 7.88861e-31, 7.88861e-31)
+bones/13/rotation = Quaternion(1.42109e-14, -7.10543e-15, 7.10543e-15, 1)
+bones/13/scale = Vector3(1, 1, 1)
+bones/14/position = Vector3(-7.21642e-16, 8.14907e-09, 1.86265e-07)
+bones/14/rotation = Quaternion(3.27825e-07, -1.75415e-14, 1.42109e-14, 1)
+bones/14/scale = Vector3(1, 1, 1)
+bones/15/position = Vector3(-1.44329e-15, 1.6298e-08, 3.72529e-07)
+bones/15/rotation = Quaternion(6.55651e-07, -3.5083e-14, 2.84217e-14, 1)
+bones/15/scale = Vector3(1, 1, 1)
+bones/16/position = Vector3(-2.16495e-15, 2.44468e-08, 5.58793e-07)
+bones/16/rotation = Quaternion(9.83477e-07, -5.26246e-14, 4.26326e-14, 1)
+bones/16/scale = Vector3(1, 1, 1)
+bones/19/position = Vector3(5.55111e-17, 7.88861e-31, 7.88861e-31)
+bones/19/rotation = Quaternion(1.42109e-14, -7.10543e-15, 7.10543e-15, 1)
+bones/19/scale = Vector3(1, 1, 1)
+bones/20/position = Vector3(-7.21642e-16, 8.14907e-09, 1.86265e-07)
+bones/20/rotation = Quaternion(3.27825e-07, -1.75415e-14, 1.42109e-14, 1)
+bones/20/scale = Vector3(1, 1, 1)
+bones/21/position = Vector3(-1.44329e-15, 1.6298e-08, 3.72529e-07)
+bones/21/rotation = Quaternion(6.55651e-07, -3.5083e-14, 2.84217e-14, 1)
+bones/21/scale = Vector3(1, 1, 1)
+bones/22/position = Vector3(-2.16495e-15, 2.44468e-08, 5.58793e-07)
+bones/22/rotation = Quaternion(9.83477e-07, -5.26246e-14, 4.26326e-14, 1)
+bones/22/scale = Vector3(1, 1, 1)
+bones/25/position = Vector3(5.55111e-17, 7.88861e-31, 7.88861e-31)
+bones/25/rotation = Quaternion(1.42109e-14, -7.10543e-15, 7.10543e-15, 1)
+bones/25/scale = Vector3(1, 1, 1)
+bones/26/position = Vector3(-7.21642e-16, 8.14907e-09, 1.86265e-07)
+bones/26/rotation = Quaternion(3.27825e-07, -1.75415e-14, 1.42109e-14, 1)
+bones/26/scale = Vector3(1, 1, 1)
+bones/27/position = Vector3(-1.44329e-15, 1.6298e-08, 3.72529e-07)
+bones/27/rotation = Quaternion(6.55651e-07, -3.5083e-14, 2.84217e-14, 1)
+bones/27/scale = Vector3(1, 1, 1)
+bones/28/position = Vector3(-2.16495e-15, 2.44468e-08, 5.58793e-07)
+bones/28/rotation = Quaternion(9.83477e-07, -5.26246e-14, 4.26326e-14, 1)
+bones/28/scale = Vector3(1, 1, 1)
+
+[node name="BPalma" type="BoneAttachment3D" parent="Armature/Skeleton3D" index="1"]
+bone_name = "Palma_1"
+bone_idx = 1
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("..")
+
+[node name="BMenique0" type="BoneAttachment3D" parent="Armature/Skeleton3D/BPalma" index="0"]
+bone_name = "Meñique_0"
+bone_idx = 7
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../..")
+
+[node name="BMenique1" type="BoneAttachment3D" parent="Armature/Skeleton3D/BPalma/BMenique0" index="0"]
+bone_name = "Meñique_1"
+bone_idx = 8
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../../..")
+
+[node name="BMenique2" type="BoneAttachment3D" parent="Armature/Skeleton3D/BPalma/BMenique0/BMenique1" index="0"]
+bone_name = "Meñique_2"
+bone_idx = 9
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../../../..")
+
+[node name="BMenique3" type="BoneAttachment3D" parent="Armature/Skeleton3D/BPalma/BMenique0/BMenique1/BMenique2" index="0"]
+bone_name = "Meñique_3"
+bone_idx = 10
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../../../../..")
+
+[node name="BAnular0" type="BoneAttachment3D" parent="Armature/Skeleton3D/BPalma" index="1"]
+bone_name = "Anular_0"
+bone_idx = 13
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../..")
+
+[node name="BAnular1" type="BoneAttachment3D" parent="Armature/Skeleton3D/BPalma/BAnular0" index="0"]
+bone_name = "Anular_1"
+bone_idx = 14
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../../..")
+
+[node name="BAnular2" type="BoneAttachment3D" parent="Armature/Skeleton3D/BPalma/BAnular0/BAnular1" index="0"]
+bone_name = "Anular_2"
+bone_idx = 15
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../../../..")
+
+[node name="BAnular3" type="BoneAttachment3D" parent="Armature/Skeleton3D/BPalma/BAnular0/BAnular1/BAnular2" index="0"]
+bone_name = "Anular_3"
+bone_idx = 16
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../../../../..")
+
+[node name="BCorazon0" type="BoneAttachment3D" parent="Armature/Skeleton3D/BPalma" index="2"]
+bone_name = "Corazon_0"
+bone_idx = 19
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../..")
+
+[node name="BCorazon1" type="BoneAttachment3D" parent="Armature/Skeleton3D/BPalma/BCorazon0" index="0"]
+bone_name = "Corazon_1"
+bone_idx = 20
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../../..")
+
+[node name="BCorazon2" type="BoneAttachment3D" parent="Armature/Skeleton3D/BPalma/BCorazon0/BCorazon1" index="0"]
+bone_name = "Corazon_2"
+bone_idx = 21
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../../../..")
+
+[node name="BCorazon3" type="BoneAttachment3D" parent="Armature/Skeleton3D/BPalma/BCorazon0/BCorazon1/BCorazon2" index="0"]
+bone_name = "Corazon_3"
+bone_idx = 22
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../../../../..")
+
+[node name="BIndice0" type="BoneAttachment3D" parent="Armature/Skeleton3D/BPalma" index="3"]
+bone_name = "Indice_0"
+bone_idx = 25
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../..")
+
+[node name="BIndice1" type="BoneAttachment3D" parent="Armature/Skeleton3D/BPalma/BIndice0" index="0"]
+bone_name = "Indice_1"
+bone_idx = 26
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../../..")
+
+[node name="BIndice2" type="BoneAttachment3D" parent="Armature/Skeleton3D/BPalma/BIndice0/BIndice1" index="0"]
+bone_name = "Indice_2"
+bone_idx = 27
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../../../..")
+
+[node name="BIndice3" type="BoneAttachment3D" parent="Armature/Skeleton3D/BPalma/BIndice0/BIndice1/BIndice2" index="0"]
+bone_name = "indice_3"
+bone_idx = 28
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../../../../..")
+
+[node name="BPulgar0" type="BoneAttachment3D" parent="Armature/Skeleton3D/BPalma" index="4"]
+bone_name = "Pulgar_1"
+bone_idx = 2
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../..")
+
+[node name="BPulgar1" type="BoneAttachment3D" parent="Armature/Skeleton3D/BPalma/BPulgar0" index="0"]
+bone_name = "Pulgar_2"
+bone_idx = 3
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../../..")
+
+[node name="BPulgar2" type="BoneAttachment3D" parent="Armature/Skeleton3D/BPalma/BPulgar0/BPulgar1" index="0"]
+bone_name = "Pulgar_2"
+bone_idx = 3
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("../../../..")

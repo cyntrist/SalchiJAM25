@@ -2,19 +2,20 @@ extends Node3D
 
 
 @export var listBones: Array[Node3D]
-@onready var mesh: MeshInstance3D = $Armature/Skeleton3D/Circle
+@onready var m_ano: MeshInstance3D = $Armature/Skeleton3D/MAno
+
 var selected = false
 var boneActual: int = 0
 
 func select():
 	selected = true
-	mesh.scale = Vector3(1.05,1.05,1.05)
+	m_ano.scale = Vector3(1.05,1.05,1.05)
 	
 	listBones[boneActual].select_bone()
 
 func un_select():
 	selected = false
-	mesh.scale = Vector3(1,1,1)
+	m_ano.scale = Vector3(1,1,1)
 	for e in listBones:
 		e.reset_select()
 
