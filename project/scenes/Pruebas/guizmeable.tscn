@@ -7,9 +7,8 @@
 
 [sub_resource type="BoxMesh" id="BoxMesh_t7c0d"]
 
-[node name="Node3D" type="Node3D" node_paths=PackedStringArray("listBones")]
+[node name="Node3D" type="Node3D"]
 script = ExtResource("1_aw2lm")
-listBones = [NodePath("gizmeable"), NodePath("gizmeable2")]
 
 [node name="gizmeable" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.86588, 0, 0)
