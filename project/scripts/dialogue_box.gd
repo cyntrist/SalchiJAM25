@@ -34,6 +34,10 @@ func _process(delta: float) -> void:
 		label.visible_ratio = textDisplayed
 
 func _next_dialogue():
+	var tween = create_tween()
+	tween.tween_property(self, "scale", Vector2(0.99,0.99), 0.01)
+	tween.tween_property(self, "scale", Vector2(1,1), 0.1)
+	
 	# completa el texto si no lo ha hecho
 	if textDisplayed >= 1:
 		textDisplayed = 0
@@ -148,3 +152,8 @@ func _show():
 	var tween = create_tween()
 	tween.tween_property(self, "modulate", Color.WHITE, 0.5)
 	_next_level()
+
+func _on_button_mouse_entered():
+	var tween = create_tween()
+	tween.tween_property(self, "rotation_degrees", -0.5, 0.1)
+	tween.tween_property(self, "rotation_degrees", 0, 0.1)
