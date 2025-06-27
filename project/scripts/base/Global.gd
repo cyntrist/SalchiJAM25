@@ -8,6 +8,8 @@ signal on_disable(scene)
 signal on_game_end()
 # juego
 signal nextLevel
+signal on_candle_lit
+signal on_candle_unlit()
 signal contarHistoria(index) # señal para avanzar de sombra
 signal checkLevel()
 signal capturaToCompare
