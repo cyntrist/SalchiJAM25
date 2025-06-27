@@ -11,6 +11,7 @@ signal nextLevel
 signal contarHistoria(index) # señal para avanzar de sombra
 signal checkLevel()
 signal capturaToCompare
+signal startQuest
 
 enum Sombras { sombra1, sombra2, sombra3 }
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://doma3ldba1l8e"]
 
 [ext_resource type="Script" uid="uid://c8k4nrtrs6b8j" path="res://scripts/flujo/Credits.gd" id="1_4f4al"]
-[ext_resource type="Texture2D" uid="uid://bwlxghpwdh36a" path="res://icon.svg" id="2_hv1m4"]
+[ext_resource type="Texture2D" uid="uid://cwwhik7hll2c1" path="res://icon.svg" id="2_hv1m4"]
 
 [node name="Credits" type="Control"]
 layout_mode = 3

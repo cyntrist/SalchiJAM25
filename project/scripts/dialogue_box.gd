@@ -1,7 +1,18 @@
 extends Control
 
+@onready var audio_stream: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var button: Button = $Button
 @onready var label: Label = $Button/Label
+
+#color de cada persona
+var color1 : Color
+var color2 : Color
+var color3 : Color
+#ruta del sonido de cada persona
+var sound = load("res://Sounds/voces/random.wav")
+var sound1: float
+var sound2: float
+var sound3: float
 
 var textDisplayed: float = 0 # contador para que se escriba letra a letra
 var dialogueID: int = 0 # ID del dialogo en el que estamos
@@ -32,21 +43,29 @@ func _next_dialogue():
 		_end_dialogue()
 		print("FIN DEL DIALOGO")
 		return
+		
 	else:
-		#if JsonParser.dialogos[dialogueID].Texts[dialogueTextID].Person == 0:
-			#audio_stream.pitch_scale = sound1
-			#label.add_theme_color_override("font_color", color1)
-		#else:
-			#audio_stream.pitch_scale = sound2
-			#label.add_theme_color_override("font_color", color2)
+		match JsonParser.dialogos[dialogueID].Texts[dialogueTextID].Person:
+			0:
+				#audio_stream.pitch_scale = sound1
+				label.add_theme_color_override("font_color", color1)
+			1:
+				#audio_stream.pitch_scale = sound2
+				label.add_theme_color_override("font_color", color2)
+			2:
+				#audio_stream.pitch_scale = sound3
+				label.add_theme_color_override("font_color", color3)
+			_:
+				label.add_theme_color_override("font_color", (Color(1,0,0,1)))
 		
 		#audio_stream.play()
 		
 		if "@" in JsonParser.dialogos[dialogueID].Texts[dialogueTextID].Text:
 			label.text = JsonParser.dialogos[dialogueID].Texts[dialogueTextID].Text.replace('@', '')
+
 		else:
 			label.text = JsonParser.dialogos[dialogueID].Texts[dialogueTextID].Text
-			dialogueTextID += 1
+			dialogueTextID +=1
 	
 func _start_quest(idText: int):
 	if idText == ultimaHistoria:
@@ -65,8 +84,9 @@ func _start_quest(idText: int):
 	#sound2 = rng.randf_range(0.5, 2.5)
 	#audio_stream.stream = sound
 	
-	#color1 = Color(JsonData.dialogos[dialogueID].Color1.R,JsonData.dialogos[dialogueID].Color1.G,JsonData.dialogos[dialogueID].Color1.B, 1)
-	#color2 = Color(JsonData.dialogos[dialogueID].Color2.R,JsonData.dialogos[dialogueID].Color2.G,JsonData.dialogos[dialogueID].Color2.B, 1)
+	color1 = Color(JsonParser.dialogos[dialogueID].Color1.R,JsonParser.dialogos[dialogueID].Color1.G,JsonParser.dialogos[dialogueID].Color1.B, 1)
+	color2 = Color(JsonParser.dialogos[dialogueID].Color2.R,JsonParser.dialogos[dialogueID].Color2.G,JsonParser.dialogos[dialogueID].Color2.B, 1)
+	color3 = Color(JsonParser.dialogos[dialogueID].Color3.R,JsonParser.dialogos[dialogueID].Color3.G,JsonParser.dialogos[dialogueID].Color3.B, 1)
 	
 	if Global.nivelCorrecto:
 		_start_dialogue()
