@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cagciatay3u85"]
+[gd_scene load_steps=18 format=3 uid="uid://cagciatay3u85"]
 
 [ext_resource type="Script" uid="uid://ildu48g22hgr" path="res://scripts/andres_scene.gd" id="1_24kfx"]
 [ext_resource type="Shader" uid="uid://b2jcj6037lets" path="res://scripts/shaders/2d to gradient_3D.gdshader" id="1_q04gk"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://by2kdi7hju2bj" path="res://scripts/camera_3d.gd" id="3_q04gk"]
 [ext_resource type="Script" uid="uid://cne05dlno2a5e" path="res://scripts/image_comparator.gd" id="5_irjko"]
 [ext_resource type="PackedScene" uid="uid://ywcejmpfamf7" path="res://scenes/MANO5.tscn" id="5_yfca1"]
+[ext_resource type="Texture2D" uid="uid://notbnc4u1mlg" path="res://assets/images/soluciones/Sol1.png" id="8_h4tmv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mnawn"]
 
@@ -134,3 +135,8 @@ material = SubResource("StandardMaterial3D_irjko")
 
 [node name="ImageComparator" type="Node" parent="."]
 script = ExtResource("5_irjko")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1.262, 0, 0, 0, 1.262, 0, 0, 0, 1.262, 0, 2.5261, -2.69765)
+modulate = Color(1, 1, 1, 0.27451)
+texture = ExtResource("8_h4tmv")

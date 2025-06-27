@@ -11,7 +11,11 @@ signal nextLevel
 signal contarHistoria(index) # señal para avanzar de sombra
 signal checkLevel()
 signal capturaToCompare
-
+const SOL_1 = "res://assets/images/soluciones/Sol1.png"
+const SOL_2 = "res://assets/images/soluciones/Sol2.png"
+const SOL_3 = "res://assets/images/soluciones/Sol3.png"
+const SOL_4 = "res://assets/images/soluciones/Sol4.png"
+var Soluciones = [SOL_1, SOL_2, SOL_3, SOL_4]
 enum Sombras { sombra1, sombra2, sombra3 }
 
 enum Scenes { SPLASH, MAIN_MENU, INTRO, GAME, CREDITS, NULL}
