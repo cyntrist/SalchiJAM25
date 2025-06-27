@@ -4,6 +4,7 @@ var soundCoger = load("res://assets/audio/sfx/coger.wav")
 
 func on_enable():
 	self.visible = true;
+	$Node3D/titulo/AnimationPlayer.play("titulo|tituloAction")
 	$Node3D.visible = true;
 
 func on_disable():

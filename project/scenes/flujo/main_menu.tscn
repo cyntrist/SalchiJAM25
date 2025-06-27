@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dy4tygucl1fuu"]
+[gd_scene load_steps=16 format=3 uid="uid://dy4tygucl1fuu"]
 
 [ext_resource type="Script" uid="uid://ovognw1joqnr" path="res://scripts/flujo/MainMenu.gd" id="1_rpswa"]
 [ext_resource type="Texture2D" uid="uid://cwwhik7hll2c1" path="res://icon.svg" id="2_1urw7"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://dk1my2wgoclst" path="res://scenes/Pruebas/camera.gd" id="2_f33ph"]
 [ext_resource type="PackedScene" uid="uid://bl4x7chhwx4td" path="res://scenes/Pruebas/play.tscn" id="3_f33ph"]
 [ext_resource type="Shader" uid="uid://b2jcj6037lets" path="res://scripts/shaders/2d to gradient_3D.gdshader" id="4_pd7ed"]
+[ext_resource type="PackedScene" uid="uid://b82p6b1eft8up" path="res://scenes/flujo/titulo.tscn" id="4_qjggc"]
 [ext_resource type="Script" uid="uid://c4fei85qf20v3" path="res://scripts/shaders/shaderbox.gd" id="5_qjggc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tetnm"]
@@ -17,13 +18,13 @@ sky_material = SubResource("ProceduralSkyMaterial_tetnm")
 background_mode = 2
 sky = SubResource("Sky_yfca1")
 
-[sub_resource type="Gradient" id="Gradient_f33ph"]
+[sub_resource type="Gradient" id="Gradient_pd7ed"]
 interpolation_mode = 1
 offsets = PackedFloat32Array(0, 0.0833333, 0.166667, 0.25, 0.333333, 0.416667, 0.5, 0.583333, 0.666667, 0.75, 0.833333, 0.916667)
 colors = PackedColorArray(0.00784314, 0.00784314, 0.00784314, 1, 0.262745, 0.262745, 0.262745, 1, 0.862745, 0.372549, 0.0941176, 1, 0.113725, 0.0784314, 0.176471, 1, 0, 0, 0.211765, 1, 0.00392157, 0.054902, 0.321569, 1, 0.00392157, 0.12549, 0.72549, 1, 0.164706, 0.364706, 0.741176, 1, 1, 0.905882, 0.643137, 1, 0.188235, 0.321569, 0.980392, 1, 0.121569, 0.113725, 0.329412, 1, 0.172549, 0.223529, 0.541176, 1)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_pd7ed"]
-gradient = SubResource("Gradient_f33ph")
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_qjggc"]
+gradient = SubResource("Gradient_pd7ed")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ijfu0"]
 render_priority = -10
@@ -31,7 +32,7 @@ shader = ExtResource("4_pd7ed")
 shader_parameter/rows = 3.0
 shader_parameter/cols = 4.0
 shader_parameter/dither_size = 4.0
-shader_parameter/pal = SubResource("GradientTexture1D_pd7ed")
+shader_parameter/pal = SubResource("GradientTexture1D_qjggc")
 
 [sub_resource type="BoxMesh" id="BoxMesh_m32l4"]
 size = Vector3(2, 2, 2)
@@ -46,10 +47,9 @@ grow_vertical = 2
 script = ExtResource("1_rpswa")
 
 [node name="Node3D" type="Node3D" parent="."]
-visible = false
 
 [node name="Camera" type="Camera3D" parent="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24298, 4.1855)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.67924, 5.78481)
 script = ExtResource("2_f33ph")
 
 [node name="RayCast3D" type="RayCast3D" parent="Node3D/Camera"]
@@ -79,11 +79,14 @@ spot_angle = 34.3445
 script = ExtResource("2_ey3ua")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0668125, 0.311935, -6.87883)
-size = Vector3(30.5146, 16.957, 0.241333)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.75388, -0.561505, -18.2243)
+size = Vector3(86.9235, 36.4698, 0.241333)
+
+[node name="titulo" parent="Node3D" instance=ExtResource("4_qjggc")]
+transform = Transform3D(3.91, 0, 0, 0, -1.70912e-07, -3.91, 0, 3.91, -1.70912e-07, 0.0635948, 6.63559, -7.85934)
 
 [node name="Play" parent="Node3D" instance=ExtResource("3_f33ph")]
-transform = Transform3D(1.91069e-15, -4.37114e-08, 1, -1, -4.37114e-08, 0, 4.37114e-08, -1, -4.37114e-08, 0, 1.54081, -2.7483)
+transform = Transform3D(1.91069e-15, -4.37114e-08, 1, -1, -4.37114e-08, 0, 4.37114e-08, -1, -4.37114e-08, 0, 0.298492, -6.54269)
 
 [node name="shaderbox" type="MeshInstance3D" parent="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 0.99984, -0.0179061, 0, 0.0179061, 0.99984, 0.189896, 3.09497, 0)
