@@ -71,6 +71,7 @@ func _next_dialogue():
 			dialogueTextID +=1
 
 func _start_quest(idText: int):
+	print("START PREHISTORIA")
 	if idText == ultimaHistoria:
 		return
 	
