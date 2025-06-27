@@ -52,7 +52,7 @@ func next_stage():
 var nivelCorrecto = false
 func _sombra_terminada(currentHistoria: int)->void:
 	if nivelCorrecto:
-		nextLevel.emit()
+		#nextLevel.emit()
 		nivelCorrecto = false
 
 func change_scene(next : Global.Scenes, speed = 1.0, force = true):

@@ -73,6 +73,7 @@ func _next_dialogue():
 func _start_quest(idText: int):
 	print("START PREHISTORIA")
 	if idText == ultimaHistoria:
+		print("hola")
 		return
 	
 	dialogueTextID = 0
@@ -118,4 +119,5 @@ func _avanzar_hasta_quest()->void:
 
 func _next_level()->void:
 	self.visible = false
-	Global.contarHistoria.emit(dialogueID)
+	dialogueID += 1 
+	Global.contarHistoria.emit(Global.stage-1)
