@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqf2t8qbuki1q"]
+
+[ext_resource type="PackedScene" uid="uid://bqjc8a26hvd3g" path="res://assets/models/botones/next.fbx" id="1_f2aji"]
+
+[node name="next" instance=ExtResource("1_f2aji")]
+
+[node name="next" parent="." index="0"]
+transform = Transform3D(86.6111, 2.23148, -49.9354, 49.9354, -8.32255, 86.2392, -2.23148, -99.6281, -8.32255, 0, 0, 0)

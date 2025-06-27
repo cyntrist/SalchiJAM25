@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://bx0cn133vx2x4"]
+[gd_scene load_steps=8 format=3 uid="uid://bx0cn133vx2x4"]
 
 [ext_resource type="Script" uid="uid://dh6njmuxh0ww2" path="res://scripts/flujo/Game.gd" id="1_ab273"]
 [ext_resource type="PackedScene" uid="uid://cagciatay3u85" path="res://scenes/andres_scene.tscn" id="2_pa1jb"]
-[ext_resource type="Texture2D" uid="uid://cwwhik7hll2c1" path="res://icon.svg" id="3_ab273"]
+[ext_resource type="PackedScene" uid="uid://bqjc8a26hvd3g" path="res://assets/models/botones/next.fbx" id="3_l2ljc"]
+[ext_resource type="PackedScene" uid="uid://b5wxiayqtex8o" path="res://scenes/flujo/reset.tscn" id="4_2jtgr"]
 [ext_resource type="Script" uid="uid://cchiii0apdegl" path="res://scripts/silhouette_button.gd" id="4_6wywq"]
-[ext_resource type="Script" path="res://scenes/flujo/button_reset.gd" id="4_l2ljc"]
+[ext_resource type="Script" uid="uid://b58bae3a7h15w" path="res://scenes/flujo/button_reset.gd" id="4_l2ljc"]
 [ext_resource type="PackedScene" uid="uid://dgdvboufg10pc" path="res://scenes/dialogo/dialogueBox.tscn" id="5_6wywq"]
 
 [node name="Game" type="Control"]
@@ -19,6 +20,12 @@ script = ExtResource("1_ab273")
 [node name="AndresScene" parent="." instance=ExtResource("2_pa1jb")]
 visible = false
 
+[node name="next" parent="." instance=ExtResource("3_l2ljc")]
+transform = Transform3D(0.566464, -0.197777, 0.00175013, 0, -0.00530921, -0.599977, 0.197785, 0.566442, -0.00501246, 4.08591, 2.89017, -1.28263)
+
+[node name="reset" parent="." instance=ExtResource("4_2jtgr")]
+transform = Transform3D(0.552299, 0.234439, -0.00207456, 0, -0.00530921, -0.599977, -0.234448, 0.552277, -0.00488712, -4.89017, 2.20733, -1.08108)
+
 [node name="DebugNivel" type="Label" parent="."]
 layout_mode = 0
 offset_right = 40.0
@@ -31,17 +38,17 @@ offset_left = 20.11
 offset_top = 20.0
 offset_right = 156.11
 offset_bottom = 156.0
-icon = ExtResource("3_ab273")
+flat = true
 clip_text = true
 script = ExtResource("4_l2ljc")
 
 [node name="ButtonConfirm" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1123.0
+offset_left = 1071.0
 offset_top = 23.0
-offset_right = 1259.0
+offset_right = 1242.0
 offset_bottom = 159.0
-icon = ExtResource("3_ab273")
+flat = true
 clip_text = true
 script = ExtResource("4_6wywq")
 
