@@ -122,13 +122,11 @@ mesh = SubResource("BoxMesh_qmgvp")
 script = ExtResource("2_irjko")
 cList = Array[Color]([Color(0.00784314, 0.00784314, 0.00784314, 1), Color(0.262745, 0.262745, 0.262745, 1), Color(0.862745, 0.372549, 0.0941176, 1), Color(0.113725, 0.0784314, 0.176471, 1), Color(0, 0, 0.211765, 1), Color(0.00392157, 0.054902, 0.321569, 1), Color(0.00392157, 0.12549, 0.72549, 1), Color(0.164706, 0.364706, 0.741176, 1), Color(1, 0.905882, 0.643137, 1), Color(0.188235, 0.321569, 0.980392, 1), Color(0.121569, 0.113725, 0.329412, 1), Color(0.172549, 0.223529, 0.541176, 1)])
 
-[node name="MANO_I" parent="." node_paths=PackedStringArray("listBones") instance=ExtResource("5_yfca1")]
+[node name="MANO_I" parent="." instance=ExtResource("5_yfca1")]
 transform = Transform3D(0.2, 0, 0, 0, 0.19998, -0.00279244, 0, 0.00279244, 0.19998, -0.771, -0.320012, 0.0372625)
-listBones = [null, null, null, null, null, null, null]
 
-[node name="MANO_R" parent="." node_paths=PackedStringArray("listBones") instance=ExtResource("5_yfca1")]
+[node name="MANO_R" parent="." instance=ExtResource("5_yfca1")]
 transform = Transform3D(-0.2, 0, 0, 0, 0.198057, -0.0278104, 0, 0.0278104, 0.198057, 0.770528, -0.32018, 0.0372385)
-listBones = [null, null, null, null, null, null, null]
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.873866, -0.486168, 0, 0.486168, 0.873866, 2.12552, 1.14445, 0.445628)
