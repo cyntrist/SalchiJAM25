@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://bx0cn133vx2x4"]
+[gd_scene load_steps=6 format=3 uid="uid://bx0cn133vx2x4"]
 
 [ext_resource type="Script" uid="uid://dh6njmuxh0ww2" path="res://scripts/flujo/Game.gd" id="1_ab273"]
 [ext_resource type="PackedScene" uid="uid://cagciatay3u85" path="res://scenes/andres_scene.tscn" id="2_pa1jb"]
 [ext_resource type="Texture2D" uid="uid://cwwhik7hll2c1" path="res://icon.svg" id="3_ab273"]
 [ext_resource type="Script" uid="uid://cchiii0apdegl" path="res://scripts/silhouette_button.gd" id="4_6wywq"]
-[ext_resource type="Script" uid="uid://b58bae3a7h15w" path="res://scenes/flujo/button_reset.gd" id="4_l2ljc"]
 [ext_resource type="PackedScene" uid="uid://dgdvboufg10pc" path="res://scenes/dialogo/dialogueBox.tscn" id="5_6wywq"]
 
 [node name="Game" type="Control"]
@@ -17,7 +16,6 @@ grow_vertical = 2
 script = ExtResource("1_ab273")
 
 [node name="AndresScene" parent="." instance=ExtResource("2_pa1jb")]
-visible = false
 
 [node name="DebugNivel" type="Label" parent="."]
 layout_mode = 0
@@ -33,7 +31,6 @@ offset_right = 156.11
 offset_bottom = 156.0
 icon = ExtResource("3_ab273")
 clip_text = true
-script = ExtResource("4_l2ljc")
 
 [node name="ButtonConfirm" type="Button" parent="."]
 layout_mode = 0
@@ -52,9 +49,5 @@ offset_right = 338.0
 offset_bottom = 427.0
 
 [connection signal="button_down" from="ButtonReset" to="AndresScene" method="reset_pos"]
-[connection signal="mouse_entered" from="ButtonReset" to="ButtonReset" method="_on_button_reset_mouse_entered"]
-[connection signal="mouse_exited" from="ButtonReset" to="ButtonReset" method="_on_button_reset_mouse_exited"]
-[connection signal="pressed" from="ButtonReset" to="ButtonReset" method="_on_pressed"]
-[connection signal="mouse_entered" from="ButtonConfirm" to="ButtonConfirm" method="_on_button_confirm_mouse_entered"]
-[connection signal="mouse_exited" from="ButtonConfirm" to="ButtonConfirm" method="_on_button_confirm_mouse_exited"]
-[connection signal="pressed" from="ButtonConfirm" to="ButtonConfirm" method="_on_pressed"]
+[connection signal="mouse_entered" from="ButtonConfirm" to="." method="_on_button_confirm_mouse_entered"]
+[connection signal="mouse_exited" from="ButtonConfirm" to="." method="_on_button_confirm_mouse_exited"]
