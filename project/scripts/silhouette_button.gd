@@ -6,8 +6,8 @@ func _ready() -> void:
 
 func _pressed() -> void:
 	#print("BOTON PULSADO");
-	Global.sfx2.stream = load("res://assets/audio/sfx/papel.wav")
-	Global.sfx2.play()
+	Global.sfx.stream = load("res://assets/audio/sfx/papel.wav")
+	Global.sfx.play()
 	Global.capturaToCompare.emit(); # captura para comparar
 	pass
 
