@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://t4p55hjx1m5i"]
+[gd_scene load_steps=12 format=3 uid="uid://t4p55hjx1m5i"]
 
 [ext_resource type="Script" uid="uid://b2yb2wipspl12" path="res://scripts/flujo/StateMachine.gd" id="1_seyow"]
 [ext_resource type="PackedScene" uid="uid://doma3ldba1l8e" path="res://scenes/flujo/credits_scene.tscn" id="2_6qpgm"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bx0cn133vx2x4" path="res://scenes/flujo/game_scene.tscn" id="3_ea0l5"]
 [ext_resource type="PackedScene" uid="uid://dy4tygucl1fuu" path="res://scenes/flujo/main_menu.tscn" id="3_mwl0m"]
 [ext_resource type="PackedScene" uid="uid://kuee5s7qpvx2" path="res://scenes/flujo/intro_scene.tscn" id="4_jhmf0"]
+[ext_resource type="PackedScene" uid="uid://qjrxoe15ywqi" path="res://scenes/canvas_layer.tscn" id="9_7ovb7"]
 [ext_resource type="AudioStream" uid="uid://baaeily6rn4b2" path="res://assets/audio/ambient/wind.wav" id="9_e1eur"]
 [ext_resource type="AudioStream" uid="uid://dx6324toc8ryq" path="res://assets/audio/ambient/crickets.wav" id="10_e1eur"]
 [ext_resource type="PackedScene" uid="uid://dnysdn0d3o7b2" path="res://scenes/flujo/splash_scene.tscn" id="14_aso3l"]
@@ -40,6 +41,8 @@ visible = false
 [node name="Splash" parent="Scenes" instance=ExtResource("14_aso3l")]
 
 [node name="Fade" parent="." instance=ExtResource("17_rgtxn")]
+
+[node name="CanvasLayer" parent="." instance=ExtResource("9_7ovb7")]
 
 [node name="Sound" type="Node" parent="."]
 
