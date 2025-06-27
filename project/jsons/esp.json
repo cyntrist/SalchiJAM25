@@ -329,7 +329,11 @@
 				},
 				{
 					"Person": 0,
-					"Text": " Le acuesta en la cama, siendo por primera vez consciente de que el fruto se ha podrido.@"
+					"Text": " Le acuesta en la cama, siendo por primera vez consciente de que el fruto se ha podrido."
+				},
+				{
+					"Person": 0,
+					"Text": "@"
 				}
 			]
 		}

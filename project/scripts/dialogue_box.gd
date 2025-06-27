@@ -43,7 +43,7 @@ func _next_dialogue():
 	#print_debug(dialogueTextID)
 	#print_debug(JsonParser.json_data.Dialoges[dialogueID].Texts.size())
 
-	if dialogueTextID == 10 and dialogueID == 4:
+	if dialogueTextID == 11 and dialogueID == 4:
 		juego_acabado = true;
 	if juego_acabado:
 		await get_tree().create_timer(2).timeout;
