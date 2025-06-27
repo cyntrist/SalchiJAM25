@@ -24,6 +24,7 @@ enum Scenes { SPLASH, MAIN_MENU, INTRO, GAME, CREDITS, NULL}
 
 var gms
 var sfx
+var sfx2
 var bgm1
 var bgm2
 var bgm3

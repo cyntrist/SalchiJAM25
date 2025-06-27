@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bx0cn133vx2x4"]
+[gd_scene load_steps=10 format=3 uid="uid://bx0cn133vx2x4"]
 
 [ext_resource type="Script" uid="uid://dh6njmuxh0ww2" path="res://scripts/flujo/Game.gd" id="1_ab273"]
 [ext_resource type="PackedScene" uid="uid://cagciatay3u85" path="res://scenes/andres_scene.tscn" id="2_pa1jb"]
@@ -7,6 +7,10 @@
 [ext_resource type="Script" uid="uid://cchiii0apdegl" path="res://scripts/silhouette_button.gd" id="4_6wywq"]
 [ext_resource type="Script" uid="uid://b58bae3a7h15w" path="res://scenes/flujo/button_reset.gd" id="4_l2ljc"]
 [ext_resource type="PackedScene" uid="uid://dgdvboufg10pc" path="res://scenes/dialogo/dialogueBox.tscn" id="5_6wywq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fg5qh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2jtgr"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -39,6 +43,7 @@ offset_left = 20.11
 offset_top = 20.0
 offset_right = 156.11
 offset_bottom = 156.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fg5qh")
 flat = true
 clip_text = true
 script = ExtResource("4_l2ljc")
@@ -49,6 +54,7 @@ offset_left = 1071.0
 offset_top = 23.0
 offset_right = 1242.0
 offset_bottom = 159.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2jtgr")
 flat = true
 clip_text = true
 script = ExtResource("4_6wywq")
