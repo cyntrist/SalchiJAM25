@@ -41,16 +41,16 @@ func _next_dialogue():
 		textDisplayed = 1
 		label.visible_ratio = textDisplayed
 	
-	print_debug(dialogueTextID)
-	print_debug(JsonParser.json_data.Dialoges[dialogueID].Texts.size())
-	
+	#print_debug(dialogueTextID)
+	#print_debug(JsonParser.json_data.Dialoges[dialogueID].Texts.size())
+	#
 	
 	
 	### GESTIONES DE PUTA MIERDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 	if dialogueTextID == 6 and dialogueID == 0:
 		get_parent().encender_cojones();
 	if dialogueTextID == 7 and dialogueID == 4:
-		get_parent().encender_cojones();
+		get_parent().apagar_cojones();
 	#################################################################
 	
 	
@@ -135,6 +135,7 @@ func _avanzar_hasta_quest()->void:
 func _next_level()->void:
 	#self.visible = false
 	dialogueID += 1 
+	print_debug(Global.stage)
 	Global.contarHistoria.emit(Global.stage-1)
 
 func _hide():

@@ -10,8 +10,8 @@ func _pressed() -> void:
 	pass
 
 func _next_stage():
-	if (Global.stage >= Global.maxStages):
-		get_parent().apagar_cojones()			
+	if (Global.stage == Global.maxStages):
+		Global.contarHistoria.emit(4)	
 	else:
 		get_parent().apagar_y_encender()
 		Global.next_stage();
