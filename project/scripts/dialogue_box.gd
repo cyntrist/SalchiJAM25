@@ -1,6 +1,6 @@
 extends Control
 
-@onready var audio_stream: AudioStreamPlayer2D = $AudioStreamPlayer2D
+#@onready var audio_stream: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var button: Button = $Button
 @onready var label: Label = $Button/Label
 
@@ -9,7 +9,7 @@ var color1 : Color
 var color2 : Color
 var color3 : Color
 #ruta del sonido de cada persona
-var sound = load("res://Sounds/voces/random.wav")
+#var sound = load("res://Sounds/voces/random.wav")
 var sound1: float
 var sound2: float
 var sound3: float
@@ -71,6 +71,7 @@ func _next_dialogue():
 			dialogueTextID +=1
 
 func _start_quest(idText: int):
+	print("START PREHISTORIA")
 	if idText == ultimaHistoria:
 		return
 	

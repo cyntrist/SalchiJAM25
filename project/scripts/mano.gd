@@ -25,20 +25,21 @@ func un_select():
 func  _input(event: InputEvent) -> void:
 	if not selected:
 		return
-	
-	if event is InputEventKey and event.is_pressed():
-		match event.keycode:
-			KEY_W:
-				if (boneActual != 0 || boneActual == 0 && !Global.trasladarBrazo):
+		
+	if event is InputEventMouseButton and event.pressed:
+		match event.button_index:
+			MOUSE_BUTTON_WHEEL_UP:
+				if boneActual != 0 or (boneActual == 0 and !Global.trasladarBrazo):
 					listBones[boneActual].reset_select()
-					boneActual +=1
-					if boneActual >= len(listBones):
+					boneActual += 1
+					if boneActual >= listBones.size():
 						boneActual = 0
 					listBones[boneActual].select_bone()
-			KEY_S:
-				if (boneActual != 0 || boneActual == 0 && !Global.trasladarBrazo):
+					
+			MOUSE_BUTTON_WHEEL_DOWN:
+				if boneActual != 0 or (boneActual == 0 and !Global.trasladarBrazo):
 					listBones[boneActual].reset_select()
-					boneActual -=1
+					boneActual -= 1
 					if boneActual < 0:
-						boneActual = len(listBones)-1
+						boneActual = listBones.size() - 1
 					listBones[boneActual].select_bone()
