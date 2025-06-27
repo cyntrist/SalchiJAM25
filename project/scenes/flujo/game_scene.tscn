@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cagciatay3u85" path="res://scenes/andres_scene.tscn" id="2_pa1jb"]
 [ext_resource type="Texture2D" uid="uid://cwwhik7hll2c1" path="res://icon.svg" id="3_ab273"]
 [ext_resource type="Script" uid="uid://cchiii0apdegl" path="res://scripts/silhouette_button.gd" id="4_6wywq"]
-[ext_resource type="Script" uid="uid://b58bae3a7h15w" path="res://scenes/flujo/button_reset.gd" id="4_l2ljc"]
+[ext_resource type="Script" path="res://scenes/flujo/button_reset.gd" id="4_l2ljc"]
 [ext_resource type="PackedScene" uid="uid://dgdvboufg10pc" path="res://scenes/dialogo/dialogueBox.tscn" id="5_6wywq"]
 
 [node name="Game" type="Control"]

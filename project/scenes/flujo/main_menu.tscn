@@ -112,6 +112,7 @@ offset_right = 707.405
 offset_bottom = 392.0
 
 [node name="Label" type="Label" parent="Jugar"]
+visible = false
 layout_mode = 0
 offset_left = 20.0
 offset_top = 48.0
@@ -128,6 +129,7 @@ offset_bottom = 697.0
 texture_normal = ExtResource("2_1urw7")
 
 [node name="Label" type="Label" parent="Salir"]
+visible = false
 layout_mode = 0
 offset_left = 20.0
 offset_top = 48.0
