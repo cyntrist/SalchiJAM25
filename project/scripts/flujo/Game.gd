@@ -44,6 +44,7 @@ func apagar(speed = 0.5):
 	var tween = create_tween()
 	tween.tween_property(luz, "light_energy", 0.0, speed)
 	Global.on_candle_unlit.emit()
+	andres.hide_hint()
 	tween.finished.connect(func(): 
 		andres.reset_pos() 
 		)
