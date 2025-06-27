@@ -23,7 +23,7 @@ func  _input(event: InputEvent) -> void:
 				manos[1].select()
 
 func next_stage():
-	print_debug(Global.stage)
+	#print_debug(Global.stage)
 	if (Global.stage <= Global.Soluciones.size()):
 		sprite_3d.texture = load(Global.Soluciones[Global.stage - 1])
 

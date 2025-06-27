@@ -35,14 +35,15 @@ func _process(delta: float) -> void:
 		label.visible_ratio = textDisplayed
 
 func _next_dialogue():
-	if juego_acabado:
-		Global.change_scene(Global.Scenes.CREDITS)
-		print_debug("HUEVOOOOOOOOOOOOOOOOOOOOOS")
-		return
-	elif dialogueTextID == 11 and dialogueID == 4:
+	#print_debug(dialogueTextID)
+	#print_debug(JsonParser.json_data.Dialoges[dialogueID].Texts.size())
+
+	if dialogueTextID == 10 and dialogueID == 4:
 		juego_acabado = true;
-		print_debug("COJOOOOOOOOOOOOOOOOOOOONES")
-		return;
+	if juego_acabado:
+		await get_tree().create_timer(2).timeout;
+		Global.change_scene(Global.Scenes.CREDITS)
+		return
 	
 	# completa el texto si no lo ha hecho
 	if textDisplayed >= 1:
@@ -63,6 +64,7 @@ func _next_dialogue():
 		get_parent().get_child(0).show_hint();
 	elif dialogueTextID == 7 and dialogueID == 4:
 		get_parent().apagar_cojones();
+		get_parent().get_child(0).hide_hint();
 	#################################################################
 	
 	
