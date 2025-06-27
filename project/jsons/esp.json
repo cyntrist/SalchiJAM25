@@ -1,12 +1,4 @@
 {
-	"UI": {
-		"Lenguage": "Idioma",
-		"Exit": "Salir",
-		"Context": "21 de Noviembre, 1946\nTomillar del Alba\nEspaña",
-		"Papers": "<- Papeles",
-		"Discarts": "Descartes ->",
-		"Clue": "c/Reatas 15"
-	},
 	"Dialoges": [
 		{
 			"Sound1": "res://Sounds/Placeholders/SonidoPH1.wav",
@@ -117,7 +109,7 @@
 					"Text": "Tan feliz que ignora el peligro de su alrededor."
 				},
 				{
-					"Person": 1,
+					"Person": 2,
 					"Text": "No empieces..."
 				},
 				{
