@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 		# control.scale =  Vector2((1+elapsedTime)/10,(1+elapsedTime)/10)
 		elapsedTime += delta
 	elif not aumentado:
-		Global.change_scene(Global.Scenes.MAIN_MENU)
+		Global.change_scene(Global.Scenes.GAME)
 		aumentado = true	
 
 
