@@ -1,5 +1,9 @@
 extends Scene
 
+func on_enable():
+	self.visible = true;
+	$Node3D.visible = true;
+
 func on_disable():
 	self.visible = false;
 	$Node3D.visible = false;
