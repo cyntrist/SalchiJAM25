@@ -2,6 +2,7 @@ extends Scene
 
 func on_disable():
 	self.visible = false;
+	$Node3D.visible = false;
 	$Node3D/WorldEnvironment/SpotLight3D.visible = false
 	$Node3D/WorldEnvironment/SpotLight3D.light_energy = 0.0
 	pass

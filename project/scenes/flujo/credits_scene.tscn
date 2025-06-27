@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://doma3ldba1l8e"]
 
 [ext_resource type="Script" uid="uid://c8k4nrtrs6b8j" path="res://scripts/flujo/Credits.gd" id="1_4f4al"]
-[ext_resource type="Texture2D" uid="uid://cwwhik7hll2c1" path="res://icon.svg" id="2_hv1m4"]
 [ext_resource type="FontFile" uid="uid://dkta2oxlut7xe" path="res://assets/fonts/PPLettraMono-Medium.otf" id="2_x3w6v"]
+[ext_resource type="Texture2D" uid="uid://wm4g8caa26bs" path="res://assets/fonts/banner.png" id="3_x3w6v"]
 
 [node name="Credits" type="Control"]
 layout_mode = 3
@@ -50,11 +50,11 @@ autoplay = true
 
 [node name="Icon" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 559.0
-offset_top = 2203.0
-offset_right = 687.0
-offset_bottom = 2331.0
-texture = ExtResource("2_hv1m4")
+offset_left = 302.0
+offset_top = 2331.0
+offset_right = 1021.0
+offset_bottom = 2731.0
+texture = ExtResource("3_x3w6v")
 
 [node name="Label" type="Label" parent="."]
 visible = false
