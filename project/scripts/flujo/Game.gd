@@ -9,6 +9,7 @@ extends Scene
 @export var initial_value : float = 7.0
 
 func on_enable():
+	andres.visible = true;
 	luz.light_energy = 0.0;
 	dialogue.modulate = Color.TRANSPARENT;
 	var tween = create_tween()

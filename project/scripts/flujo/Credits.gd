@@ -35,17 +35,16 @@ var lines := []
 
 var credits = [
 	[
-		"SALCHIJAM25"
+		"INQUIETUD EN UNA NOCHE DE VERANO"
 	], [
 		"EQUIPO",
 		"Nieves Alonso Gilsanz",
 		"Andrés García Navarro",
 		"Cynthia Tristán Álvarez"
 	], [
-		"AGRADECIMIENTOS ESPECIALES",
-		"Rocío Sánchez"
+		"AGRADECIMIENTOS ESPECIALES"
 	], [
-		"y a ti :^]"
+		"a ti :^]"
 	]
 	#],[
 		#"tetitas",

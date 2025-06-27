@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://ovognw1joqnr" path="res://scripts/flujo/MainMenu.gd" id="1_rpswa"]
 [ext_resource type="Texture2D" uid="uid://cwwhik7hll2c1" path="res://icon.svg" id="2_1urw7"]
-[ext_resource type="Script" uid="uid://745xjmyeefo7" path="res://scenes/Pruebas/spot_light_3d.gd" id="2_ey3ua"]
-[ext_resource type="Script" uid="uid://dk1my2wgoclst" path="res://scenes/Pruebas/camera.gd" id="2_f33ph"]
-[ext_resource type="PackedScene" uid="uid://bl4x7chhwx4td" path="res://scenes/Pruebas/play.tscn" id="3_f33ph"]
+[ext_resource type="Script" path="res://scenes/Pruebas/spot_light_3d.gd" id="2_ey3ua"]
+[ext_resource type="Script" path="res://scenes/Pruebas/camera.gd" id="2_f33ph"]
+[ext_resource type="PackedScene" path="res://scenes/Pruebas/play.tscn" id="3_f33ph"]
 [ext_resource type="Shader" uid="uid://b2jcj6037lets" path="res://scripts/shaders/2d to gradient_3D.gdshader" id="4_pd7ed"]
 [ext_resource type="Script" uid="uid://c4fei85qf20v3" path="res://scripts/shaders/shaderbox.gd" id="5_qjggc"]
 

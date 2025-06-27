@@ -1,5 +1,11 @@
 extends Scene
 
+func _on_disable():
+	self.visible = false;
+	$Node3D/WorldEnvironment.visible = false
+	$Node3D/WorldEnvironment/SpotLight3D.visible = false
+	$Node3D/WorldEnvironment/SpotLight3D.energy = 0.0
+	pass
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -19,5 +25,5 @@ func _on_jugar_pressed() -> void:
 	$Node3D/Play/Caja/compartimento/AnimationPlayer.play("Compartimento|CompartimentoAction")
 	await $Node3D/Play/AnimationPlayer.animation_finished
 	print("CAMBIO DE ESCEASD")
-	Global.change_scene(Global.Scenes.INTRO)
+	Global.change_scene(Global.Scenes.GAME)
 	pass

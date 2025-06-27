@@ -16,6 +16,7 @@ grow_vertical = 2
 script = ExtResource("1_ab273")
 
 [node name="AndresScene" parent="." instance=ExtResource("2_pa1jb")]
+visible = false
 
 [node name="DebugNivel" type="Label" parent="."]
 layout_mode = 0
