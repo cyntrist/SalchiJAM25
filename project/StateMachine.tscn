@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://t4p55hjx1m5i"]
+[gd_scene load_steps=12 format=3 uid="uid://t4p55hjx1m5i"]
 
 [ext_resource type="Script" uid="uid://b2yb2wipspl12" path="res://scripts/flujo/StateMachine.gd" id="1_seyow"]
 [ext_resource type="PackedScene" uid="uid://doma3ldba1l8e" path="res://scenes/flujo/credits_scene.tscn" id="2_6qpgm"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://kuee5s7qpvx2" path="res://scenes/flujo/intro_scene.tscn" id="4_jhmf0"]
 [ext_resource type="AudioStream" uid="uid://baaeily6rn4b2" path="res://assets/audio/ambient/wind.wav" id="9_e1eur"]
 [ext_resource type="AudioStream" uid="uid://dx6324toc8ryq" path="res://assets/audio/ambient/crickets.wav" id="10_e1eur"]
+[ext_resource type="AudioStream" uid="uid://b82lknodjucbw" path="res://assets/audio/sfx/flickering.wav" id="11_7ovb7"]
 [ext_resource type="PackedScene" uid="uid://dnysdn0d3o7b2" path="res://scenes/flujo/splash_scene.tscn" id="14_aso3l"]
 [ext_resource type="PackedScene" uid="uid://5w0xl8fledrk" path="res://scenes/flujo/fade_scene.tscn" id="17_rgtxn"]
 
@@ -53,6 +54,8 @@ volume_db = 4.952
 stream = ExtResource("10_e1eur")
 
 [node name="BGM3" type="AudioStreamPlayer2D" parent="Sound"]
+stream = ExtResource("11_7ovb7")
+volume_db = 6.933
 
 [node name="SFX2" type="AudioStreamPlayer2D" parent="Sound"]
 volume_db = 4.952

@@ -13,8 +13,8 @@ var soundApagar = load("res://assets/audio/sfx/apagar.wav")
 var soundApagar2 = load("res://assets/audio/sfx/apagar_2.wav")
 
 func on_enable():
-	Global.bgm1.play()
-	Global.bgm2.play()
+	#Global.bgm1.play()
+	#Global.bgm2.play()
 	andres.visible = true;
 	luz.light_energy = 0.0;
 	dialogue.modulate = Color.TRANSPARENT;
@@ -35,6 +35,7 @@ func encender_cojones(speed = 1.0):
 	tween.tween_property(luz, "light_energy", initial_value, speed)
 	Global.sfx.stream = soundEncender
 	Global.sfx.play()
+	Global.bgm3.play()
 	pass;
 
 func apagar_cojones(speed = 0.5):
@@ -54,6 +55,7 @@ func encender(speed = 1.0):
 		)
 	Global.sfx.stream = soundEncender
 	Global.sfx.play()
+	Global.bgm3.play()
 	pass
 	
 func apagar(speed = 0.5):
@@ -66,6 +68,7 @@ func apagar(speed = 0.5):
 		)
 	Global.sfx.stream = soundApagar2
 	Global.sfx.play()
+	Global.bgm3.stop()
 	pass
 	
 func apagar_y_encender(speed = 1.0):
