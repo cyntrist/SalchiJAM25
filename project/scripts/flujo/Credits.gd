@@ -116,7 +116,7 @@ func _process(delta):
 	if speed_up:
 		scroll_speed *= speed_up_multiplier
 	
-	if final_icon.position.y <= 300:
+	if final_icon.position.y <= 325:
 		final_icon_en_mitad = true
 	
 	if (!final_icon_en_mitad):

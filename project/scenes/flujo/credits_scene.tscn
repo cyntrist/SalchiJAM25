@@ -51,9 +51,9 @@ autoplay = true
 [node name="Icon" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = 302.0
-offset_top = 2365.0
+offset_top = 2331.0
 offset_right = 1021.0
-offset_bottom = 2765.0
+offset_bottom = 2731.0
 texture = ExtResource("3_x3w6v")
 
 [node name="Label" type="Label" parent="."]
