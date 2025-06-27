@@ -49,7 +49,9 @@ func _next_dialogue():
 	### GESTIONES DE PUTA MIERDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 	if dialogueTextID == 6 and dialogueID == 0:
 		get_parent().encender_cojones();
-	if dialogueTextID == 7 and dialogueID == 4:
+	elif dialogueTextID == 11 and dialogueID == 0 or dialogueTextID == 5 and dialogueID == 1 or dialogueTextID == 7 and dialogueID == 2 or dialogueTextID == 6 and dialogueID == 3:
+		get_parent().get_child(0).show_hint();
+	elif dialogueTextID == 7 and dialogueID == 4:
 		get_parent().apagar_cojones();
 	#################################################################
 	

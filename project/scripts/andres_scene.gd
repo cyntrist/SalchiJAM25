@@ -1,14 +1,16 @@
 extends Node3D
 
 @export var manos : Array[Node3D]
+@onready var sprite_3d: Sprite3D = $Sprite3D
+@export var color = Color("ffffff46")
 
 func _ready() -> void:	
-	Global.nextLevel.connect(next_stage)
+	sprite_3d.modulate = Color.TRANSPARENT
+	#Global.nextLevel.connect(next_stage)
 
 func reset_pos():
 	for m in manos:
 		m.reset_pos()
-@onready var sprite_3d: Sprite3D = $Sprite3D
 
 func  _input(event: InputEvent) -> void:
 	if event is InputEventKey and event.is_pressed():
@@ -21,5 +23,20 @@ func  _input(event: InputEvent) -> void:
 				manos[1].select()
 
 func next_stage():
-	if (Global.stage < Global.Soluciones.size()):
-		sprite_3d.texture = load(Global.Soluciones[Global.stage])
+	print_debug(Global.stage)
+	if (Global.stage <= Global.Soluciones.size()):
+		sprite_3d.texture = load(Global.Soluciones[Global.stage - 1])
+
+func show_hint():
+	if (sprite_3d.modulate != Color.WHITE):
+		var tween = create_tween()
+		tween.tween_property(sprite_3d, "modulate", color, 0.5)
+	pass
+	
+func hide_hint():
+	if (sprite_3d.modulate != Color.TRANSPARENT):
+		var tween = create_tween()
+		tween.tween_property(sprite_3d, "modulate", Color.TRANSPARENT, 0.5)
+		tween.finished.connect(func(): next_stage())
+	
+	pass
