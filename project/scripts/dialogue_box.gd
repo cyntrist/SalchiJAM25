@@ -23,7 +23,9 @@ var ultimaHistoria: int = -1 # guarda la ultima historia contada (nivel)
 func _ready() -> void:
 	_start_quest(dialogueID)
 	Global.contarHistoria.connect(_start_quest)
-	Global.nextLevel.connect(_next_level)
+	#Global.nextLevel.connect(_next_level)
+	Global.on_candle_lit.connect(_show)
+	Global.on_candle_unlit.connect(_hide)
 	label.text = ""
 
 func _process(delta: float) -> void:
@@ -39,15 +41,29 @@ func _next_dialogue():
 		textDisplayed = 1
 		label.visible_ratio = textDisplayed
 	
+	#print_debug(dialogueTextID)
+	#print_debug(JsonParser.json_data.Dialoges[dialogueID].Texts.size())
+	#
+	
+	
+	### GESTIONES DE PUTA MIERDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+	if dialogueTextID == 6 and dialogueID == 0:
+		get_parent().encender_cojones();
+	if dialogueTextID == 7 and dialogueID == 4:
+		get_parent().apagar_cojones();
+	#################################################################
+	
+	
+	
 	# Comprueba si ha acabado el dialogo
-	if dialogueTextID >= JsonParser.json_data.Dialoges[dialogueID].Texts.size() :
-		_end_dialogue()
+	if dialogueTextID >= JsonParser.json_data.Dialoges[dialogueID].Texts.size():
 		print("FIN DEL DIALOGO")
+		_end_dialogue()
 		return
 		
 	else:
 		var person = JsonParser.dialogos[dialogueID].Texts[dialogueTextID].Person
-		print(person)
+		#print(person)
 		match person:
 			0.0:
 				#audio_stream.pitch_scale = sound1
@@ -65,13 +81,12 @@ func _next_dialogue():
 		
 		if "@" in JsonParser.dialogos[dialogueID].Texts[dialogueTextID].Text:
 			label.text = JsonParser.dialogos[dialogueID].Texts[dialogueTextID].Text.replace('@', '')
-
 		else:
 			label.text = JsonParser.dialogos[dialogueID].Texts[dialogueTextID].Text
 			dialogueTextID +=1
 
 func _start_quest(idText: int):
-	print("START PREHISTORIA ", idText)
+	#print("START PREHISTORIA ", idText)
 	if idText == ultimaHistoria:
 		print("hola")
 		return
@@ -84,7 +99,7 @@ func _start_quest(idText: int):
 	dialogueID = idText
 	
 	#asigna las diferentes propiedades
-	var rng = RandomNumberGenerator.new() 
+	#var rng = RandomNumberGenerator.new() 
 	#sound1 = rng.randf_range(0.5, 2.5)
 	#sound2 = rng.randf_range(0.5, 2.5)
 	#audio_stream.stream = sound
@@ -94,7 +109,6 @@ func _start_quest(idText: int):
 	color3 = Color(JsonParser.dialogos[dialogueID].Color3.R,JsonParser.dialogos[dialogueID].Color3.G,JsonParser.dialogos[dialogueID].Color3.B, 1)
 	
 	if Global.nivelCorrecto:
-		print("SIGUIENTEEE")
 		_start_dialogue()
 		return
 	
@@ -102,14 +116,14 @@ func _start_quest(idText: int):
 	_next_dialogue()
 
 func _start_dialogue() -> void:
-	self.visible = true
+	#self.visible = true
 	textDisplayed = 0
 	#_avanzar_hasta_quest()
 	_next_dialogue()
 
 func _end_dialogue():
 	ultimaHistoria = dialogueID
-	self.visible = true
+	#self.visible = true
 	Global._sombra_terminada(dialogueID)
 
 func _avanzar_hasta_quest()->void:
@@ -119,6 +133,16 @@ func _avanzar_hasta_quest()->void:
 	dialogueTextID += 1
 
 func _next_level()->void:
-	self.visible = false
+	#self.visible = false
 	dialogueID += 1 
+	print_debug(Global.stage)
 	Global.contarHistoria.emit(Global.stage-1)
+
+func _hide():
+	var tween = create_tween()
+	tween.tween_property(self, "modulate", Color.TRANSPARENT, 0.5)
+	
+func _show():
+	var tween = create_tween()
+	tween.tween_property(self, "modulate", Color.WHITE, 0.5)
+	_next_level()
