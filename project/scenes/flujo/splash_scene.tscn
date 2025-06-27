@@ -14,22 +14,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bqrie")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = -986.0
-offset_top = -565.0
-offset_right = 977.0
-offset_bottom = 559.0
-color = Color(0.054902, 0.054902, 0.054902, 1)
-
-[node name="TextureRect2" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = -580.0
-offset_top = -326.0
-offset_right = 2872.0
-offset_bottom = 2122.0
-scale = Vector2(0.34, 0.27)
-
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = -151.0

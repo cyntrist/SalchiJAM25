@@ -104,7 +104,6 @@ directional_shadow_pancake_size = 11.2
 
 [node name="SpotLight3D" type="SpotLight3D" parent="WorldEnvironment"]
 transform = Transform3D(1, 0, 0, 0, 0.587333, -0.809345, 0, 0.809345, 0.587333, -0.0452889, -4.71157, 5.57549)
-light_energy = 7.0
 shadow_enabled = true
 spot_range = 23.7406
 spot_angle = 34.3445
