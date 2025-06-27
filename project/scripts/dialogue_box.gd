@@ -18,6 +18,7 @@ var textDisplayed: float = 0 # contador para que se escriba letra a letra
 var dialogueID: int = 0 # ID del dialogo en el que estamos
 var dialogueTextID: int = 0 # ID texto del dialogo mostrado
 var ultimaHistoria: int = -1 # guarda la ultima historia contada (nivel)
+var juego_acabado = false;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -34,9 +35,20 @@ func _process(delta: float) -> void:
 		label.visible_ratio = textDisplayed
 
 func _next_dialogue():
+
 	var tween = create_tween()
 	tween.tween_property(self, "scale", Vector2(0.99,0.99), 0.01)
 	tween.tween_property(self, "scale", Vector2(1,1), 0.1)
+
+	#print_debug(dialogueTextID)
+	#print_debug(JsonParser.json_data.Dialoges[dialogueID].Texts.size())
+
+	if dialogueTextID == 10 and dialogueID == 4:
+		juego_acabado = true;
+	if juego_acabado:
+		await get_tree().create_timer(2).timeout;
+		Global.change_scene(Global.Scenes.CREDITS)
+		return
 	
 	# completa el texto si no lo ha hecho
 	if textDisplayed >= 1:
@@ -57,6 +69,7 @@ func _next_dialogue():
 		get_parent().get_child(0).show_hint();
 	elif dialogueTextID == 7 and dialogueID == 4:
 		get_parent().apagar_cojones();
+		get_parent().get_child(0).hide_hint();
 	#################################################################
 	
 	

@@ -17,6 +17,7 @@ func _ready():
 	
 func _screenshot():
 	#print("CAPTURA")
+	
 	await RenderingServer.frame_post_draw #accede al frame despues de dibujarlo
 	var vpImg = viewport.get_texture().get_image() #imagen del viewport
 	

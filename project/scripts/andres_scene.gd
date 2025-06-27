@@ -23,11 +23,12 @@ func  _input(event: InputEvent) -> void:
 				manos[1].select()
 
 func next_stage():
-	print_debug(Global.stage)
+	#print_debug(Global.stage)
 	if (Global.stage <= Global.Soluciones.size()):
 		sprite_3d.texture = load(Global.Soluciones[Global.stage - 1])
 
 func show_hint():
+	next_stage()
 	if (sprite_3d.modulate != Color.WHITE):
 		var tween = create_tween()
 		tween.tween_property(sprite_3d, "modulate", color, 0.5)
@@ -38,5 +39,6 @@ func hide_hint():
 		var tween = create_tween()
 		tween.tween_property(sprite_3d, "modulate", Color.TRANSPARENT, 0.5)
 		tween.finished.connect(func(): next_stage())
-	
+	else:
+		next_stage()
 	pass
