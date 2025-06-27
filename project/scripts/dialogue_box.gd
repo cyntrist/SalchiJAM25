@@ -44,6 +44,17 @@ func _next_dialogue():
 	print_debug(dialogueTextID)
 	print_debug(JsonParser.json_data.Dialoges[dialogueID].Texts.size())
 	
+	
+	
+	### GESTIONES DE PUTA MIERDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+	if dialogueTextID == 6 and dialogueID == 0:
+		get_parent().encender_cojones();
+	if dialogueTextID == 7 and dialogueID == 4:
+		get_parent().encender_cojones();
+	#################################################################
+	
+	
+	
 	# Comprueba si ha acabado el dialogo
 	if dialogueTextID >= JsonParser.json_data.Dialoges[dialogueID].Texts.size():
 		print("FIN DEL DIALOGO")
@@ -70,7 +81,6 @@ func _next_dialogue():
 		
 		if "@" in JsonParser.dialogos[dialogueID].Texts[dialogueTextID].Text:
 			label.text = JsonParser.dialogos[dialogueID].Texts[dialogueTextID].Text.replace('@', '')
-
 		else:
 			label.text = JsonParser.dialogos[dialogueID].Texts[dialogueTextID].Text
 			dialogueTextID +=1
@@ -89,7 +99,7 @@ func _start_quest(idText: int):
 	dialogueID = idText
 	
 	#asigna las diferentes propiedades
-	var rng = RandomNumberGenerator.new() 
+	#var rng = RandomNumberGenerator.new() 
 	#sound1 = rng.randf_range(0.5, 2.5)
 	#sound2 = rng.randf_range(0.5, 2.5)
 	#audio_stream.stream = sound
@@ -132,7 +142,6 @@ func _hide():
 	tween.tween_property(self, "modulate", Color.TRANSPARENT, 0.5)
 	
 func _show():
-	if not self.visible:
-		var tween = create_tween()
-		tween.tween_property(self, "modulate", Color.WHITE, 0.5)
+	var tween = create_tween()
+	tween.tween_property(self, "modulate", Color.WHITE, 0.5)
 	_next_level()

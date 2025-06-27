@@ -20,6 +20,16 @@ func on_disable():
 	dialogue.modulate = Color.TRANSPARENT;
 	pass
 
+func encender_cojones(speed = 0.5):
+	var tween = create_tween()
+	tween.tween_property(luz, "light_energy", initial_value, speed)
+	pass;
+
+func apagar_cojones(speed = 0.5):
+	var tween = create_tween()
+	tween.tween_property(luz, "light_energy", 0.0, speed)
+	pass;
+
 func encender(speed = 0.5):
 	var tween = create_tween()
 	tween.tween_property(luz, "light_energy", initial_value, speed)

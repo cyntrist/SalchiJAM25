@@ -53,33 +53,8 @@
 				},
 				{
 					"Person": 0,
-					"Text": "Una tortura cariñosa que favorecía su estadía en una infancia que pronto acabaría.@"
-				}
-			]
-		},
-		{
-			"Sound1": "res://Sounds/Placeholders/SonidoPH1.wav",
-			"Color1": {
-				"R": 1,
-				"G": 0,
-				"B": 0,
-				"A": 1
-			},
-			"Sound2": "res://Sounds/Placeholders/SonidoPH2.wav",
-			"Color2": {
-				"R": 0,
-				"G": 1,
-				"B": 0,
-				"A": 1
-			},
-			"Sound3": "res://Sounds/Placeholders/SonidoPH2.wav",
-			"Color3": {
-				"R": 0,
-				"G": 0,
-				"B": 1,
-				"A": 1
-			},
-			"Texts": [
+					"Text": "Una tortura cariñosa que favorecía su estadía en una infancia que pronto acabaría."
+				},
 				{
 					"Person": 0,
 					"Text": "26/6/1879. El gran teatro improvisado de sombras chinescas en una noche de verano abre sus puertas por primera vez a un exigente y selecto público (un niño de 10 años)."
@@ -342,33 +317,8 @@
 				},
 				{
 					"Person": 0,
-					"Text": "El hermano pequeño bosteza.@"
-				}
-			]
-		},
-		{
-			"Sound1": "res://Sounds/Placeholders/SonidoPH1.wav",
-			"Color1": {
-				"R": 1,
-				"G": 0,
-				"B": 0,
-				"A": 1
-			},
-			"Sound2": "res://Sounds/Placeholders/SonidoPH2.wav",
-			"Color2": {
-				"R": 0,
-				"G": 1,
-				"B": 0,
-				"A": 1
-			},
-			"Sound3": "res://Sounds/Placeholders/SonidoPH2.wav",
-			"Color3": {
-				"R": 0,
-				"G": 0,
-				"B": 1,
-				"A": 1
-			},
-			"Texts": [
+					"Text": "El hermano pequeño bosteza."
+				},
 				{
 					"Person": 0,
 					"Text": "Lo recoge de entre el montón de cojines que se hacían pasar por butacas de teatro, se lo lleva en brazos."
