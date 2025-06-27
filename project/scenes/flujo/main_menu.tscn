@@ -123,6 +123,7 @@ offset_bottom = 71.0
 text = "jugaaaaaaar"
 
 [node name="Salir" type="TextureButton" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 1135.0
 offset_top = 569.0

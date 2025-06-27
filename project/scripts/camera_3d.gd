@@ -4,11 +4,16 @@ extends Camera3D
 var isDragging = false;
 var dragged_object: Node3D = null
 var drag_offset: Vector3 = Vector3.ZERO
+@onready var boton = $"../../DialogueBox/Button"
 
 func _ready() -> void:
 	pass
 
 func  _input(event: InputEvent) -> void:
+	#var hovered = get_viewport().gui_get_hovered_control()
+	#if hovered == boton or boton.is_ancestor_of(hovered):
+		#return
+	
 	if event is InputEventMouseButton:
 		var mouse_pos = get_viewport().get_mouse_position()
 		var origin = self.project_ray_origin(mouse_pos)
