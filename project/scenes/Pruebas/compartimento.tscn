@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqsv23vrdswo4"]
+
+[ext_resource type="PackedScene" uid="uid://b7b1mq5onicmo" path="res://assets/models/botones/compartimento.fbx" id="1_p8dhb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p8dhb"]
+albedo_color = Color(0.247059, 0.211765, 0.105882, 1)
+
+[node name="compartimento" instance=ExtResource("1_p8dhb")]
+
+[node name="Compartimento" parent="." index="0"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, 100, 0, -100, -4.37114e-06, 0, 0, 0)
+
+[node name="Cerilla" parent="Compartimento" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_p8dhb")

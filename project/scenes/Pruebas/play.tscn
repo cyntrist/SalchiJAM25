@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bl4x7chhwx4td"]
+
+[ext_resource type="PackedScene" uid="uid://csso0jjbgr583" path="res://assets/models/botones/Play.fbx" id="1_sjam7"]
+[ext_resource type="PackedScene" uid="uid://cqsv23vrdswo4" path="res://scenes/Pruebas/compartimento.tscn" id="2_xmmp2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xmmp2"]
+albedo_color = Color(0.905882, 0.243137, 0.439216, 1)
+
+[node name="Play" instance=ExtResource("1_sjam7")]
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Caja" parent="." index="0"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, 100, 0, -100, -4.37114e-06, 0, 0, 0)
+surface_material_override/0 = SubResource("StandardMaterial3D_xmmp2")
+
+[node name="compartimento" parent="Caja" index="0" instance=ExtResource("2_xmmp2")]
+transform = Transform3D(0.01, 5.55112e-17, -2.42647e-24, 0, -4.37114e-10, -0.01, -5.55112e-17, 0.01, -4.37114e-10, 0, 0, 0)
