@@ -5,7 +5,7 @@ func _ready() -> void:
 
 func comparate() -> float:
 	print("COMPARAR")
-	var img1 = Image.load_from_file("user://screenshots/userTry"+str(Global.stage)+".png")
+	var img1 = Image.load_from_file(Global.Soluciones[Global.stage-1])
 	var img2 = Image.load_from_file("user://screenshots/userTry"+str(Global.stage)+".png")
 
 	var imgSize = img1.get_size()
@@ -14,7 +14,7 @@ func comparate() -> float:
 		for j in range(imgSize.y):
 			if img1.get_pixel(i,j) == img2.get_pixel(i,j):
 				equalPixels += 1
-	
+	print(equalPixels)
 	var similitud = equalPixels / (imgSize.x * imgSize.y)
 	print(similitud * 100, "%")
 	

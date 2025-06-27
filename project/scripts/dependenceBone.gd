@@ -1,6 +1,5 @@
-extends Node3D
+extends Gizmeable
 @export var boneParent: Node3D = null
-
 
 func _process(delta: float) -> void:
 	if boneParent:

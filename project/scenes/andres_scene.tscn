@@ -134,3 +134,5 @@ material = SubResource("StandardMaterial3D_irjko")
 
 [node name="ImageComparator" type="Node" parent="."]
 script = ExtResource("5_irjko")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
