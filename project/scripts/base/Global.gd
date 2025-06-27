@@ -8,7 +8,7 @@ signal on_disable(scene)
 signal on_game_end()
 # juego
 signal nextLevel
-signal contarHistoria # señal para avanzar de sombra
+signal contarHistoria(index) # señal para avanzar de sombra
 signal checkLevel()
 signal capturaToCompare
 

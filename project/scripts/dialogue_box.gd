@@ -1,6 +1,6 @@
 extends Control
 
-@onready var audio_stream: AudioStreamPlayer2D = $AudioStreamPlayer2D
+#@onready var audio_stream: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var button: Button = $Button
 @onready var label: Label = $Button/Label
 
@@ -9,7 +9,7 @@ var color1 : Color
 var color2 : Color
 var color3 : Color
 #ruta del sonido de cada persona
-var sound = load("res://Sounds/voces/random.wav")
+#var sound = load("res://Sounds/voces/random.wav")
 var sound1: float
 var sound2: float
 var sound3: float
@@ -117,4 +117,4 @@ func _avanzar_hasta_quest()->void:
 
 func _next_level()->void:
 	self.visible = false
-	Global.contarHistoria.emit()
+	Global.contarHistoria.emit(dialogueID)
