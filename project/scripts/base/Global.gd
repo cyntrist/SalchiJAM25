@@ -8,10 +8,9 @@ signal on_disable(scene)
 signal on_game_end()
 # juego
 signal nextLevel
-signal contarHistoria(index) # señal para avanzar de sombra
+signal contarHistoria # señal para avanzar de sombra
 signal checkLevel()
 signal capturaToCompare
-signal startQuest
 
 enum Sombras { sombra1, sombra2, sombra3 }
 
@@ -45,6 +44,12 @@ func  _process(delta: float) -> void:
 func next_stage():
 	Global.stage += 1
 	Global.stage = clamp(Global.stage, 1, maxStages)
+	
+var nivelCorrecto = false
+func _sombra_terminada(currentHistoria: int)->void:
+	if nivelCorrecto:
+		nextLevel.emit()
+		nivelCorrecto = false
 
 func change_scene(next : Global.Scenes, speed = 1.0, force = true):
 	Global.next_scene = next

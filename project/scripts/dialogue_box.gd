@@ -20,7 +20,7 @@ var dialogueTextID: int = 0 # ID texto del dialogo mostrado
 var ultimaHistoria: int = -1 # guarda la ultima historia contada (nivel)
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:	
+func _ready() -> void:
 	Global.contarHistoria.connect(_start_quest)
 	Global.nextLevel.connect(_next_level)
 	label.text = ""
@@ -66,7 +66,7 @@ func _next_dialogue():
 		else:
 			label.text = JsonParser.dialogos[dialogueID].Texts[dialogueTextID].Text
 			dialogueTextID +=1
-	
+
 func _start_quest(idText: int):
 	if idText == ultimaHistoria:
 		return
@@ -74,7 +74,7 @@ func _start_quest(idText: int):
 	dialogueTextID = 0
 	textDisplayed = 0
 	
-	#hace visible el cuadro de dialogo
+	# hace visible el cuadro de dialogo
 	self.visible = true
 	dialogueID = idText
 	
@@ -91,7 +91,7 @@ func _start_quest(idText: int):
 	if Global.nivelCorrecto:
 		_start_dialogue()
 		return
-		
+	
 	print("START HISTORIA")
 	_next_dialogue()
 
@@ -104,7 +104,7 @@ func _start_dialogue() -> void:
 func _end_dialogue():
 	ultimaHistoria = dialogueID
 	self.visible = false
-	Global._llamada_terminada(dialogueID)
+	Global._sombra_terminada(dialogueID)
 
 func _avanzar_hasta_quest()->void:
 	dialogueTextID = 0
@@ -114,3 +114,4 @@ func _avanzar_hasta_quest()->void:
 
 func _next_level()->void:
 	self.visible = false
+	Global.contarHistoria.emit()
