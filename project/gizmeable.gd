@@ -23,6 +23,10 @@ func  _input(event: InputEvent) -> void:
 				rotate_object_local(axis, -velocity)
 			KEY_A:
 				rotate_object_local(axis, velocity)
+			KEY_W:
+				rotate_object_local(axis, -velocity)
+			KEY_S:
+				rotate_object_local(axis, velocity)
 			KEY_Q:
 				match axis:
 					Vector3(1,0,0):
