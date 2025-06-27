@@ -14,8 +14,8 @@ func comparate() -> float:
 		for j in range(imgSize.y):
 			if img1.get_pixel(i,j) == img2.get_pixel(i,j):
 				equalPixels += 1
-	print(equalPixels)
-	var similitud = equalPixels / (imgSize.x * imgSize.y)
+	print(equalPixels, "/", imgSize.x * imgSize.y)
+	var similitud := (float(equalPixels) / float(imgSize.x * imgSize.y))
 	print(similitud * 100, "%")
 	
 	# comprueba si es correcta la respuesta
