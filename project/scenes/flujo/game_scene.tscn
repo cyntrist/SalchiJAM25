@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dh6njmuxh0ww2" path="res://scripts/flujo/Game.gd" id="1_ab273"]
 [ext_resource type="PackedScene" uid="uid://cagciatay3u85" path="res://scenes/andres_scene.tscn" id="2_pa1jb"]
 [ext_resource type="PackedScene" uid="uid://bqjc8a26hvd3g" path="res://assets/models/botones/next.fbx" id="3_l2ljc"]
-[ext_resource type="PackedScene" uid="uid://b5wxiayqtex8o" path="res://scenes/flujo/reset.tscn" id="4_2jtgr"]
+[ext_resource type="PackedScene" path="res://scenes/flujo/reset.tscn" id="4_2jtgr"]
 [ext_resource type="Script" uid="uid://cchiii0apdegl" path="res://scripts/silhouette_button.gd" id="4_6wywq"]
 [ext_resource type="Script" uid="uid://b58bae3a7h15w" path="res://scenes/flujo/button_reset.gd" id="4_l2ljc"]
 [ext_resource type="PackedScene" uid="uid://dgdvboufg10pc" path="res://scenes/dialogo/dialogueBox.tscn" id="5_6wywq"]
