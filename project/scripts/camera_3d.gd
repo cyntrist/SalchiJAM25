@@ -10,9 +10,9 @@ func _ready() -> void:
 	pass
 
 func  _input(event: InputEvent) -> void:
-	#var hovered = get_viewport().gui_get_hovered_control()
-	#if hovered == boton or boton.is_ancestor_of(hovered):
-		#return
+	var hovered = get_viewport().gui_get_hovered_control()
+	if hovered == boton or boton.is_ancestor_of(hovered):
+		return
 	
 	if event is InputEventMouseButton:
 		var mouse_pos = get_viewport().get_mouse_position()

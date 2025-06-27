@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bwwfirfov8du7"
-path="res://.godot/imported/53380__eric5335__meadow-ambience.wav-ace06e73ab8f8481217eddcec72af59b.sample"
+path="res://.godot/imported/53380__eric5335__meadow-ambience.wav-fa7f857824169d9f05952c3262b354d0.sample"
 
 [deps]
 
-source_file="res://assets/audio/ambient/53380__eric5335__meadow-ambience.wav"
-dest_files=["res://.godot/imported/53380__eric5335__meadow-ambience.wav-ace06e73ab8f8481217eddcec72af59b.sample"]
+source_file="res://assets/audio/ambient/raws/53380__eric5335__meadow-ambience.wav"
+dest_files=["res://.godot/imported/53380__eric5335__meadow-ambience.wav-fa7f857824169d9f05952c3262b354d0.sample"]
 
 [params]
 

@@ -1,5 +1,7 @@
 extends Scene
 
+var soundCoger = load("res://assets/audio/sfx/coger.wav")
+
 func on_enable():
 	self.visible = true;
 	$Node3D.visible = true;
@@ -25,6 +27,8 @@ func _on_salir_pressed() -> void:
 	pass
 
 func _on_jugar_pressed() -> void:
+	Global.sfx.stream = soundCoger
+	Global.sfx.play()
 	$Node3D/Play/AnimationPlayer.play("Caja|CajaAction")
 	$Node3D/Play/Caja/compartimento/AnimationPlayer.play("Compartimento|CompartimentoAction")
 	await $Node3D/Play/AnimationPlayer.animation_finished
