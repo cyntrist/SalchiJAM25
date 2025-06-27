@@ -41,10 +41,10 @@ visible = false
 
 [node name="Sound" type="Node" parent="."]
 
-[node name="BGM" type="AudioStreamPlayer2D" parent="Sound"]
+[node name="BGM1" type="AudioStreamPlayer2D" parent="Sound"]
 
-[node name="SFX1" type="AudioStreamPlayer2D" parent="Sound"]
+[node name="SFX" type="AudioStreamPlayer2D" parent="Sound"]
 
-[node name="SFX2" type="AudioStreamPlayer2D" parent="Sound"]
+[node name="BGM2" type="AudioStreamPlayer2D" parent="Sound"]
 
-[node name="SFX3" type="AudioStreamPlayer2D" parent="Sound"]
+[node name="BGM3" type="AudioStreamPlayer2D" parent="Sound"]

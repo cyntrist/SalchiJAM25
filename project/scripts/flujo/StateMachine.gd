@@ -3,15 +3,15 @@ extends Node
 @export var scenes: Array[Node] = [] 
 @onready var fade = $Fade
 
-@onready var bgm: AudioStreamPlayer2D = $Sound/BGM
-@onready var sfx_1: AudioStreamPlayer2D = $Sound/SFX1
-@onready var sfx_2: AudioStreamPlayer2D = $Sound/SFX2
-@onready var sfx_3: AudioStreamPlayer2D = $Sound/SFX3
+@onready var bgm1: AudioStreamPlayer2D = $Sound/BGM1
+@onready var bgm2: AudioStreamPlayer2D = $Sound/BGM2
+@onready var bgm3: AudioStreamPlayer2D = $Sound/BGM2
+@onready var sfx: AudioStreamPlayer2D = $Sound/SFX
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Global.gms = self
-	Global.sfx = sfx_1
+	Global.sfx = sfx
 	Global.on_transition_end.connect(_on_fade_end)
 	Global.on_game_end.connect(_on_game_end)
 	pass 
