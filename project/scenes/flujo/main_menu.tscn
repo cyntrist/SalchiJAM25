@@ -111,10 +111,11 @@ vertical_alignment = 1
 
 [node name="Jugar" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 563.0
-offset_top = 264.0
-offset_right = 707.405
-offset_bottom = 392.0
+offset_left = 539.0
+offset_top = 303.0
+offset_right = 683.405
+offset_bottom = 431.0
+scale = Vector2(1.41896, 1.35891)
 
 [node name="Label" type="Label" parent="Jugar"]
 visible = false

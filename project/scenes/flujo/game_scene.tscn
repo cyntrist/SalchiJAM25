@@ -25,10 +25,10 @@ script = ExtResource("1_ab273")
 visible = false
 
 [node name="next" parent="AndresScene" instance=ExtResource("3_l2ljc")]
-transform = Transform3D(0.566464, -0.197777, 0.00175013, 0, -0.00530921, -0.599977, 0.197785, 0.566442, -0.00501246, 4.08591, 2.89017, -1.28263)
+transform = Transform3D(0.566464, -0.197777, 0.00175013, 0, -0.00530921, -0.599977, 0.197785, 0.566442, -0.00501246, 3.56726, 2.4921, -1.42884)
 
 [node name="reset" parent="AndresScene" instance=ExtResource("4_2jtgr")]
-transform = Transform3D(0.552299, 0.234439, -0.00207456, 0, -0.00530921, -0.599977, -0.234448, 0.552277, -0.00488712, -4.89017, 2.20733, -1.08108)
+transform = Transform3D(0.552299, 0.234439, -0.00207456, 0, -0.00530921, -0.599977, -0.234448, 0.552277, -0.00488712, -3.96869, 1.75924, -1.07278)
 
 [node name="DebugNivel" type="Label" parent="."]
 visible = false
@@ -39,10 +39,11 @@ text = "Nivel"
 
 [node name="ButtonReset" type="Button" parent="."]
 layout_mode = 0
-offset_left = 20.11
-offset_top = 20.0
-offset_right = 156.11
-offset_bottom = 156.0
+offset_left = 126.0
+offset_top = 82.0
+offset_right = 262.0
+offset_bottom = 218.0
+scale = Vector2(1.22334, 1.18463)
 theme_override_styles/focus = SubResource("StyleBoxEmpty_fg5qh")
 flat = true
 clip_text = true
@@ -50,10 +51,11 @@ script = ExtResource("4_l2ljc")
 
 [node name="ButtonConfirm" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1071.0
-offset_top = 23.0
-offset_right = 1242.0
-offset_bottom = 159.0
+offset_left = 940.0
+offset_top = 64.0
+offset_right = 1111.0
+offset_bottom = 200.0
+scale = Vector2(1.44329, 1.06879)
 theme_override_styles/focus = SubResource("StyleBoxEmpty_2jtgr")
 flat = true
 clip_text = true
