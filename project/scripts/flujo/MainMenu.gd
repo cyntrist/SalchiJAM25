@@ -3,7 +3,7 @@ extends Scene
 func on_disable():
 	self.visible = false;
 	$Node3D/WorldEnvironment/SpotLight3D.visible = false
-	$Node3D/WorldEnvironment/SpotLight3D.energy = 0.0
+	$Node3D/WorldEnvironment/SpotLight3D.light_energy = 0.0
 	pass
 
 # Called when the node enters the scene tree for the first time.
