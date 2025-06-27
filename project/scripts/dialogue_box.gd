@@ -18,6 +18,7 @@ var textDisplayed: float = 0 # contador para que se escriba letra a letra
 var dialogueID: int = 0 # ID del dialogo en el que estamos
 var dialogueTextID: int = 0 # ID texto del dialogo mostrado
 var ultimaHistoria: int = -1 # guarda la ultima historia contada (nivel)
+var juego_acabado = false;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -34,6 +35,13 @@ func _process(delta: float) -> void:
 		label.visible_ratio = textDisplayed
 
 func _next_dialogue():
+	if juego_acabado:
+		Global.change_scene(Global.Scenes.CREDITS)
+		return
+	elif dialogueTextID == 11 and dialogueID == 4:
+		juego_acabado = true;
+		return;
+	
 	# completa el texto si no lo ha hecho
 	if textDisplayed >= 1:
 		textDisplayed = 0

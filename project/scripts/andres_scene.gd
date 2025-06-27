@@ -28,6 +28,7 @@ func next_stage():
 		sprite_3d.texture = load(Global.Soluciones[Global.stage - 1])
 
 func show_hint():
+	next_stage()
 	if (sprite_3d.modulate != Color.WHITE):
 		var tween = create_tween()
 		tween.tween_property(sprite_3d, "modulate", color, 0.5)
@@ -38,5 +39,6 @@ func hide_hint():
 		var tween = create_tween()
 		tween.tween_property(sprite_3d, "modulate", Color.TRANSPARENT, 0.5)
 		tween.finished.connect(func(): next_stage())
-	
+	else:
+		next_stage()
 	pass

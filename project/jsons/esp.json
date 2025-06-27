@@ -11,8 +11,8 @@
 		{
 			"Sound1": "res://Sounds/Placeholders/SonidoPH1.wav",
 			"Color1": {
-				"R": 0,
-				"G": 1,
+				"R": 1,
+				"G": 0,
 				"B": 0,
 				"A": 1
 			},
@@ -84,8 +84,8 @@
 		{
 			"Sound1": "res://Sounds/Placeholders/SonidoPH1.wav",
 			"Color1": {
-				"R": 0,
-				"G": 1,
+				"R": 1,
+				"G": 0,
 				"B": 0,
 				"A": 1
 			},
@@ -133,8 +133,8 @@
 		{
 			"Sound1": "res://Sounds/Placeholders/SonidoPH1.wav",
 			"Color1": {
-				"R": 0,
-				"G": 1,
+				"R": 1,
+				"G": 0,
 				"B": 0,
 				"A": 1
 			},
@@ -190,8 +190,8 @@
 		{
 			"Sound1": "res://Sounds/Placeholders/SonidoPH1.wav",
 			"Color1": {
-				"R": 0,
-				"G": 1,
+				"R": 1,
+				"G": 0,
 				"B": 0,
 				"A": 1
 			},
@@ -267,8 +267,8 @@
 		{
 			"Sound1": "res://Sounds/Placeholders/SonidoPH1.wav",
 			"Color1": {
-				"R": 0,
-				"G": 1,
+				"R": 1,
+				"G": 0,
 				"B": 0,
 				"A": 1
 			},
