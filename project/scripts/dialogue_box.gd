@@ -37,9 +37,11 @@ func _process(delta: float) -> void:
 func _next_dialogue():
 	if juego_acabado:
 		Global.change_scene(Global.Scenes.CREDITS)
+		print_debug("HUEVOOOOOOOOOOOOOOOOOOOOOS")
 		return
 	elif dialogueTextID == 11 and dialogueID == 4:
 		juego_acabado = true;
+		print_debug("COJOOOOOOOOOOOOOOOOOOOONES")
 		return;
 	
 	# completa el texto si no lo ha hecho
