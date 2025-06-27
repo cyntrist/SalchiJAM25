@@ -71,7 +71,7 @@ func _next_dialogue():
 			dialogueTextID +=1
 
 func _start_quest(idText: int):
-	print("START PREHISTORIA")
+	print("START PREHISTORIA ", idText)
 	if idText == ultimaHistoria:
 		print("hola")
 		return
@@ -94,6 +94,7 @@ func _start_quest(idText: int):
 	color3 = Color(JsonParser.dialogos[dialogueID].Color3.R,JsonParser.dialogos[dialogueID].Color3.G,JsonParser.dialogos[dialogueID].Color3.B, 1)
 	
 	if Global.nivelCorrecto:
+		print("SIGUIENTEEE")
 		_start_dialogue()
 		return
 	
@@ -103,12 +104,12 @@ func _start_quest(idText: int):
 func _start_dialogue() -> void:
 	self.visible = true
 	textDisplayed = 0
-	_avanzar_hasta_quest()
+	#_avanzar_hasta_quest()
 	_next_dialogue()
 
 func _end_dialogue():
 	ultimaHistoria = dialogueID
-	self.visible = false
+	self.visible = true
 	Global._sombra_terminada(dialogueID)
 
 func _avanzar_hasta_quest()->void:
