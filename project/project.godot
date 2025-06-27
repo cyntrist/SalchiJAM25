@@ -80,7 +80,7 @@ Rotate={
 
 [rendering]
 
-environment/defaults/default_clear_color=Color(0.00784314, 0.0431373, 0.0313726, 1)
+environment/defaults/default_clear_color=Color(0.00392157, 0.054902, 0.321569, 1)
 
 [xr]
 
