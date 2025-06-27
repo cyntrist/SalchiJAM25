@@ -8,7 +8,13 @@ extends Scene
 #@export var initial_value : float = 1.5
 @export var initial_value : float = 7.0
 
+#var soundEncender = load("res://assets/audio/sfx/encender.wav")
+#var soundApagar = load("res://assets/audio/sfx/apagar.wav")
+#var bgmGrillos = load("res://assets/audio/ambient/crickets.wav")
+#var bgmViento = load("res://assets/audio/ambient/wind.wav")
+
 func on_enable():
+	#Global.bgm1 
 	andres.visible = true;
 	luz.light_energy = 0.0;
 	dialogue.modulate = Color.TRANSPARENT;
