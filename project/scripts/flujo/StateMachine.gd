@@ -5,7 +5,7 @@ extends Node
 
 @onready var bgm1: AudioStreamPlayer2D = $Sound/BGM1
 @onready var bgm2: AudioStreamPlayer2D = $Sound/BGM2
-@onready var bgm3: AudioStreamPlayer2D = $Sound/BGM2
+@onready var bgm3: AudioStreamPlayer2D = $Sound/BGM3
 @onready var sfx: AudioStreamPlayer2D = $Sound/SFX
 @onready var sfx2: AudioStreamPlayer2D = $Sound/SFX2
 

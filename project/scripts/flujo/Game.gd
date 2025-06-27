@@ -13,8 +13,8 @@ var soundApagar = load("res://assets/audio/sfx/apagar.wav")
 var soundApagar2 = load("res://assets/audio/sfx/apagar_2.wav")
 
 func on_enable():
-	#Global.bgm1.play()
-	#Global.bgm2.play()
+	Global.bgm1.play()
+	Global.bgm2.play()
 	andres.visible = true;
 	luz.light_energy = 0.0;
 	dialogue.modulate = Color.TRANSPARENT;
