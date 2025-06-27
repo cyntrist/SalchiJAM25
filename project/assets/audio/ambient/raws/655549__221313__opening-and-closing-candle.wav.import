@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bd3yclpwh3ktd"
-path="res://.godot/imported/655549__221313__opening-and-closing-candle.wav-3c4f032ecd973c5922832deeb29bd851.sample"
+path="res://.godot/imported/655549__221313__opening-and-closing-candle.wav-03f448875e84eca3118457d3cb2cd27d.sample"
 
 [deps]
 
-source_file="res://assets/audio/ambient/655549__221313__opening-and-closing-candle.wav"
-dest_files=["res://.godot/imported/655549__221313__opening-and-closing-candle.wav-3c4f032ecd973c5922832deeb29bd851.sample"]
+source_file="res://assets/audio/ambient/raws/655549__221313__opening-and-closing-candle.wav"
+dest_files=["res://.godot/imported/655549__221313__opening-and-closing-candle.wav-03f448875e84eca3118457d3cb2cd27d.sample"]
 
 [params]
 

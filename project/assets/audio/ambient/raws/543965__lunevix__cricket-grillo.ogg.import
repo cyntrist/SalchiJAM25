@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://cemm4rugbb5nf"
-path="res://.godot/imported/543965__lunevix__cricket-grillo.ogg-8bff1de31afc416338da2e10822c34ee.oggvorbisstr"
+path="res://.godot/imported/543965__lunevix__cricket-grillo.ogg-ace39b83742e739d07d34bc750117f59.oggvorbisstr"
 
 [deps]
 
-source_file="res://assets/audio/ambient/543965__lunevix__cricket-grillo.ogg"
-dest_files=["res://.godot/imported/543965__lunevix__cricket-grillo.ogg-8bff1de31afc416338da2e10822c34ee.oggvorbisstr"]
+source_file="res://assets/audio/ambient/raws/543965__lunevix__cricket-grillo.ogg"
+dest_files=["res://.godot/imported/543965__lunevix__cricket-grillo.ogg-ace39b83742e739d07d34bc750117f59.oggvorbisstr"]
 
 [params]
 

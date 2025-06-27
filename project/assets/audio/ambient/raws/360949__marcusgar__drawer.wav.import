@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bgtsq1arn3cpx"
-path="res://.godot/imported/360949__marcusgar__drawer.wav-c891ba65bfadce7e5d160381a1d739c3.sample"
+path="res://.godot/imported/360949__marcusgar__drawer.wav-0b95fb046676cf75186b492d3b1327f8.sample"
 
 [deps]
 
-source_file="res://assets/audio/ambient/360949__marcusgar__drawer.wav"
-dest_files=["res://.godot/imported/360949__marcusgar__drawer.wav-c891ba65bfadce7e5d160381a1d739c3.sample"]
+source_file="res://assets/audio/ambient/raws/360949__marcusgar__drawer.wav"
+dest_files=["res://.godot/imported/360949__marcusgar__drawer.wav-0b95fb046676cf75186b492d3b1327f8.sample"]
 
 [params]
 

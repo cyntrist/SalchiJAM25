@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bulkjatalj3vp"
-path="res://.godot/imported/170273__knova__change-weapon-sound.wav-94ac196862b4e9873a10abb0795b7084.sample"
+path="res://.godot/imported/170273__knova__change-weapon-sound.wav-da6ee4d6c65b08089ca47112022222e3.sample"
 
 [deps]
 
-source_file="res://assets/audio/ambient/170273__knova__change-weapon-sound.wav"
-dest_files=["res://.godot/imported/170273__knova__change-weapon-sound.wav-94ac196862b4e9873a10abb0795b7084.sample"]
+source_file="res://assets/audio/ambient/raws/170273__knova__change-weapon-sound.wav"
+dest_files=["res://.godot/imported/170273__knova__change-weapon-sound.wav-da6ee4d6c65b08089ca47112022222e3.sample"]
 
 [params]
 
