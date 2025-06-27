@@ -12,6 +12,9 @@ extends Node
 func _ready() -> void:
 	Global.gms = self
 	Global.sfx = sfx
+	Global.bgm1 = bgm1
+	Global.bgm2 = bgm2
+	Global.bgm3 = bgm3
 	Global.on_transition_end.connect(_on_fade_end)
 	Global.on_game_end.connect(_on_game_end)
 	pass 

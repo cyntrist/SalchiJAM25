@@ -8,13 +8,13 @@ extends Scene
 #@export var initial_value : float = 1.5
 @export var initial_value : float = 7.0
 
-#var soundEncender = load("res://assets/audio/sfx/encender.wav")
-#var soundApagar = load("res://assets/audio/sfx/apagar.wav")
-#var bgmGrillos = load("res://assets/audio/ambient/crickets.wav")
-#var bgmViento = load("res://assets/audio/ambient/wind.wav")
+var soundEncender = load("res://assets/audio/sfx/encender.wav")
+var soundApagar = load("res://assets/audio/sfx/apagar.wav")
+var soundApagar2 = load("res://assets/audio/sfx/apagar_2.wav")
 
 func on_enable():
-	#Global.bgm1 
+	Global.bgm1.play()
+	Global.bgm2.play()
 	andres.visible = true;
 	luz.light_energy = 0.0;
 	dialogue.modulate = Color.TRANSPARENT;
@@ -23,21 +23,28 @@ func on_enable():
 	pass
 
 func on_disable():
+	Global.bgm1.stop()
+	Global.bgm2.stop()
+	Global.bgm3.stop()
 	luz.light_energy = 0.0;
 	dialogue.modulate = Color.TRANSPARENT;
 	pass
 
-func encender_cojones(speed = 0.5):
+func encender_cojones(speed = 1.0):
 	var tween = create_tween()
 	tween.tween_property(luz, "light_energy", initial_value, speed)
+	Global.sfx.stream = soundEncender
+	Global.sfx.play()
 	pass;
 
 func apagar_cojones(speed = 0.5):
 	var tween = create_tween()
 	tween.tween_property(luz, "light_energy", 0.0, speed)
+	Global.sfx.stream = soundApagar
+	Global.sfx.play()
 	pass;
 
-func encender(speed = 0.5):
+func encender(speed = 1.0):
 	var tween = create_tween()
 	tween.tween_property(luz, "light_energy", initial_value, speed)
 	debugnivel.text = "Nivel: " + str((Global.stage))
@@ -45,6 +52,8 @@ func encender(speed = 0.5):
 		andres.reset_pos() 
 		Global.on_candle_lit.emit()
 		)
+	Global.sfx.stream = soundEncender
+	Global.sfx.play()
 	pass
 	
 func apagar(speed = 0.5):
@@ -55,9 +64,11 @@ func apagar(speed = 0.5):
 	tween.finished.connect(func(): 
 		andres.reset_pos() 
 		)
+	Global.sfx.stream = soundApagar2
+	Global.sfx.play()
 	pass
 	
-func apagar_y_encender(speed = 0.5):
+func apagar_y_encender(speed = 1.0):
 	apagar(speed)
 	await get_tree().create_timer(1).timeout
 	andres.reset_pos();
