@@ -39,10 +39,6 @@ func _input(event):
 	if (scene != Global.Scenes.NULL):
 		Global.change_scene(scene)
 
-func add_bgm_channel():
-	Global.bgm[Global.CurrentEdad].volume_db = 0.0
-	pass
-
 func _on_game_end():
 	Global.change_scene(Global.Scenes.CREDITS)
 

@@ -14,7 +14,7 @@ var bgmGrillos = load("res://assets/audio/ambient/crickets.wav")
 var bgmViento = load("res://assets/audio/ambient/wind.wav")
 
 func on_enable():
-	Global.bgm1 
+	#Global.bgm1 
 	andres.visible = true;
 	luz.light_energy = 0.0;
 	dialogue.modulate = Color.TRANSPARENT;
