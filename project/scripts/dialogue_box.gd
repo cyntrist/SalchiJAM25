@@ -21,6 +21,7 @@ var ultimaHistoria: int = -1 # guarda la ultima historia contada (nivel)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	_start_quest(dialogueID)
 	Global.contarHistoria.connect(_start_quest)
 	Global.nextLevel.connect(_next_level)
 	label.text = ""
@@ -45,14 +46,16 @@ func _next_dialogue():
 		return
 		
 	else:
-		match JsonParser.dialogos[dialogueID].Texts[dialogueTextID].Person:
-			0:
+		var person = JsonParser.dialogos[dialogueID].Texts[dialogueTextID].Person
+		print(person)
+		match person:
+			0.0:
 				#audio_stream.pitch_scale = sound1
 				label.add_theme_color_override("font_color", color1)
-			1:
+			1.0:
 				#audio_stream.pitch_scale = sound2
 				label.add_theme_color_override("font_color", color2)
-			2:
+			2.0:
 				#audio_stream.pitch_scale = sound3
 				label.add_theme_color_override("font_color", color3)
 			_:
