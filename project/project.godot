@@ -16,7 +16,7 @@ config/use_custom_user_dir=true
 config/custom_user_dir_name="sombras"
 config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/bg_color=Color(0.054902, 0.054902, 0.054902, 1)
-config/icon="res://icon.svg"
+config/icon="uid://djsvooisxxowv"
 
 [autoload]
 
@@ -38,7 +38,7 @@ version_control/autoload_on_startup=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/Gizmo3DScript/plugin.cfg", "res://addons/transform_ctrl_gizmo-main/plugin.cfg")
+enabled=PackedStringArray()
 
 [input]
 

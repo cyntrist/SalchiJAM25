@@ -19,7 +19,7 @@ func comparate() -> float:
 	print(similitud * 100, "%")
 	
 	# comprueba si es correcta la respuesta
-	if similitud * 100 >= 70:
+	if similitud * 100 >= 0:
 		Global.nivelCorrecto = true
 		#Global.contarHistoria.emit(1)
 		Global.nextLevel.emit()
