@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dgdvboufg10pc"]
+[gd_scene load_steps=5 format=3 uid="uid://dgdvboufg10pc"]
 
 [ext_resource type="Script" uid="uid://c8uawt6yvc8fc" path="res://scripts/dialogue_box.gd" id="1_rpvob"]
 [ext_resource type="FontFile" uid="uid://dkta2oxlut7xe" path="res://assets/fonts/PPLettraMono-Medium.otf" id="2_cbqrf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7hd0u"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cbqrf"]
 content_margin_left = 50.0
@@ -25,6 +27,7 @@ offset_top = 155.0
 offset_right = 781.0
 offset_bottom = 313.0
 scale = Vector2(1, 0.8)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7hd0u")
 autowrap_mode = 3
 icon_alignment = 1
 expand_icon = true

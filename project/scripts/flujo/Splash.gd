@@ -1,7 +1,7 @@
 extends Scene
 
 var elapsedTime: float = 0
-var maxTime: float = 4
+var maxTime: float = 3
 var aumentado: bool = false
 @onready var control: Control = $Control
 
