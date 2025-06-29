@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://b0reyf6s75rus" path="res://scripts/Game/Scene/camera_sombras.gd" id="3_rcnhc"]
 [ext_resource type="Shader" uid="uid://b2jcj6037lets" path="res://scripts/shaders/2d to gradient_3D.gdshader" id="4_5qerh"]
 [ext_resource type="Script" uid="uid://c4fei85qf20v3" path="res://scripts/shaders/shaderbox.gd" id="5_pwcph"]
-[ext_resource type="PackedScene" uid="uid://ywcejmpfamf7" path="res://scenes/Game/MANO5.tscn" id="6_5ijv6"]
+[ext_resource type="PackedScene" uid="uid://ywcejmpfamf7" path="res://scenes/Game/mano_completa.tscn" id="6_5ijv6"]
 [ext_resource type="Script" uid="uid://cne05dlno2a5e" path="res://scripts/Game/image_comparator.gd" id="7_v8i0o"]
 [ext_resource type="Texture2D" uid="uid://notbnc4u1mlg" path="res://assets/images/soluciones/Sol1.png" id="8_huv7s"]
 
