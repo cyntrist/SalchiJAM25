@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://crnhs87x11khv"
-path="res://.godot/imported/MANO.fbx-3417a411ae3b15d9ed6fc0136d13a2c1.scn"
+uid="uid://bqjc8a26hvd3g"
+path="res://.godot/imported/next.fbx-e24b1a45de4e26dce798a70eecad9ea0.scn"
 
 [deps]
 
-source_file="res://assets/models/MANO.fbx"
-dest_files=["res://.godot/imported/MANO.fbx-3417a411ae3b15d9ed6fc0136d13a2c1.scn"]
+source_file="res://assets/models/Game/Buttons/next.fbx"
+dest_files=["res://.godot/imported/next.fbx-e24b1a45de4e26dce798a70eecad9ea0.scn"]
 
 [params]
 

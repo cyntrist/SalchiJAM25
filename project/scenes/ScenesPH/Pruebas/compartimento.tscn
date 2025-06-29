@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cqsv23vrdswo4"]
 
-[ext_resource type="PackedScene" uid="uid://b7b1mq5onicmo" path="res://assets/models/botones/compartimento.fbx" id="1_p8dhb"]
+[ext_resource type="PackedScene" uid="uid://b7b1mq5onicmo" path="res://assets/models/Main menu/compartimento.fbx" id="1_p8dhb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p8dhb"]
 albedo_color = Color(0.247059, 0.211765, 0.105882, 1)

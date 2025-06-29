@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b82p6b1eft8up"]
 
-[ext_resource type="PackedScene" uid="uid://ciac8g2r2nu5p" path="res://assets/models/botones/titulo.fbx" id="1_udsdd"]
+[ext_resource type="PackedScene" uid="uid://ciac8g2r2nu5p" path="res://assets/models/Main menu/titulo.fbx" id="1_udsdd"]
 [ext_resource type="Texture2D" uid="uid://brlqwg47wu8oy" path="res://assets/images/titulo.png" id="2_4usgt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i1k35"]

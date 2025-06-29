@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://csso0jjbgr583"
-path="res://.godot/imported/Play.fbx-b37e91127e72b23145710c55b539dc93.scn"
+uid="uid://b7b1mq5onicmo"
+path="res://.godot/imported/compartimento.fbx-f420d7718094bac4cf9e74eeff832d38.scn"
 
 [deps]
 
-source_file="res://assets/models/botones/Play.fbx"
-dest_files=["res://.godot/imported/Play.fbx-b37e91127e72b23145710c55b539dc93.scn"]
+source_file="res://assets/models/Main menu/compartimento.fbx"
+dest_files=["res://.godot/imported/compartimento.fbx-f420d7718094bac4cf9e74eeff832d38.scn"]
 
 [params]
 

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bqjc8a26hvd3g"
-path="res://.godot/imported/next.fbx-a46d438e07fdc5046c9efe03935b2d58.scn"
+uid="uid://ciac8g2r2nu5p"
+path="res://.godot/imported/titulo.fbx-67c299ecd0a55a69f4ada897892bf1f4.scn"
 
 [deps]
 
-source_file="res://assets/models/botones/next.fbx"
-dest_files=["res://.godot/imported/next.fbx-a46d438e07fdc5046c9efe03935b2d58.scn"]
+source_file="res://assets/models/Main menu/titulo.fbx"
+dest_files=["res://.godot/imported/titulo.fbx-67c299ecd0a55a69f4ada897892bf1f4.scn"]
 
 [params]
 

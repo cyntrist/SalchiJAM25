@@ -1,13 +1,13 @@
 [gd_scene load_steps=18 format=3 uid="uid://cagciatay3u85"]
 
-[ext_resource type="Script" uid="uid://ildu48g22hgr" path="res://scripts/andres_scene.gd" id="1_24kfx"]
-[ext_resource type="Shader" uid="uid://b2jcj6037lets" path="res://scripts/shaders/2d to gradient_3D.gdshader" id="1_q04gk"]
-[ext_resource type="Script" uid="uid://c4fei85qf20v3" path="res://scripts/shaders/shaderbox.gd" id="2_irjko"]
-[ext_resource type="Script" uid="uid://b0reyf6s75rus" path="res://scripts/camera_sombras.gd" id="2_yfca1"]
-[ext_resource type="Script" uid="uid://by2kdi7hju2bj" path="res://scripts/camera_3d.gd" id="3_q04gk"]
-[ext_resource type="Script" uid="uid://cne05dlno2a5e" path="res://scripts/image_comparator.gd" id="5_irjko"]
-[ext_resource type="PackedScene" uid="uid://ywcejmpfamf7" path="res://scenes/MANO5.tscn" id="5_yfca1"]
-[ext_resource type="Texture2D" uid="uid://notbnc4u1mlg" path="res://assets/images/soluciones/Sol1.png" id="8_h4tmv"]
+[ext_resource type="Script" uid="uid://ildu48g22hgr" path="res://scripts/Game/Scene/gameScript.gd" id="1_t2wrj"]
+[ext_resource type="Script" uid="uid://by2kdi7hju2bj" path="res://scripts/Game/Scene/camera_3d.gd" id="2_s2hwh"]
+[ext_resource type="Script" uid="uid://b0reyf6s75rus" path="res://scripts/Game/Scene/camera_sombras.gd" id="3_rcnhc"]
+[ext_resource type="Shader" uid="uid://b2jcj6037lets" path="res://scripts/shaders/2d to gradient_3D.gdshader" id="4_5qerh"]
+[ext_resource type="Script" uid="uid://c4fei85qf20v3" path="res://scripts/shaders/shaderbox.gd" id="5_pwcph"]
+[ext_resource type="PackedScene" uid="uid://ywcejmpfamf7" path="res://scenes/Game/MANO5.tscn" id="6_5ijv6"]
+[ext_resource type="Script" uid="uid://cne05dlno2a5e" path="res://scripts/Game/image_comparator.gd" id="7_v8i0o"]
+[ext_resource type="Texture2D" uid="uid://notbnc4u1mlg" path="res://assets/images/soluciones/Sol1.png" id="8_huv7s"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mnawn"]
 
@@ -48,21 +48,21 @@ func _process(delta):
 	global_position = original_position + current_offset
 "
 
-[sub_resource type="Gradient" id="Gradient_h4tmv"]
+[sub_resource type="Gradient" id="Gradient_tacrf"]
 interpolation_mode = 1
 offsets = PackedFloat32Array(0, 0.0833333, 0.166667, 0.25, 0.333333, 0.416667, 0.5, 0.583333, 0.666667, 0.75, 0.833333, 0.916667)
 colors = PackedColorArray(0.00784314, 0.00784314, 0.00784314, 1, 0.262745, 0.262745, 0.262745, 1, 0.862745, 0.372549, 0.0941176, 1, 0.113725, 0.0784314, 0.176471, 1, 0, 0, 0.211765, 1, 0.00392157, 0.054902, 0.321569, 1, 0.00392157, 0.12549, 0.72549, 1, 0.164706, 0.364706, 0.741176, 1, 1, 0.905882, 0.643137, 1, 0.188235, 0.321569, 0.980392, 1, 0.121569, 0.113725, 0.329412, 1, 0.172549, 0.223529, 0.541176, 1)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_42e6k"]
-gradient = SubResource("Gradient_h4tmv")
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_f4kp2"]
+gradient = SubResource("Gradient_tacrf")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4ljyf"]
 render_priority = -10
-shader = ExtResource("1_q04gk")
+shader = ExtResource("4_5qerh")
 shader_parameter/rows = 3.0
 shader_parameter/cols = 4.0
 shader_parameter/dither_size = 4.0
-shader_parameter/pal = SubResource("GradientTexture1D_42e6k")
+shader_parameter/pal = SubResource("GradientTexture1D_f4kp2")
 
 [sub_resource type="BoxMesh" id="BoxMesh_qmgvp"]
 size = Vector3(2, 2, 2)
@@ -70,12 +70,12 @@ size = Vector3(2, 2, 2)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_irjko"]
 
 [node name="AndresScene" type="Node3D" node_paths=PackedStringArray("manos")]
-script = ExtResource("1_24kfx")
-manos = [NodePath("MANO_I"), NodePath("MANO_R")]
+script = ExtResource("1_t2wrj")
+manos = [null, NodePath("")]
 
 [node name="Camera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24298, 2.35625)
-script = ExtResource("3_q04gk")
+script = ExtResource("2_s2hwh")
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera"]
 
@@ -85,7 +85,7 @@ render_target_update_mode = 4
 [node name="CameraSombras" type="Camera3D" parent="Camera/SubViewport"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0360334, 2.33102, -0.400857)
 fov = 100.0
-script = ExtResource("2_yfca1")
+script = ExtResource("3_rcnhc")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_ptogf")
@@ -119,14 +119,16 @@ transform = Transform3D(1, 0, 0, 0, 0.99984, -0.0179061, 0, 0.0179061, 0.99984, 
 material_override = SubResource("ShaderMaterial_4ljyf")
 extra_cull_margin = 16384.0
 mesh = SubResource("BoxMesh_qmgvp")
-script = ExtResource("2_irjko")
+script = ExtResource("5_pwcph")
 cList = Array[Color]([Color(0.00784314, 0.00784314, 0.00784314, 1), Color(0.262745, 0.262745, 0.262745, 1), Color(0.862745, 0.372549, 0.0941176, 1), Color(0.113725, 0.0784314, 0.176471, 1), Color(0, 0, 0.211765, 1), Color(0.00392157, 0.054902, 0.321569, 1), Color(0.00392157, 0.12549, 0.72549, 1), Color(0.164706, 0.364706, 0.741176, 1), Color(1, 0.905882, 0.643137, 1), Color(0.188235, 0.321569, 0.980392, 1), Color(0.121569, 0.113725, 0.329412, 1), Color(0.172549, 0.223529, 0.541176, 1)])
 
-[node name="MANO_I" parent="." instance=ExtResource("5_yfca1")]
+[node name="MANO_I" parent="." node_paths=PackedStringArray("listBones") instance=ExtResource("6_5ijv6")]
 transform = Transform3D(0.2, 0, 0, 0, 0.19998, -0.00279244, 0, 0.00279244, 0.19998, -0.771, -0.320012, 0.0372625)
+listBones = [null, NodePath("Armature/Skeleton3D/BPalma"), NodePath("Armature/Skeleton3D/BPalma/BMenique0"), NodePath("Armature/Skeleton3D/BPalma/BMenique0/BMenique1"), NodePath("Armature/Skeleton3D/BPalma/BMenique0/BMenique1/BMenique2"), NodePath("Armature/Skeleton3D/BPalma/BAnular0"), NodePath("Armature/Skeleton3D/BPalma/BAnular0/BAnular1"), NodePath("Armature/Skeleton3D/BPalma/BAnular0/BAnular1/BAnular2"), NodePath("Armature/Skeleton3D/BPalma/BCorazon0"), NodePath("Armature/Skeleton3D/BPalma/BCorazon0/BCorazon1"), NodePath("Armature/Skeleton3D/BPalma/BCorazon0/BCorazon1/BCorazon2"), NodePath("Armature/Skeleton3D/BPalma/BIndice0"), NodePath("Armature/Skeleton3D/BPalma/BIndice0/BIndice1"), NodePath("Armature/Skeleton3D/BPalma/BIndice0/BIndice1/BIndice2"), NodePath("Armature/Skeleton3D/BPalma/BPulgar0"), NodePath("Armature/Skeleton3D/BPalma/BPulgar0/BPulgar1"), NodePath("Armature/Skeleton3D/BPalma/BPulgar0/BPulgar1/BPulgar2")]
 
-[node name="MANO_R" parent="." instance=ExtResource("5_yfca1")]
+[node name="MANO_R" parent="." node_paths=PackedStringArray("listBones") instance=ExtResource("6_5ijv6")]
 transform = Transform3D(-0.2, 0, 0, 0, 0.198057, -0.0278104, 0, 0.0278104, 0.198057, 0.770528, -0.32018, 0.0372385)
+listBones = [null, NodePath("Armature/Skeleton3D/BPalma"), NodePath("Armature/Skeleton3D/BPalma/BMenique0"), NodePath("Armature/Skeleton3D/BPalma/BMenique0/BMenique1"), NodePath("Armature/Skeleton3D/BPalma/BMenique0/BMenique1/BMenique2"), NodePath("Armature/Skeleton3D/BPalma/BAnular0"), NodePath("Armature/Skeleton3D/BPalma/BAnular0/BAnular1"), NodePath("Armature/Skeleton3D/BPalma/BAnular0/BAnular1/BAnular2"), NodePath("Armature/Skeleton3D/BPalma/BCorazon0"), NodePath("Armature/Skeleton3D/BPalma/BCorazon0/BCorazon1"), NodePath("Armature/Skeleton3D/BPalma/BCorazon0/BCorazon1/BCorazon2"), NodePath("Armature/Skeleton3D/BPalma/BIndice0"), NodePath("Armature/Skeleton3D/BPalma/BIndice0/BIndice1"), NodePath("Armature/Skeleton3D/BPalma/BIndice0/BIndice1/BIndice2"), NodePath("Armature/Skeleton3D/BPalma/BPulgar0"), NodePath("Armature/Skeleton3D/BPalma/BPulgar0/BPulgar1"), NodePath("Armature/Skeleton3D/BPalma/BPulgar0/BPulgar1/BPulgar2")]
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.873866, -0.486168, 0, 0.486168, 0.873866, 2.12552, 1.14445, 0.445628)
@@ -134,9 +136,9 @@ visible = false
 material = SubResource("StandardMaterial3D_irjko")
 
 [node name="ImageComparator" type="Node" parent="."]
-script = ExtResource("5_irjko")
+script = ExtResource("7_v8i0o")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 0.498, 0, 2.5261, -2.69765)
 modulate = Color(1, 1, 1, 0.27451)
-texture = ExtResource("8_h4tmv")
+texture = ExtResource("8_huv7s")

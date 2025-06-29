@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://hcvwr6t74lw0"]
 
-[ext_resource type="Script" uid="uid://k48i5dkerj25" path="res://scripts/mano.gd" id="1_aw2lm"]
-[ext_resource type="Script" uid="uid://fi6dalvamsdp" path="res://gizmeable.gd" id="1_bumlc"]
-[ext_resource type="PackedScene" uid="uid://dqbgerab2hwp4" path="res://scenes/gizmos.tscn" id="2_aw2lm"]
-[ext_resource type="Script" uid="uid://by2kdi7hju2bj" path="res://scripts/camera_3d.gd" id="3_aw2lm"]
+[ext_resource type="Script" uid="uid://k48i5dkerj25" path="res://scripts/Game/Hand/mano.gd" id="1_aw2lm"]
+[ext_resource type="Script" uid="uid://fi6dalvamsdp" path="res://scripts/Game/Hand/bone.gd" id="1_bumlc"]
+[ext_resource type="PackedScene" uid="uid://dqbgerab2hwp4" path="res://scenes/Game/gizmos.tscn" id="2_aw2lm"]
+[ext_resource type="Script" uid="uid://by2kdi7hju2bj" path="res://scripts/Game/Scene/camera_3d.gd" id="3_aw2lm"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_t7c0d"]
 

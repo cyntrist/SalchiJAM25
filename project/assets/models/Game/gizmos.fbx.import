@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ciac8g2r2nu5p"
-path="res://.godot/imported/titulo.fbx-6fa0409ea6492083f5a05aa6fbf0a189.scn"
+uid="uid://dv5r46dyp4hcl"
+path="res://.godot/imported/gizmos.fbx-dbc11985dfe3fb6ad18d6a635c1fdc53.scn"
 
 [deps]
 
-source_file="res://assets/models/botones/titulo.fbx"
-dest_files=["res://.godot/imported/titulo.fbx-6fa0409ea6492083f5a05aa6fbf0a189.scn"]
+source_file="res://assets/models/Game/gizmos.fbx"
+dest_files=["res://.godot/imported/gizmos.fbx-dbc11985dfe3fb6ad18d6a635c1fdc53.scn"]
 
 [params]
 

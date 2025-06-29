@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://dik3jn4i5aous"]
 
-[ext_resource type="PackedScene" uid="uid://bslpvbowedeel" path="res://assets/models/mano.tscn" id="1_1eu8g"]
+[ext_resource type="PackedScene" uid="uid://bslpvbowedeel" path="res://scenes/Game/mano.tscn" id="1_1eu8g"]
+
 
 [node name="Prueba" type="Node3D"]
 

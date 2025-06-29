@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cqf2t8qbuki1q"]
 
-[ext_resource type="PackedScene" uid="uid://bqjc8a26hvd3g" path="res://assets/models/botones/next.fbx" id="1_f2aji"]
+[ext_resource type="PackedScene" uid="uid://bqjc8a26hvd3g" path="res://assets/models/Game/Buttons/next.fbx" id="1_f2aji"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f2aji"]
 

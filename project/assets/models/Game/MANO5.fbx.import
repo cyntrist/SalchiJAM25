@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b7b1mq5onicmo"
-path="res://.godot/imported/compartimento.fbx-eb4bcd8e796c8f768e9a4fd630012c56.scn"
+uid="uid://bkefsoyrw1e5b"
+path="res://.godot/imported/MANO5.fbx-f87238ae0c1dd101c5560dec52c8ed08.scn"
 
 [deps]
 
-source_file="res://assets/models/botones/compartimento.fbx"
-dest_files=["res://.godot/imported/compartimento.fbx-eb4bcd8e796c8f768e9a4fd630012c56.scn"]
+source_file="res://assets/models/Game/MANO5.fbx"
+dest_files=["res://.godot/imported/MANO5.fbx-f87238ae0c1dd101c5560dec52c8ed08.scn"]
 
 [params]
 

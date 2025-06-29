@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dv5r46dyp4hcl"
-path="res://.godot/imported/gizmos.fbx-4152a228ec487b9cfd5448f736d5b531.scn"
+uid="uid://csso0jjbgr583"
+path="res://.godot/imported/Play.fbx-78cccdd5284bc32a9f8017892a7f7dea.scn"
 
 [deps]
 
-source_file="res://assets/models/gizmos.fbx"
-dest_files=["res://.godot/imported/gizmos.fbx-4152a228ec487b9cfd5448f736d5b531.scn"]
+source_file="res://assets/models/Main menu/Play.fbx"
+dest_files=["res://.godot/imported/Play.fbx-78cccdd5284bc32a9f8017892a7f7dea.scn"]
 
 [params]
 
