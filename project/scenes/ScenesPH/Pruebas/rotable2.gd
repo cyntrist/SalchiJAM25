@@ -1,7 +1,10 @@
 extends Node3D
 
 @export var camera: Camera3D
-@export var angleRot: float = 0.5
+@export var sensivility:= Vector2(0.5, 0.5)
+@export var maxRot:= Vector2(180, 180)
+@export var minRot:= Vector2(-180, -180)
+const DEAD_ZONE = 10.0  
 
 var startRot: Vector3
 
@@ -12,9 +15,6 @@ var antPosCursor # anterior
 var sigPosCursor # siguiente
 
 func _ready() -> void:
-	#add_child(gizmoInstance)
-	Global.selectBone.connect(select_bone)
-	Global.unSelectBone.connect(reset_select)
 	startRot = rotation
 
 func _process(delta):
@@ -35,18 +35,37 @@ func _process(delta):
 		var axisZ := Vector3(0,0,1)
 		if rotation_degrees.z > 180:
 			axisZ *= -1
-		rotate_relative_to_camera(axisX, (sigPosCursor.y - antPosCursor.y) * angleRot * delta)
-		rotate_relative_to_camera(axisZ, (sigPosCursor.x - antPosCursor.x) * angleRot * delta)
+		
+		# Desplazamiento en eje y
+		var deltaY = sigPosCursor.y - antPosCursor.y
+		# Aplicar rotacion si supera la zona muerta
+		if abs(deltaY) > DEAD_ZONE:
+			rotate_relative_to_camera(axisX, deltaY * sensivility.x * delta)
+	
+		# Desplazamiento en x
+		var deltaX = sigPosCursor.x - antPosCursor.x
+		# Aplicar rotacion si supera la zona muerta
+		if abs(deltaX) > DEAD_ZONE:
+			rotate_relative_to_camera(axisZ, deltaX * sensivility.y * delta)
+			
 		antPosCursor = sigPosCursor
 
 
 func rotate_relative_to_camera(axis: Vector3, angle: float):
 	var cameraAxis
+	var targetAngle
 	
+	#print(rad_to_deg(angle + rotation.x), "|", minRot.x, "|", maxRot.x, "|",  rad_to_deg(clamp(angle + rotation.x , deg_to_rad(minRot.x), deg_to_rad(maxRot.x))))
 	if axis == Vector3(1,0,0):
-		cameraAxis = -camera.global_transform.basis.x.normalized()
+		cameraAxis = camera.global_transform.basis.x.normalized()
+		if angle + global_rotation.x < deg_to_rad(minRot.x):
+			print("HA SUPERADO EL LIMITE X MINIMO")
+		if angle + global_rotation.x > deg_to_rad(maxRot.x):
+			print("HA SUPERADO EL LIMITE X MAXIMO")
+		targetAngle = clamp(angle + rotation.x , deg_to_rad(minRot.x), deg_to_rad(maxRot.x))
 	else:
 		cameraAxis = camera.global_transform.basis.z.normalized()
+		targetAngle = clamp(angle + rotation.z , deg_to_rad(minRot.y), deg_to_rad(maxRot.y))
 	
 	global_rotate(cameraAxis, angle)
 

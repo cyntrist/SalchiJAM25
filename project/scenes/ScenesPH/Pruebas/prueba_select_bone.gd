@@ -3,6 +3,7 @@ extends Node3D
 
 @export var listBones: Array[Node3D]
 @onready var m_ano: MeshInstance3D = $Armature/Skeleton3D/MAno
+
 var selected = false
 var boneActual: int = 0
 
@@ -23,7 +24,7 @@ func un_select():
 	selected = false
 	m_ano.scale = Vector3(1,1,1)
 	for e in listBones:
-		e.reset_select()
+		e.unselect_bone()
 
 func  _input(event: InputEvent) -> void:
 	if not selected:
@@ -33,7 +34,7 @@ func  _input(event: InputEvent) -> void:
 		match event.button_index:
 			MOUSE_BUTTON_WHEEL_UP:
 				if boneActual != 0 or (boneActual == 0 and !Global.trasladarBrazo):
-					listBones[boneActual].reset_select()
+					listBones[boneActual].unselect_bone()
 					boneActual += 1
 					if boneActual >= listBones.size():
 						boneActual = 0
@@ -41,7 +42,7 @@ func  _input(event: InputEvent) -> void:
 					
 			MOUSE_BUTTON_WHEEL_DOWN:
 				if boneActual != 0 or (boneActual == 0 and !Global.trasladarBrazo):
-					listBones[boneActual].reset_select()
+					listBones[boneActual].unselect_bone()
 					boneActual -= 1
 					if boneActual < 0:
 						boneActual = listBones.size() - 1
