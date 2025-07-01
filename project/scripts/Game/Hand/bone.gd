@@ -9,7 +9,8 @@ var startRot: Vector3
 var startPos: Vector3
 
 func _ready() -> void:
-	gizmos.visible = false
+	if gizmos:
+		gizmos.visible = false
 	startRot = rotation
 	startPos = position
 
