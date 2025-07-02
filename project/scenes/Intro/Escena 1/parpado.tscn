@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://buxfyjlrthd3h"]
+
+[ext_resource type="PackedScene" uid="uid://3scacf6cm355" path="res://assets/models/Intro/1/Parpado.fbx" id="1_anmwo"]
+
+[node name="Parpado" instance=ExtResource("1_anmwo")]

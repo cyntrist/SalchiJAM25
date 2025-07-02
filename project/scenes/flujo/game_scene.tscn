@@ -37,7 +37,6 @@ offset_right = 262.0
 offset_bottom = 218.0
 scale = Vector2(1.22334, 1.18463)
 theme_override_styles/focus = SubResource("StyleBoxEmpty_fg5qh")
-flat = true
 clip_text = true
 script = ExtResource("4_l2ljc")
 
@@ -49,7 +48,6 @@ offset_right = 1111.0
 offset_bottom = 200.0
 scale = Vector2(1.44329, 1.06879)
 theme_override_styles/focus = SubResource("StyleBoxEmpty_2jtgr")
-flat = true
 clip_text = true
 script = ExtResource("4_6wywq")
 

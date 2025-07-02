@@ -11,8 +11,7 @@ func _on_button_reset_mouse_exited():
 	tween.tween_property($"../AndresScene/reset", "rotation", targrot, 0.1)
 
 func _on_pressed():
-	Global.sfx.stream = load("res://assets/audio/sfx/papel.wav")
-	Global.sfx.play()
+	SoundSystem.play_sfx("res://assets/audio/sfx/papel.wav")
 	var tween = create_tween()
 	tween.tween_property($"../AndresScene/reset", "scale", Vector3(0.5,0.5, 0.5), 0.1)
 	tween.tween_property($"../AndresScene/reset", "scale", Vector3(0.6,0.6,0.6), 0.1)

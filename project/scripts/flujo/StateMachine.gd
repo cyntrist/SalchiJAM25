@@ -6,17 +6,14 @@ extends Node
 @onready var bgm1: AudioStreamPlayer2D = $Sound/BGM1
 @onready var bgm2: AudioStreamPlayer2D = $Sound/BGM2
 @onready var bgm3: AudioStreamPlayer2D = $Sound/BGM3
-@onready var sfx: AudioStreamPlayer2D = $Sound/SFX
+@onready var sfx1: AudioStreamPlayer2D = $Sound/SFX1
 @onready var sfx2: AudioStreamPlayer2D = $Sound/SFX2
+@onready var sfx3: AudioStreamPlayer2D = $Sound/SFX3
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Global.gms = self
-	Global.sfx = sfx
-	Global.sfx2 = sfx2
-	Global.bgm1 = bgm1
-	Global.bgm2 = bgm2
-	Global.bgm3 = bgm3
+	
 	Global.on_transition_end.connect(_on_fade_end)
 	Global.on_game_end.connect(_on_game_end)
 	pass 

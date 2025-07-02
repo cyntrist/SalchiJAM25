@@ -55,19 +55,16 @@ func rotate_relative_to_camera(axis: Vector3, angle: float):
 	var cameraAxis
 	var targetAngle
 	
-	#print(rad_to_deg(angle + rotation.x), "|", minRot.x, "|", maxRot.x, "|",  rad_to_deg(clamp(angle + rotation.x , deg_to_rad(minRot.x), deg_to_rad(maxRot.x))))
-	if axis == Vector3(1,0,0):
+	if axis == Vector3(1, 0, 0):
 		cameraAxis = camera.global_transform.basis.x.normalized()
-		if angle + global_rotation.x < deg_to_rad(minRot.x):
-			print("HA SUPERADO EL LIMITE X MINIMO")
-		if angle + global_rotation.x > deg_to_rad(maxRot.x):
-			print("HA SUPERADO EL LIMITE X MAXIMO")
-		targetAngle = clamp(angle + rotation.x , deg_to_rad(minRot.x), deg_to_rad(maxRot.x))
+		targetAngle = clamp(rotation_degrees.x + angle, minRot.x, maxRot.x)
+		rotation_degrees.x = targetAngle
 	else:
 		cameraAxis = camera.global_transform.basis.z.normalized()
-		targetAngle = clamp(angle + rotation.z , deg_to_rad(minRot.y), deg_to_rad(maxRot.y))
+		targetAngle = clamp(rotation_degrees.z + angle, minRot.y, maxRot.y)
+		rotation_degrees.z = targetAngle
 	
-	global_rotate(cameraAxis, angle)
+	global_rotate(cameraAxis, deg_to_rad(targetAngle))
 
 func select_bone():
 	scale = scale + Vector3(0.1,0.1,0.1)

@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://c8uawt6yvc8fc" path="res://scripts/Game/dialogue_box.gd" id="1_rpvob"]
 [ext_resource type="FontFile" uid="uid://dkta2oxlut7xe" path="res://assets/fonts/PPLettraMono-Medium.otf" id="2_cbqrf"]
 
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7hd0u"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cbqrf"]

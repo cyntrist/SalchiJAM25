@@ -22,6 +22,7 @@ config/icon="uid://djsvooisxxowv"
 
 Global="*res://scripts/base/Global.gd"
 JsonParser="*res://scripts/jsonParser/json_parser.gd"
+SoundSystem="*res://scripts/base/Sound/sound_system.gd"
 
 [display]
 

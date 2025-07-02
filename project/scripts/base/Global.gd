@@ -25,11 +25,6 @@ enum Sombras { sombra1, sombra2, sombra3 }
 enum Scenes { SPLASH, MAIN_MENU, INTRO, GAME, CREDITS, NULL}
 
 var gms
-var sfx
-var sfx2
-var bgm1
-var bgm2
-var bgm3
 var current_scene = Scenes.SPLASH 
 var next_scene = Scenes.SPLASH
 var stage = 1

@@ -11,12 +11,12 @@
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tetnm"]
 
-[sub_resource type="Sky" id="Sky_yfca1"]
+[sub_resource type="Sky" id="Sky_pd7ed"]
 sky_material = SubResource("ProceduralSkyMaterial_tetnm")
 
 [sub_resource type="Environment" id="Environment_xxmux"]
 background_mode = 2
-sky = SubResource("Sky_yfca1")
+sky = SubResource("Sky_pd7ed")
 
 [sub_resource type="Gradient" id="Gradient_pd7ed"]
 interpolation_mode = 1

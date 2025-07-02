@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://f7kto8hkti5k"]
+
+[ext_resource type="PackedScene" uid="uid://x4eyabtq0610" path="res://assets/models/Intro/1/Cabeza.fbx" id="1_chotg"]
+[ext_resource type="PackedScene" uid="uid://3scacf6cm355" path="res://assets/models/Intro/1/Parpado.fbx" id="2_131kb"]
+
+[node name="Cabeza" instance=ExtResource("1_chotg")]
+
+[node name="Parpado" parent="cabeza" index="0" instance=ExtResource("2_131kb")]
+transform = Transform3D(0.976992, -0.186629, 0.103231, 0.176705, 0.979353, 0.0981959, -0.119426, -0.0776951, 0.989798, 0, 0, 0)
