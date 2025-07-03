@@ -2,7 +2,7 @@ extends Node
 
 @export var label: Label = null
 var dialogues: Array[Dialogue]
-var actualDialogue: int = 0
+var actualDialogue: int = -1
 
 func _ready() -> void:
 	if not label:
@@ -14,10 +14,21 @@ func add_dialogue(dialogue:Dialogue = null) ->bool:
 	dialogues.append(dialogue)
 	return true
 
-func enter_dialogue() -> String:
+func advance_dialogue() -> String:
 	var dialogue = dialogues[actualDialogue]
 	if actualDialogue >= len(dialogues):
 		return ""
 	else:
 		actualDialogue += 1
 	return dialogue.reproduce()
+
+func retreat_dialogue() -> String:
+	var dialogue = dialogues[actualDialogue]
+	if actualDialogue >= len(dialogues):
+		return ""
+	else:
+		actualDialogue += 1
+	return dialogue.reproduce()
+
+func restart_dialogue() -> String:
+	return ""

@@ -28,13 +28,13 @@ func play_sfx(path:="", channel := int(-1)):
 func _play_on_channel(list:Array, path:="", channel:= int(-1)):
 	# Si no hay audio o no hay canales return
 	if path == "" or len(list) <= 0:
-		print("PATH: ", path, " lEN: ", len(list))
+		printerr("[SOUND ERROR] PATH: ", path, " lEN: ", len(list))
 		return
 	# Si no hay canales seleccionados, busca uno libre
 	var freeChannel = list[0]
 	if channel <= -1 or channel >= len(list):
 		if channel >= len(list):
-			printerr("No existe el canal de loop seleccionado, se escogera uno libre")
+			push_warning("[SOUND ERROR] No existe el canal de loop seleccionado, se escogera uno libre")
 		for c in list:
 			channel +=1
 			if not c.playing:
