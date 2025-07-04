@@ -3,7 +3,6 @@ extends Node
 #
 # Variable para almacenar los datos JSON cargados
 var json_data = {}
-var dialogos = []
 
 func _ready():
 	_load_lenguage("res://jsons/esp.json")
@@ -18,7 +17,6 @@ func load_json_data(file_path: String) -> void:
 		var file_content = file.get_as_text()
 		file.close()
 		json_data = parse_json(file_content)
-		dialogos = json_data["Dialoges"]
 
 # Función para parsear el JSON
 func parse_json(json_string: String) -> Dictionary:
