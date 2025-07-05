@@ -19,17 +19,30 @@ func generate_narrative() -> void:
 	var persons = JsonParser.json_data["Persons"]
 	var dialogos = JsonParser.json_data["Dialogues"]
 	
+	var characters: Array[NarrativeCharacter]
+	for p in persons:
+		var character = NarrativeCharacter.new(Color(p["Color"]["R"],p["Color"]["G"], p["Color"]["B"]))
+		# Recorrer cada emoción y sus sonidos
+		for emo_name in p["Sound"].keys():
+			var emo_enum = NarrativeCharacter.Emotion[emo_name.to_upper()]
+			var paths = p["Sound"][emo_name]
+			if paths is Array:
+				character.sounds[emo_enum] = paths.duplicate()
+		characters.append(character)
+	
+	
 	var i = 0
 	for narrvs in dialogos:
 		narrativas.append(Narrative.new(label))
 		var j = 0
 		for blq in narrvs:
-			var bloq = NarrativeBLock.new(blq["Text"],persons[blq["Person"]]["Sound"],Color(persons[blq["Person"]]["Color"]["R"],persons[blq["Person"]]["Color"]["G"],persons[blq["Person"]]["Color"]["B"],persons[blq["Person"]]["Color"]["A"]))
+			var bloq = NarrativeBLock.new(characters[blq["Person"]], NarrativeCharacter.Emotion[blq["Emotion"].to_upper()], blq["Text"])
 			if j % 2 == 0:
-				bloq.set_font(load("res://assets/fonts/PPLettraMono-Medium.otf"))
+				characters[blq["Person"]].set_font(load("res://assets/fonts/PPLettraMono-Medium.otf"))
 			else:
-				bloq.set_font(load("res://assets/fonts/PPModelPlastic-Medium.otf"))
+				characters[blq["Person"]].set_font(load("res://assets/fonts/PPModelPlastic-Medium.otf"))
 			narrativas[i].add_block(bloq)
+			j+=1
 		narrativas[i].restart_block_begin()
 		i += 1
 

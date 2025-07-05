@@ -1,7 +1,20 @@
 {
 	"Persons":[
 		{
-			"Sound": "res://Sounds/Placeholders/SonidoPH1.wav",
+			"Sound": {
+				"neutral": [
+					"res://assets/audio/voices/NarradorPH.wav"
+				],
+				"happy": [
+					"res://assets/audio/voices/NarradorPH.wav"
+				],
+				"sad": [
+					"res://assets/audio/voices/NarradorPH.wav"
+				],
+				"angry": [
+					"res://assets/audio/voices/NarradorPH.wav"
+				]
+			},
 			"Color": {
 				"R": 0.91,
 				"G": 0.929,
@@ -10,7 +23,20 @@
 			}
 		},
 		{
-			"Sound": "res://assets/audio/voices/Adult.mp3",
+			"Sound": {
+				"neutral": [
+					"res://assets/audio/voices/AdultPH.mp3"
+				],
+				"happy": [
+					"res://assets/audio/voices/AdultPH.mp3"
+				],
+				"sad": [
+					"res://assets/audio/voices/AdultPH.mp3"
+				],
+				"angry": [
+					"res://assets/audio/voices/AdultPH.mp3"
+				]
+			},
 			"Color": {
 				"R": 0.961,
 				"G": 0.325,
@@ -18,8 +44,21 @@
 				"A": 1
 			}
 		},
-		{
-			"Sound": "res://assets/audio/voices/Kid1.mp3",
+		{			
+			"Sound": {
+				"neutral": [
+					"res://assets/audio/voices/KidPH.mp3"
+				],
+				"happy": [
+					"res://assets/audio/voices/KidPH.mp3"
+				],
+				"sad": [
+					"res://assets/audio/voices/KidPH.mp3"
+				],
+				"angry": [
+					"res://assets/audio/voices/KidPH.mp3"
+				]
+			},
 			"Color": {
 				"R": 0.463,
 				"G": 0.8,
@@ -32,224 +71,277 @@
 		[
 			{
 				"Person": 0,
+				"Emotion": "neutral",
 				"Text": ""
 			},
 			{
 				"Person": 0,
+				"Emotion": "neutral",
 				"Text": "La inquietud en las noches de verano le devoraba la mente, una termita que se alimenta de la blanda madera de un pino recién plantado."
 			},
 			{
 				"Person": 0,
+				"Emotion": "neutral",
 				"Text": "El verano existe en un limbo, ningún fruto dentro de esta casa se echa a perder durante los meses más calurosos, todo parece permanecer."
 			},
 			{
 				"Person": 0,
+				"Emotion": "neutral",
 				"Text": "En contra de lo que diga su padre, él prefiere permanecer también, agigantando con ello el golpe de la cáscara contra el suelo durante el solsticio de otoño."
 			},
 			{
 				"Person": 0,
+				"Emotion": "neutral",
 				"Text": "Se distrae de lo no tan ajeno entre enciclopedias, especializándose en lo inespecializable, se distrae jugueteando con las piedras del patio de su casa apilándolas formando castillos imposibles, y se distrae atormentando a su hermano."
 			},
 			{
 				"Person": 0,
+				"Emotion": "neutral",
 				"Text": "Una tortura cariñosa que favorecía su estadía en una infancia que pronto acabaría."
 			}
 		],
 		[
 			{
 				"Person": 0,
+				"Emotion": "neutral",
 				"Text": "26/6/1879. El gran teatro improvisado de sombras chinescas en una noche de verano abre sus puertas por primera vez a un exigente y selecto público (un niño de 10 años)."
 			},
 			{
 				"Person": 2,
+				"Emotion": "neutral",
 				"Text": "Cuéntame otra historia."
 			},
 			{
 				"Person": 1,
+				"Emotion": "neutral",
 				"Text": "¿Otra de miedo?"
 			},
 			{
 				"Person": 2,
+				"Emotion": "neutral",
 				"Text": "¡No! De miedo no."
 			},
 			{
 				"Person": 0,
+				"Emotion": "neutral",
 				"Text": "Ruega de rodillas, teme una noche llena de pesadillas."
 			},
 			{
 				"Person": 1,
+				"Emotion": "neutral",
 				"Text": "Está bien. Esta va sobre una linda mariposa.@"
 			}
 		],
 		[
 			{
 				"Person": 1,
+				"Emotion": "neutral",
 				"Text": "Revolotea por el campo, ignorando su belleza y la de la naturaleza que la rodea."
 			},
 			{
 				"Person": 2,
+				"Emotion": "neutral",
 				"Text": "Revolotea feliz."
 			},
 			{
 				"Person": 1,
+				"Emotion": "neutral",
 				"Text": "Tan feliz que ignora el peligro de su alrededor."
 			},
 			{
 				"Person": 2,
+				"Emotion": "neutral",
 				"Text": "No empieces..."
 			},
 			{
 				"Person": 0,
+				"Emotion": "neutral",
 				"Text": "Se masca la tragedia."
 			},
 			{
 				"Person": 1,
+				"Emotion": "neutral",
 				"Text": "La delicada mariposa se posa sobre una flor, de fondo se alza un gallo, imponente, hambriento.@"
 			}
 		],
 		[
 			{
 				"Person": 1,
+				"Emotion": "neutral",
 				"Text": "¡ÑAM! Un picotazo y adiós a la mariposa."
 			},
 			{
 				"Person": 2,
+				"Emotion": "neutral",
 				"Text": "..."
 			},
 			{
 				"Person": 1,
+				"Emotion": "neutral",
 				"Text": "Una muerte rápida."
 			},
 			{
 				"Person": 2,
+				"Emotion": "neutral",
 				"Text": "¡La que te voy a dar!"
 			},
 			{
 				"Person": 0,
+				"Emotion": "neutral",
 				"Text": "Asesta un golpe certero con el canto de la mano sobre su cabeza."
 			},
 			{
 				"Person": 1,
+				"Emotion": "neutral",
 				"Text": "Ay..."
 			},
 			{
 				"Person": 2,
+				"Emotion": "neutral",
 				"Text": "Vamos, cuéntame otra."
 			},
 			{
 				"Person": 1,
+				"Emotion": "neutral",
 				"Text": "Venga. Esta va de un hombre. Un hombre de aspiraciones simples, de ideales hedonistas.@"
 			}
 		],
 		[
 			{
 				"Person": 2,
+				"Emotion": "neutral",
 				"Text": "¿Un disfrute sin fondo?"
 			},
 			{
 				"Person": 1,
+				"Emotion": "neutral",
 				"Text": "Esto no es una fábula con moraleja como las que te cuentan en la escuela, tú escucha."
 			},
 			{
 				"Person": 2,
+				"Emotion": "neutral",
 				"Text": "..."
 			},
 			{
 				"Person": 1,
+				"Emotion": "neutral",
 				"Text": "Un día caminando de noche por la calle se percató de que a su sombra se le acopló otra, cornuda y deforme."
 			},
 			{
 				"Person": 2,
+				"Emotion": "neutral",
 				"Text": "¡Un demonio!"
 			},
 			{
 				"Person": 0,
+				"Emotion": "neutral",
 				"Text": "Grita aterrorizado."
 			},
 			{
 				"Person": 1,
+				"Emotion": "neutral",
 				"Text": "¡Un demonio! Pensó aquel hombre, ¡Me está bien empleado, de tanto deambular sin rumbo por esta acera! Se temió lo peor, intentó recordar aquellos salmos que recitaba de niño, con poco éxito."
 			},
 			{
 				"Person": 1,
+				"Emotion": "neutral",
 				"Text": "Sus manos sudaban, se enterró en su abrigo, dejando que este le devorase, apretó los dientes y cerró los ojos mientras avanzaba lentamente."
 			},
 			{
 				"Person": 1,
+				"Emotion": "neutral",
 				"Text": "Se fijó, allí seguía la sombra. Se tiró al suelo de la desesperación, se arrastró como si fuese a convertirse en un gusano tan solo actuando como tal."
 			},
 			{
 				"Person": 2,
+				"Emotion": "neutral",
 				"Text": "¡Idiota! ¡Idiota! Acaba ya con la historia."
 			},
 			{
 				"Person": 1,
+				"Emotion": "neutral",
 				"Text": "Se dio la vuelta y trató de discernir quién o qué era ese mal, aun teniendo los ojos llenos de lágrimas y arena reconoció detrás de él una figura alta, con un abrigo abotonado hasta el cuello."
 			},
 			{
 				"Person": 1,
+				"Emotion": "neutral",
 				"Text": "En un intento de resignación dejó de huir."
 			},
 			{
 				"Person": 1,
+				"Emotion": "neutral",
 				"Text": "Bajo la luz de la luna yacía el hombre, aterrorizado y ya más muerto que vivo.@"
 			}
 		],
 		[
 			{
 				"Person": 2,
+				"Emotion": "neutral",
 				"Text": "Lo sabía."
 			},
 			{
 				"Person": 1,
+				"Emotion": "neutral",
 				"Text": "Al darse cuenta de que los ojos que le miraban eran de una cabra se entregó a los deseos de aquella bestia."
 			},
 			{
 				"Person": 2,
+				"Emotion": "neutral",
 				"Text": "¿Y cuáles serían esos deseos?"
 			},
 			{
 				"Person": 1,
+				"Emotion": "neutral",
 				"Text": "Simplemente buscaba la dirección de una mujer de ese pueblo, al parecer tenía una aventura con esta."
 			},
 			{
 				"Person": 1,
+				"Emotion": "neutral",
 				"Text": "El hombre lo que tenía de cobarde lo tenía de mujeriego, supo contestar al instante."
 			},
 			{
 				"Person": 2,
+				"Emotion": "neutral",
 				"Text": "Se lo debería haber llevado el demonio."
 			},
 			{
 				"Person": 1,
+				"Emotion": "neutral",
 				"Text": "El demonio se te va a llevar a ti por estar despierto tan tarde."
 			},
 			{
 				"Person": 0,
+				"Emotion": "neutral",
 				"Text": "El hermano pequeño bosteza."
 			},
 			{
 				"Person": 2,
+				"Emotion": "neutral",
 				"Text": "Oye no digas eso..."
 			},
 			{
 				"Person": 0,
+				"Emotion": "neutral",
 				"Text": "Dice soñoliento."
 			},
 			{
 				"Person": 0,
+				"Emotion": "neutral",
 				"Text": "Lo recoge de entre el montón de cojines que se hacían pasar por butacas de teatro, se lo lleva en brazos."
 			},
 			{
 				"Person": 0,
+				"Emotion": "neutral",
 				"Text": "Caminando por el pasillo el peso de su hermano se hace real, sus entrañas dejan de representar una fantasía estival de inmortalidad, y solo pesan."
 			},
 			{
 				"Person": 0,
+				"Emotion": "neutral",
 				"Text": "Le acuesta en la cama, siendo por primera vez consciente de que el fruto se ha podrido."
 			},
 			{
 				"Person": 0,
+				"Emotion": "neutral",
 				"Text": "@"
 			}
 		]
