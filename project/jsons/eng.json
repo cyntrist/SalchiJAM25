@@ -1,0 +1,257 @@
+{
+	"Persons":[
+		{
+			"Sound": "res://Sounds/Placeholders/SonidoPH1.wav",
+			"Color": {
+				"R": 0.91,
+				"G": 0.929,
+				"B": 0.835,
+				"A": 1
+			}
+		},
+		{
+			"Sound": "res://assets/audio/voices/Adult.mp3",
+			"Color": {
+				"R": 0.961,
+				"G": 0.325,
+				"B": 0.192,
+				"A": 1
+			}
+		},
+		{
+			"Sound": "res://assets/audio/voices/Kid1.mp3",
+			"Color": {
+				"R": 0.463,
+				"G": 0.8,
+				"B": 0.227,
+				"A": 1
+			}
+		}
+	],
+	"Dialogues": [
+		[
+			{
+				"Person": 0,
+				"Text": ""
+			},
+			{
+				"Person": 0,
+				"Text": "Concern on summer nights devoured his mind, a termite feeding on the soft wood of a newly planted pine tree."
+			},
+			{
+				"Person": 0,
+				"Text": "Summer exists in a limbo, no fruit inside this house spoils during the hottest months, everything seems to remain."
+			},
+			{
+				"Person": 0,
+				"Text": "Against his father's advice, he prefers to remain too, thus magnifying the thud of the eggshell against the ground during the autumn solstice."
+			},
+			{
+				"Person": 0,
+				"Text": "He distracts himself from the not so foreign among encyclopedias, specializing in the unspecializable, he distracts himself by toying with the stones in his yard, piling them up creating impossible castles, and he distracts himself by tormenting his brother."
+			},
+			{
+				"Person": 0,
+				"Text": "A tender torture that allowed his stay in a childhood that would soon come to an end."
+			}
+		],
+		[
+			{
+				"Person": 0,
+				"Text": "26/6/1879. The Great Improvised Theater of Shadow Play on a Summer Night opens its doors for the first time to a demanding and carefully selected audience (a 10 year old kid)."
+			},
+			{
+				"Person": 2,
+				"Text": "Tell me another story."
+			},
+			{
+				"Person": 1,
+				"Text": "Do you want another fright story?"
+			},
+			{
+				"Person": 2,
+				"Text": "No! Not a scary one!"
+			},
+			{
+				"Person": 0,
+				"Text": "He begs on his knees dreading a night full of nightmares."
+			},
+			{
+				"Person": 1,
+				"Text": "Alright. This one is about a pretty butterfly.@"
+			}
+		],
+		[
+			{
+				"Person": 1,
+				"Text": "It flutters through the countryside, oblivious to both its beauty and the beauty of the surrounding nature."
+			},
+			{
+				"Person": 2,
+				"Text": "It flutters happily."
+			},
+			{
+				"Person": 1,
+				"Text": "So happily that it ignores the nearby dangers."
+			},
+			{
+				"Person": 2,
+				"Text": "Don’t you start..."
+			},
+			{
+				"Person": 0,
+				"Text": "Things weren't looking good."
+			},
+			{
+				"Person": 1,
+				"Text": "The delicate butterfly settles on a flower, in the background stands a rooster, mighty and hungry.@"
+			}
+		],
+		[
+			{
+				"Person": 1,
+				"Text": "YUM! One peck and the butterfly is gone."
+			},
+			{
+				"Person": 2,
+				"Text": "..."
+			},
+			{
+				"Person": 1,
+				"Text": "A quick death."
+			},
+			{
+				"Person": 2,
+				"Text": "The death you will die!"
+			},
+			{
+				"Person": 0,
+				"Text": "He strikes a sharp blow with the edge of his hand on his head."
+			},
+			{
+				"Person": 1,
+				"Text": "Ouch..."
+			},
+			{
+				"Person": 2,
+				"Text": "Come on, tell me another one."
+			},
+			{
+				"Person": 1,
+				"Text": "Okay. This one is about a man. A man of simple aspirations and rigid hedonistic ideals.@"
+			}
+		],
+		[
+			{
+				"Person": 2,
+				"Text": "A meaningless pleasure?"
+			},
+			{
+				"Person": 1,
+				"Text": "This is not a morality tale like the ones you heard about in school. Now, listen to me."
+			},
+			{
+				"Person": 2,
+				"Text": "..."
+			},
+			{
+				"Person": 1,
+				"Text": "One day, while walking down the street at night, he suddenly noticed another shadow beside his own, horned and misshapen."
+			},
+			{
+				"Person": 2,
+				"Text": "A demon!"
+			},
+			{
+				"Person": 0,
+				"Text": "He screams in terror."
+			},
+			{
+				"Person": 1,
+				"Text": "‘A demon!’ Thought the man, ‘Serves me right, for aimlessly wandering on this sidewalk!’. He feared the worst, trying to remember those psalms he used to recite when he was a kid, with little success."
+			},
+			{
+				"Person": 1,
+				"Text": "His hands sweat, he burrowed into his coat, letting it devour him, he clenched his teeth and closed his eyes as he slowly walked forward."
+			},
+			{
+				"Person": 1,
+				"Text": "He checked, the shadow was still there. He threw himself to the ground out of despair, he started to crawl as if he would become a worm just by behaving like one."
+			},
+			{
+				"Person": 2,
+				"Text": "Idiot! Idiot! Enough with the story!"
+			},
+			{
+				"Person": 1,
+				"Text": "He turned around and tried to discern who or what that evil was, despite having his eyes full of tears and sand he recognized a tall figure behind him, dressed in a coat buttoned up to his neck."
+			},
+			{
+				"Person": 1,
+				"Text": "Resignedly, he stopped running away."
+			},
+			{
+				"Person": 1,
+				"Text": "Under the moonlight laid the man, terrified and already more dead than alive.@"
+			}
+		],
+		[
+			{
+				"Person": 2,
+				"Text": "I knew it."
+			},
+			{
+				"Person": 1,
+				"Text": "As he realized that the eyes that met his eyes were those of a goat, he gave in to the beast's desires."
+			},
+			{
+				"Person": 2,
+				"Text": "And what would those desires be?"
+			},
+			{
+				"Person": 1,
+				"Text": "Apparently, the demon was having an affair with a local woman and simply wanted to ask for her address."
+			},
+			{
+				"Person": 1,
+				"Text": "The man, who wasn't just a coward but also a womanizer, knew the address right away."
+			},
+			{
+				"Person": 2,
+				"Text": "He should have been taken by the demon."
+			},
+			{
+				"Person": 1,
+				"Text": "The demon is going to take you for staying up so late."
+			},
+			{
+				"Person": 0,
+				"Text": "The little brother yawns."
+			},
+			{
+				"Person": 2,
+				"Text": "Hey, don't say that..."
+			},
+			{
+				"Person": 0,
+				"Text": "He says sleepily."
+			},
+			{
+				"Person": 0,
+				"Text": "He picks him up from between the pile of cushions disguised as theater seats and carries him in his arms."
+			},
+			{
+				"Person": 0,
+				"Text": "As he walks down the corridor, the weight of his brother becomes real, his insides no longer reflect the summer fantasy of immortality, but merely weight."
+			},
+			{
+				"Person": 0,
+				"Text": "He puts him to bed, aware, for the first time, that the fruit has spoiled."
+			},
+			{
+				"Person": 0,
+				"Text": "@"
+			}
+		]
+	]
+}

@@ -229,6 +229,14 @@
 				"Text": "El hermano pequeño bosteza."
 			},
 			{
+				"Person": 2,
+				"Text": "Oye no digas eso..."
+			},
+			{
+				"Person": 0,
+				"Text": "Dice soñoliento."
+			},
+			{
 				"Person": 0,
 				"Text": "Lo recoge de entre el montón de cojines que se hacían pasar por butacas de teatro, se lo lleva en brazos."
 			},
@@ -238,7 +246,7 @@
 			},
 			{
 				"Person": 0,
-				"Text": " Le acuesta en la cama, siendo por primera vez consciente de que el fruto se ha podrido."
+				"Text": "Le acuesta en la cama, siendo por primera vez consciente de que el fruto se ha podrido."
 			},
 			{
 				"Person": 0,
