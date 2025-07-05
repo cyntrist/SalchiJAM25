@@ -35,3 +35,20 @@ func _on_jugar_pressed() -> void:
 	print("CAMBIO DE ESCEASD")
 	Global.change_scene(Global.Scenes.GAME)
 	pass
+
+# idiomas
+func _show_lenguages()-> void:
+	SoundSystem.play_sfx(soundCoger)
+	#v_box_container.visible = not v_box_container.visible 
+	#$VBoxContainer/Lenguages/Label.text = JsonData.json_data.UI.Lenguage
+	#$VBoxContainer/Exit/Label.text = JsonData.json_data.UI.Exit
+
+func _set_ingles()->void:
+	SoundSystem.play_sfx(soundCoger)
+	JsonParser._load_lenguage("res://jsons/eng.json")
+	_show_lenguages()
+
+func _set_espaniol()->void:
+	SoundSystem.play_sfx(soundCoger)
+	JsonParser._load_lenguage("res://jsons/esp.json")
+	_show_lenguages()
