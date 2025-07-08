@@ -16,10 +16,11 @@ var sigPosCursor # siguiente
 
 func _ready() -> void:
 	startRot = rotation
+	camera = get_viewport().get_camera_3d()
 
 func _process(delta):
 	if(Input.is_action_just_pressed("Reset") and isSelected):
-		rotation = startRot
+		reset_pos()
 	if(Input.is_action_just_pressed("Rotate")):
 		rotating = true
 		antPosCursor = get_viewport().get_mouse_position()
@@ -64,7 +65,10 @@ func rotate_relative_to_camera(axis: Vector3, angle: float):
 		targetAngle = clamp(rotation_degrees.z + angle, minRot.y, maxRot.y)
 		rotation_degrees.z = targetAngle
 	
-	global_rotate(cameraAxis, deg_to_rad(targetAngle))
+	global_rotate(cameraAxis, angle)
+
+func reset_pos() -> void:
+	rotation = startRot
 
 func select_bone():
 	scale = scale + Vector3(0.1,0.1,0.1)

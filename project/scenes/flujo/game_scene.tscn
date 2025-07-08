@@ -37,6 +37,7 @@ offset_right = 262.0
 offset_bottom = 218.0
 scale = Vector2(1.22334, 1.18463)
 theme_override_styles/focus = SubResource("StyleBoxEmpty_fg5qh")
+flat = true
 clip_text = true
 script = ExtResource("4_l2ljc")
 
@@ -48,14 +49,11 @@ offset_right = 1111.0
 offset_bottom = 200.0
 scale = Vector2(1.44329, 1.06879)
 theme_override_styles/focus = SubResource("StyleBoxEmpty_2jtgr")
+flat = true
 clip_text = true
 script = ExtResource("4_6wywq")
 
 [node name="DialogueBox" parent="." instance=ExtResource("5_6wywq")]
-offset_left = 338.0
-offset_top = 427.0
-offset_right = 338.0
-offset_bottom = 427.0
 
 [connection signal="button_down" from="ButtonReset" to="AndresScene" method="reset_pos"]
 [connection signal="mouse_entered" from="ButtonReset" to="ButtonReset" method="_on_button_reset_mouse_entered"]

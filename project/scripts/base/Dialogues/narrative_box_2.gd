@@ -9,6 +9,10 @@ var textDisplayed: float = 0 # contador para que se escriba letra a letra
 
 func _ready() -> void:
 	generate_narrative()
+	print(actualNarrative)
+	if narrativas[0]:
+		narrativas[0].restart_block_begin()
+	Global.nextLevel.connect(next_narrative)
 
 func _process(delta: float) -> void:
 	if textDisplayed < 1:
@@ -28,33 +32,66 @@ func generate_narrative() -> void:
 			var paths = p["Sound"][emo_name]
 			if paths is Array:
 				character.sounds[emo_enum] = paths.duplicate()
-		characters.append(character)
-	
+		characters.push_back(character)
 	
 	var i = 0
 	for narrvs in dialogos:
-		narrativas.append(Narrative.new(label))
+		narrativas.push_back(Narrative.new(label))
 		var j = 0
 		for blq in narrvs:
 			var bloq = NarrativeBLock.new(characters[blq["Person"]], NarrativeCharacter.Emotion[blq["Emotion"].to_upper()], blq["Text"])
-			if j % 2 == 0:
-				characters[blq["Person"]].set_font(load("res://assets/fonts/PPLettraMono-Medium.otf"))
-			else:
-				characters[blq["Person"]].set_font(load("res://assets/fonts/PPModelPlastic-Medium.otf"))
+			characters[blq["Person"]].set_font(load("res://assets/fonts/PPLettraMono-Medium.otf"))
+			if "@" in blq["Text"]:
+				#bloq.add_callable(Callable(self, "next_narrative"))
+				bloq.add_callable(Callable(get_parent().get_child(0), "show_hint"))
 			narrativas[i].add_block(bloq)
-			j+=1
-		narrativas[i].restart_block_begin()
+			j += 1
 		i += 1
+	
+	narrativas[0].get_last_block().add_callable(Callable(get_parent(),"encender_cojones"))
+	narrativas[0].get_last_block().add_callable(Callable(self, "start_story"))
+	
+	#narrativas[1].get_last_block().add_callable(Callable(self, "next_narrative"))
+	for n in range(2,len(narrativas)):
+		narrativas[n].get_first_block().add_callable(Callable(get_parent().get_child(0), "hide_hint"))
+
+### METODOS BOTONES
 
 func next_dialogue() -> void:
-	if narrativas[actualNarrative].is_end():
-		actualNarrative += 1
-		return
 	narrativas[actualNarrative].advance_block()
 	textDisplayed = 0
-
+	if narrativas[actualNarrative].is_end():
+		self.visible = false
+		return
 
 func _on_button_mouse_entered():
 	var tween = create_tween()
 	tween.tween_property(self, "rotation_degrees", -0.5, 0.1)
 	tween.tween_property(self, "rotation_degrees", 0, 0.1)
+
+### METODOS CALLBACKS
+
+
+## Empieza la historia despues de la intro
+func start_story() -> void:
+	await get_tree().create_timer(2.0).timeout
+	actualNarrative = 1
+	label.text = ""
+	next_dialogue()
+	self.visible = true
+
+func next_narrative() -> void:
+	await get_tree().create_timer(2.0).timeout
+	actualNarrative += 1
+	label.text = ""
+	next_dialogue()
+	self.visible = true
+
+func set_continue_when_level_reaches(tgt: int, bloq: NarrativeBLock) -> void:
+	var condition_func = func() -> bool:
+		return bloq.continue_
+	bloq.continue_ = false
+	Global.contarHistoria.connect(func(new_level: int) -> void:
+		if new_level == tgt:
+			bloq.continue_ = true
+	)

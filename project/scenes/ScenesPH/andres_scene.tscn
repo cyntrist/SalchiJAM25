@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cagciatay3u85"]
+[gd_scene load_steps=19 format=3 uid="uid://cagciatay3u85"]
 
 [ext_resource type="Script" uid="uid://ildu48g22hgr" path="res://scripts/Game/Scene/gameScript.gd" id="1_t2wrj"]
 [ext_resource type="PackedScene" uid="uid://cqf2t8qbuki1q" path="res://scenes/flujo/next.tscn" id="2_rcnhc"]
@@ -7,9 +7,9 @@
 [ext_resource type="Script" uid="uid://b0reyf6s75rus" path="res://scripts/Game/Scene/camera_sombras.gd" id="3_rcnhc"]
 [ext_resource type="Shader" uid="uid://b2jcj6037lets" path="res://scripts/shaders/2d to gradient_3D.gdshader" id="4_5qerh"]
 [ext_resource type="Script" uid="uid://c4fei85qf20v3" path="res://scripts/shaders/shaderbox.gd" id="5_pwcph"]
-[ext_resource type="PackedScene" uid="uid://ywcejmpfamf7" path="res://scenes/Game/mano_completa.tscn" id="6_5ijv6"]
 [ext_resource type="Script" uid="uid://cne05dlno2a5e" path="res://scripts/Game/image_comparator.gd" id="7_v8i0o"]
 [ext_resource type="Texture2D" uid="uid://notbnc4u1mlg" path="res://assets/images/soluciones/Sol1.png" id="8_huv7s"]
+[ext_resource type="PackedScene" uid="uid://qr8hwqoef35h" path="res://scenes/Game/mano_prueba_1.tscn" id="8_rcnhc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mnawn"]
 
@@ -69,17 +69,9 @@ shader_parameter/pal = SubResource("GradientTexture1D_5qerh")
 [sub_resource type="BoxMesh" id="BoxMesh_qmgvp"]
 size = Vector3(2, 2, 2)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_irjko"]
-
 [node name="AndresScene" type="Node3D" node_paths=PackedStringArray("manos")]
 script = ExtResource("1_t2wrj")
-manos = [null, null]
-
-[node name="next" parent="." instance=ExtResource("2_rcnhc")]
-transform = Transform3D(1, 0, 0, 0, 0.119548, -0.992828, 0, 0.992828, 0.119548, 4.33105, 1.44617, -1.68298)
-
-[node name="reset" parent="." instance=ExtResource("3_5qerh")]
-transform = Transform3D(0.916558, 0.397033, 0.0478073, 0.0469618, 0.0118578, -0.998826, -0.397134, 0.917728, -0.00777698, -5.36591, 1.38867, -1.97644)
+manos = [NodePath("mano_prueba_I"), NodePath("mano_prueba_R")]
 
 [node name="Camera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24298, 2.35625)
@@ -91,9 +83,15 @@ script = ExtResource("2_s2hwh")
 render_target_update_mode = 4
 
 [node name="CameraSombras" type="Camera3D" parent="Camera/SubViewport"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0360334, 2.33102, -0.400857)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0360334, 2.59082, -0.0878687)
 fov = 100.0
 script = ExtResource("3_rcnhc")
+
+[node name="next" parent="Camera" instance=ExtResource("2_rcnhc")]
+transform = Transform3D(1, 0, 0, 0, 0.119548, -0.992828, 0, 0.992828, 0.119548, 4.33105, 0.20319, -4.03923)
+
+[node name="reset" parent="Camera" instance=ExtResource("3_5qerh")]
+transform = Transform3D(0.916558, 0.397033, 0.0478073, 0.0469618, 0.0118578, -0.998826, -0.397134, 0.917728, -0.00777698, -5.36591, 0.14569, -4.33269)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_ptogf")
@@ -112,7 +110,8 @@ directional_shadow_max_distance = 27.1
 directional_shadow_pancake_size = 11.2
 
 [node name="SpotLight3D" type="SpotLight3D" parent="WorldEnvironment"]
-transform = Transform3D(1, 0, 0, 0, 0.587333, -0.809345, 0, 0.809345, 0.587333, -0.0452889, -4.71157, 5.57549)
+transform = Transform3D(1, 0, 0, 0, 0.9295, -0.368822, 0, 0.368822, 0.9295, -0.045, 0.462246, 2.789)
+light_energy = 4.174
 shadow_enabled = true
 spot_range = 23.7406
 spot_angle = 34.3445
@@ -130,23 +129,16 @@ mesh = SubResource("BoxMesh_qmgvp")
 script = ExtResource("5_pwcph")
 cList = Array[Color]([Color(0.00784314, 0.00784314, 0.00784314, 1), Color(0.262745, 0.262745, 0.262745, 1), Color(0.862745, 0.372549, 0.0941176, 1), Color(0.113725, 0.0784314, 0.176471, 1), Color(0, 0, 0.211765, 1), Color(0.00392157, 0.054902, 0.321569, 1), Color(0.00392157, 0.12549, 0.72549, 1), Color(0.164706, 0.364706, 0.741176, 1), Color(1, 0.905882, 0.643137, 1), Color(0.188235, 0.321569, 0.980392, 1), Color(0.121569, 0.113725, 0.329412, 1), Color(0.172549, 0.223529, 0.541176, 1)])
 
-[node name="MANO_I" parent="." node_paths=PackedStringArray("listBones") instance=ExtResource("6_5ijv6")]
-transform = Transform3D(0.2, 0, 0, 0, 0.19998, -0.00279244, 0, 0.00279244, 0.19998, -0.771, -0.320012, 0.0372625)
-listBones = [null, NodePath("Armature/Skeleton3D/BPalma"), NodePath("Armature/Skeleton3D/BPalma/BMenique0"), NodePath("Armature/Skeleton3D/BPalma/BMenique0/BMenique1"), NodePath("Armature/Skeleton3D/BPalma/BMenique0/BMenique1/BMenique2"), NodePath("Armature/Skeleton3D/BPalma/BAnular0"), NodePath("Armature/Skeleton3D/BPalma/BAnular0/BAnular1"), NodePath("Armature/Skeleton3D/BPalma/BAnular0/BAnular1/BAnular2"), NodePath("Armature/Skeleton3D/BPalma/BCorazon0"), NodePath("Armature/Skeleton3D/BPalma/BCorazon0/BCorazon1"), NodePath("Armature/Skeleton3D/BPalma/BCorazon0/BCorazon1/BCorazon2"), NodePath("Armature/Skeleton3D/BPalma/BIndice0"), NodePath("Armature/Skeleton3D/BPalma/BIndice0/BIndice1"), NodePath("Armature/Skeleton3D/BPalma/BIndice0/BIndice1/BIndice2"), NodePath("Armature/Skeleton3D/BPalma/BPulgar0"), NodePath("Armature/Skeleton3D/BPalma/BPulgar0/BPulgar1"), NodePath("Armature/Skeleton3D/BPalma/BPulgar0/BPulgar1/BPulgar2")]
+[node name="mano_prueba_I" parent="." instance=ExtResource("8_rcnhc")]
+transform = Transform3D(0.2, 0, 0, 0, 0.19998, -0.00279244, 0, 0.00279244, 0.19998, -0.771, -2.01331, 0.0372625)
 
-[node name="MANO_R" parent="." node_paths=PackedStringArray("listBones") instance=ExtResource("6_5ijv6")]
-transform = Transform3D(-0.2, 0, 0, 0, 0.198057, -0.0278104, 0, 0.0278104, 0.198057, 0.770528, -0.32018, 0.0372385)
-listBones = [null, NodePath("Armature/Skeleton3D/BPalma"), NodePath("Armature/Skeleton3D/BPalma/BMenique0"), NodePath("Armature/Skeleton3D/BPalma/BMenique0/BMenique1"), NodePath("Armature/Skeleton3D/BPalma/BMenique0/BMenique1/BMenique2"), NodePath("Armature/Skeleton3D/BPalma/BAnular0"), NodePath("Armature/Skeleton3D/BPalma/BAnular0/BAnular1"), NodePath("Armature/Skeleton3D/BPalma/BAnular0/BAnular1/BAnular2"), NodePath("Armature/Skeleton3D/BPalma/BCorazon0"), NodePath("Armature/Skeleton3D/BPalma/BCorazon0/BCorazon1"), NodePath("Armature/Skeleton3D/BPalma/BCorazon0/BCorazon1/BCorazon2"), NodePath("Armature/Skeleton3D/BPalma/BIndice0"), NodePath("Armature/Skeleton3D/BPalma/BIndice0/BIndice1"), NodePath("Armature/Skeleton3D/BPalma/BIndice0/BIndice1/BIndice2"), NodePath("Armature/Skeleton3D/BPalma/BPulgar0"), NodePath("Armature/Skeleton3D/BPalma/BPulgar0/BPulgar1"), NodePath("Armature/Skeleton3D/BPalma/BPulgar0/BPulgar1/BPulgar2")]
-
-[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.873866, -0.486168, 0, 0.486168, 0.873866, 2.12552, 1.14445, 0.445628)
-visible = false
-material = SubResource("StandardMaterial3D_irjko")
+[node name="mano_prueba_R" parent="." instance=ExtResource("8_rcnhc")]
+transform = Transform3D(-0.2, 0, 0, 0, 0.198057, -0.0278104, 0, 0.0278104, 0.198057, 0.770528, -2.01348, 0.0372385)
 
 [node name="ImageComparator" type="Node" parent="."]
 script = ExtResource("7_v8i0o")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 0.498, 0, 2.5261, -2.69765)
-modulate = Color(1, 1, 1, 0.27451)
+modulate = Color(1, 1, 1, 0.501961)
 texture = ExtResource("8_huv7s")

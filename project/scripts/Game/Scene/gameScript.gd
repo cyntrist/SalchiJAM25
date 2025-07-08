@@ -6,6 +6,9 @@ extends Node3D
 
 func _ready() -> void:	
 	sprite_3d.modulate = Color.TRANSPARENT
+	for c in get_children():
+		if "MANO" in c.name.to_upper():
+			manos.push_back(c)
 	#Global.nextLevel.connect(next_stage)
 
 func reset_pos():

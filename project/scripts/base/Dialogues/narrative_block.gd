@@ -7,6 +7,7 @@ var text := ""
 var soundChannel := -1
 var character : NarrativeCharacter
 var emotion : NarrativeCharacter.Emotion
+var continue_ := true
 
 ## Constructora
 ## [code]txt[code] (String) texto a mostrar
@@ -46,10 +47,10 @@ func configure_label(label: Label) ->void:
 ## Coprueba si puede pasar al siguiente dialogo
 ## [code]return[code] (bool)
 func can_continue() -> bool:
-	if not condition_continue.is_valid():
+	if not condition_continue.is_valid() or not continue_:
 		return true
 	
-	return condition_continue.call()
+	return condition_continue.call() or continue_
 
 ## Devuelve el texto y ejecuta los callbacks y el sonido del dialogo
 func reproduce() -> String:

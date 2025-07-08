@@ -72,11 +72,6 @@
 			{
 				"Person": 0,
 				"Emotion": "neutral",
-				"Text": ""
-			},
-			{
-				"Person": 0,
-				"Emotion": "neutral",
 				"Text": "La inquietud en las noches de verano le devoraba la mente, una termita que se alimenta de la blanda madera de un pino recién plantado."
 			},
 			{
@@ -129,7 +124,12 @@
 			{
 				"Person": 1,
 				"Emotion": "neutral",
-				"Text": "Está bien. Esta va sobre una linda mariposa.@"
+				"Text": "Está bien. Esta va sobre una linda mariposa."
+			},
+			{
+				"Person": 1,
+				"Emotion": "neutral",
+				"Text": "@"
 			}
 		],
 		[
@@ -161,7 +161,12 @@
 			{
 				"Person": 1,
 				"Emotion": "neutral",
-				"Text": "La delicada mariposa se posa sobre una flor, de fondo se alza un gallo, imponente, hambriento.@"
+				"Text": "La delicada mariposa se posa sobre una flor, de fondo se alza un gallo, imponente, hambriento."
+			},
+			{
+				"Person": 1,
+				"Emotion": "neutral",
+				"Text": "@"
 			}
 		],
 		[
@@ -203,7 +208,12 @@
 			{
 				"Person": 1,
 				"Emotion": "neutral",
-				"Text": "Venga. Esta va de un hombre. Un hombre de aspiraciones simples, de ideales hedonistas.@"
+				"Text": "Venga. Esta va de un hombre. Un hombre de aspiraciones simples, de ideales hedonistas."
+			},
+			{
+				"Person": 1,
+				"Emotion": "neutral",
+				"Text": "@"
 			}
 		],
 		[
@@ -270,7 +280,12 @@
 			{
 				"Person": 1,
 				"Emotion": "neutral",
-				"Text": "Bajo la luz de la luna yacía el hombre, aterrorizado y ya más muerto que vivo.@"
+				"Text": "Bajo la luz de la luna yacía el hombre, aterrorizado y ya más muerto que vivo."
+			},
+			{
+				"Person": 1,
+				"Emotion": "neutral",
+				"Text": "@"
 			}
 		],
 		[
