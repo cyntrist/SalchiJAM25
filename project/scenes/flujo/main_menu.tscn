@@ -37,7 +37,7 @@ shader_parameter/pal = SubResource("GradientTexture1D_qjggc")
 [sub_resource type="BoxMesh" id="BoxMesh_m32l4"]
 size = Vector3(2, 2, 2)
 
-[node name="Main Menu" type="Control"]
+[node name="Main Menu" type="Control" node_paths=PackedStringArray("camera_scene")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -45,6 +45,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_rpswa")
+camera_scene = NodePath("Node3D/Camera")
 
 [node name="Node3D" type="Node3D" parent="."]
 
@@ -54,21 +55,11 @@ script = ExtResource("2_f33ph")
 
 [node name="RayCast3D" type="RayCast3D" parent="Node3D/Camera"]
 
+[node name="Play" parent="Node3D/Camera" instance=ExtResource("3_f33ph")]
+transform = Transform3D(1.91069e-15, -4.37114e-08, 1, -1, -4.37114e-08, 0, 4.37114e-08, -1, -4.37114e-08, 0, -1.02961, -12.3275)
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Node3D"]
 environment = SubResource("Environment_xxmux")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Node3D/WorldEnvironment"]
-transform = Transform3D(0.800731, 0.599024, -4.06257e-08, -0.385045, 0.5147, -0.766045, -0.458879, 0.613396, 0.642787, 0, 0, 3)
-visible = false
-light_color = Color(1, 0, 0, 1)
-light_energy = 1.5
-shadow_enabled = true
-shadow_bias = 0.035
-shadow_normal_bias = 0.0
-shadow_blur = 0.278
-directional_shadow_split_1 = 0.04
-directional_shadow_max_distance = 27.1
-directional_shadow_pancake_size = 11.2
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Node3D/WorldEnvironment"]
 transform = Transform3D(1, 0, 0, 0, 0.587333, -0.809345, 0, 0.809345, 0.587333, -0.0452889, -0.412117, 5.57549)
@@ -83,10 +74,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.75388, -0.561505, -18.2243
 size = Vector3(86.9235, 36.4698, 0.241333)
 
 [node name="titulo" parent="Node3D" instance=ExtResource("4_qjggc")]
-transform = Transform3D(3.91, 0, 0, 0, -1.70912e-07, -3.91, 0, 3.91, -1.70912e-07, 0.0635948, 6.63559, -7.85934)
-
-[node name="Play" parent="Node3D" instance=ExtResource("3_f33ph")]
-transform = Transform3D(1.91069e-15, -4.37114e-08, 1, -1, -4.37114e-08, 0, 4.37114e-08, -1, -4.37114e-08, 0, 0.298492, -6.54269)
+transform = Transform3D(3.91, 0, 0, 0, -1.70912e-07, -3.91, 0, 3.91, -1.70912e-07, 0.0635948, 8.6282, -5.21395)
 
 [node name="shaderbox" type="MeshInstance3D" parent="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 0.99984, -0.0179061, 0, 0.0179061, 0.99984, 0.189896, 3.09497, 0)
@@ -112,9 +100,9 @@ vertical_alignment = 1
 [node name="Jugar" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = 539.0
-offset_top = 303.0
-offset_right = 683.405
-offset_bottom = 431.0
+offset_top = 326.0
+offset_right = 683.0
+offset_bottom = 422.0
 scale = Vector2(1.41896, 1.35891)
 
 [node name="Label" type="Label" parent="Jugar"]

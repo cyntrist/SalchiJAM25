@@ -1,36 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://kuee5s7qpvx2"]
+[gd_scene load_steps=5 format=3 uid="uid://kuee5s7qpvx2"]
 
 [ext_resource type="Script" uid="uid://b3dlqri07ib85" path="res://scripts/flujo/Intro.gd" id="1_bqrie"]
-[ext_resource type="Shader" uid="uid://b2jcj6037lets" path="res://scripts/shaders/2d to gradient_3D.gdshader" id="4_lgm6g"]
-[ext_resource type="Script" uid="uid://c4fei85qf20v3" path="res://scripts/shaders/shaderbox.gd" id="5_5nq8r"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6txun"]
-
-[sub_resource type="Sky" id="Sky_yfca1"]
-sky_material = SubResource("ProceduralSkyMaterial_6txun")
-
-[sub_resource type="Environment" id="Environment_6jhlx"]
-background_mode = 2
-sky = SubResource("Sky_yfca1")
-
-[sub_resource type="Gradient" id="Gradient_oxccj"]
-interpolation_mode = 1
-offsets = PackedFloat32Array(0, 0.0833333, 0.166667, 0.25, 0.333333, 0.416667, 0.5, 0.583333, 0.666667, 0.75, 0.833333, 0.916667)
-colors = PackedColorArray(0.00784314, 0.00784314, 0.00784314, 1, 0.262745, 0.262745, 0.262745, 1, 0.862745, 0.372549, 0.0941176, 1, 0.113725, 0.0784314, 0.176471, 1, 0, 0, 0.211765, 1, 0.00392157, 0.054902, 0.321569, 1, 0.00392157, 0.12549, 0.72549, 1, 0.164706, 0.364706, 0.741176, 1, 1, 0.905882, 0.643137, 1, 0.188235, 0.321569, 0.980392, 1, 0.121569, 0.113725, 0.329412, 1, 0.172549, 0.223529, 0.541176, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_xdv7v"]
-gradient = SubResource("Gradient_oxccj")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_bpr8l"]
-render_priority = -10
-shader = ExtResource("4_lgm6g")
-shader_parameter/rows = 3.0
-shader_parameter/cols = 4.0
-shader_parameter/dither_size = 4.0
-shader_parameter/pal = SubResource("GradientTexture1D_xdv7v")
-
-[sub_resource type="BoxMesh" id="BoxMesh_sgbba"]
-size = Vector3(2, 2, 2)
 
 [sub_resource type="Animation" id="Animation_f2rc0"]
 length = 0.001
@@ -126,35 +96,6 @@ grow_vertical = 2
 script = ExtResource("1_bqrie")
 
 [node name="Node3D" type="Node3D" parent="."]
-
-[node name="Camera" type="Camera3D" parent="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.67924, 5.78481)
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="Node3D"]
-environment = SubResource("Environment_6jhlx")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Node3D/WorldEnvironment"]
-transform = Transform3D(1, 0, 0, 0, 0.587333, -0.809345, 0, 0.809345, 0.587333, -0.0452889, -0.412117, 5.57549)
-light_energy = 5.0
-shadow_enabled = true
-spot_range = 23.7406
-spot_angle = 34.3445
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.75388, -0.561505, -18.2243)
-size = Vector3(86.9235, 36.4698, 0.241333)
-
-[node name="shaderbox" type="MeshInstance3D" parent="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 0.99984, -0.0179061, 0, 0.0179061, 0.99984, 0.189896, 3.09497, 0)
-material_override = SubResource("ShaderMaterial_bpr8l")
-extra_cull_margin = 16384.0
-mesh = SubResource("BoxMesh_sgbba")
-script = ExtResource("5_5nq8r")
-cList = Array[Color]([Color(0.00784314, 0.00784314, 0.00784314, 1), Color(0.262745, 0.262745, 0.262745, 1), Color(0.862745, 0.372549, 0.0941176, 1), Color(0.113725, 0.0784314, 0.176471, 1), Color(0, 0, 0.211765, 1), Color(0.00392157, 0.054902, 0.321569, 1), Color(0.00392157, 0.12549, 0.72549, 1), Color(0.164706, 0.364706, 0.741176, 1), Color(1, 0.905882, 0.643137, 1), Color(0.188235, 0.321569, 0.980392, 1), Color(0.121569, 0.113725, 0.329412, 1), Color(0.172549, 0.223529, 0.541176, 1)])
-
-[node name="Scene1" type="Node3D" parent="Node3D"]
-
-[node name="Scene2" type="Node3D" parent="Node3D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0

@@ -1,7 +1,7 @@
 extends Node3D
 
 @export var manos : Array[Node3D]
-@onready var sprite_3d: Sprite3D = $Sprite3D
+@onready var sprite_3d: Sprite3D = $Hint
 @export var color = Color("ffffff46")
 
 func _ready() -> void:	
@@ -12,6 +12,7 @@ func _ready() -> void:
 	#Global.nextLevel.connect(next_stage)
 
 func reset_pos():
+	manos[0].select
 	for m in manos:
 		m.reset_pos()
 

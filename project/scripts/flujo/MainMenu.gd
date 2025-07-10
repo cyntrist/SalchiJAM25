@@ -1,11 +1,15 @@
 extends Scene
 
+@export var camera_scene :Camera3D
+
 var soundCoger = "res://assets/audio/sfx/coger.wav"
+
 
 func on_enable():
 	self.visible = true;
 	$Node3D/titulo/AnimationPlayer.play("titulo|tituloAction")
 	$Node3D.visible = true;
+	camera_scene.make_current()
 
 func on_disable():
 	self.visible = false;
@@ -16,6 +20,8 @@ func on_disable():
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	self.visible = false;
+	$Node3D.visible = false;
 	pass # Replace with function body.
 
 
@@ -29,9 +35,9 @@ func _on_salir_pressed() -> void:
 
 func _on_jugar_pressed() -> void:
 	SoundSystem.play_sfx(soundCoger)
-	$Node3D/Play/AnimationPlayer.play("Caja|CajaAction")
-	$Node3D/Play/Caja/compartimento/AnimationPlayer.play("Compartimento|CompartimentoAction")
-	await $Node3D/Play/AnimationPlayer.animation_finished
+	$Node3D/Camera/Play/AnimationPlayer.play("Caja|CajaAction")
+	$Node3D/Camera/Play/Caja/compartimento/AnimationPlayer.play("Compartimento|CompartimentoAction")
+	await $Node3D/Camera/Play/AnimationPlayer.animation_finished
 	print("CAMBIO DE ESCEASD")
 	Global.change_scene(Global.Scenes.GAME)
 	pass

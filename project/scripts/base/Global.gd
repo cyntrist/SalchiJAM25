@@ -15,6 +15,8 @@ signal checkLevel()
 signal capturaToCompare
 signal selectBone
 signal unSelectBone
+signal startTalking
+signal stopTalking
 const SOL_1 = "res://assets/images/soluciones/Sol1.png"
 const SOL_2 = "res://assets/images/soluciones/Sol2.png"
 const SOL_3 = "res://assets/images/soluciones/Sol3.png"

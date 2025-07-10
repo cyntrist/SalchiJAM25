@@ -44,6 +44,8 @@ func generate_narrative() -> void:
 			if "@" in blq["Text"]:
 				#bloq.add_callable(Callable(self, "next_narrative"))
 				bloq.add_callable(Callable(get_parent().get_child(0), "show_hint"))
+				bloq.add_callable(Callable(start_input))
+				
 			narrativas[i].add_block(bloq)
 			j += 1
 		i += 1
@@ -54,6 +56,7 @@ func generate_narrative() -> void:
 	#narrativas[1].get_last_block().add_callable(Callable(self, "next_narrative"))
 	for n in range(2,len(narrativas)):
 		narrativas[n].get_first_block().add_callable(Callable(get_parent().get_child(0), "hide_hint"))
+		narrativas[n].get_first_block().add_callable(Callable(stop_input))
 
 ### METODOS BOTONES
 
@@ -70,7 +73,13 @@ func _on_button_mouse_entered():
 	tween.tween_property(self, "rotation_degrees", 0, 0.1)
 
 ### METODOS CALLBACKS
+func stop_input():
+	Global.startTalking.emit()
+	print("STOP INPUT")
 
+func start_input():
+	Global.stopTalking.emit()
+	print("START INPUT")
 
 ## Empieza la historia despues de la intro
 func start_story() -> void:

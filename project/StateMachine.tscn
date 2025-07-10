@@ -41,7 +41,7 @@ visible = false
 
 [node name="Fade" parent="." instance=ExtResource("17_rgtxn")]
 
-[node name="CanvasLayer" parent="." instance=ExtResource("9_7ovb7")]
+[node name="EfectoVignette" parent="." instance=ExtResource("9_7ovb7")]
 
 [node name="Sound" type="Node" parent="."]
 script = ExtResource("10_e1eur")

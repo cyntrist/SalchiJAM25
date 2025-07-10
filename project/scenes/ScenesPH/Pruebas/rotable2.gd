@@ -10,6 +10,7 @@ var startRot: Vector3
 
 var rotating = false
 var isSelected = false
+var interactuable := false
 
 var antPosCursor # anterior
 var sigPosCursor # siguiente
@@ -17,8 +18,13 @@ var sigPosCursor # siguiente
 func _ready() -> void:
 	startRot = rotation
 	camera = get_viewport().get_camera_3d()
+	Global.startTalking.connect(Callable(func() -> void: interactuable = false))
+	Global.stopTalking.connect(Callable(func() -> void: interactuable = true))
 
 func _process(delta):
+	if not interactuable or not isSelected:
+		return
+	
 	if(Input.is_action_just_pressed("Reset") and isSelected):
 		reset_pos()
 	if(Input.is_action_just_pressed("Rotate")):
@@ -26,8 +32,9 @@ func _process(delta):
 		antPosCursor = get_viewport().get_mouse_position()
 	if(Input.is_action_just_released("Rotate")):
 		rotating = false
-
-	if(rotating and isSelected):
+	
+	
+	if rotating:
 		#print("HOLA")
 		sigPosCursor = get_viewport().get_mouse_position()
 		var axisX := Vector3(1,0,0)
@@ -62,7 +69,7 @@ func rotate_relative_to_camera(axis: Vector3, angle: float):
 		rotation_degrees.x = targetAngle
 	else:
 		cameraAxis = camera.global_transform.basis.z.normalized()
-		targetAngle = clamp(rotation_degrees.z + angle, minRot.y, maxRot.y)
+		targetAngle = clamp(rotation_degrees.z + (angle/2), minRot.y, maxRot.y)
 		rotation_degrees.z = targetAngle
 	
 	global_rotate(cameraAxis, angle)
